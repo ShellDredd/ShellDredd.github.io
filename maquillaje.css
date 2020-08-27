@@ -218,7 +218,7 @@ body {
     background-repeat: no-repeat;
     width: auto;
     margin: auto;
-    margin-top: 10em;
+    margin-top: 9em;
     height: 50px;
     color: black;
     display: flex;
@@ -227,7 +227,7 @@ body {
 }
 
 .img-portada {
-    margin-top: 10em;
+    margin-top: 9em;
     width: 60%;
 }
 
