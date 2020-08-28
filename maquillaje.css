@@ -113,6 +113,10 @@ body {
     width: 80px;
 }
 
+.icon-maquina {
+    width: 50px;
+}
+
 .portada {
     background-size: 30%;
     background-repeat: no-repeat;
@@ -191,6 +195,10 @@ body {
     width: 45px;
 }
 
+.icon-maquina {
+    width: 35px;
+}
+    
 .navi {
     width: 100%;
     margin-top: 0.5rem;
