@@ -191,6 +191,10 @@ body {
     width:100%;
 }
 
+.cursor {
+    cursor: help;
+}
+
 @media only screen and (max-width: 400px) {
 
 .header {
