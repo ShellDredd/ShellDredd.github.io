@@ -1,3 +1,3 @@
 
-Enlace de la Web Oficial de ShellDredd:
+Web personal ShellDredd (Hacking Ético):
 https://shelldredd.github.io/ShellDredd/
