@@ -328,4 +328,13 @@ body {
     font-size: 16px;
 }
     
-    
+.div-caja-video {
+    display: initial;
+    border: red 1px solid;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.video {
+    width: 280px;
+}
