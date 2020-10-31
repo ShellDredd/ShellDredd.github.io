@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor_carga{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 15px solid red;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+     -o-animation: girar 1.5s linear infinite;
+     animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+body {
+    background-image: url();
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+
+
+.header {
+    background-image: url();
+    background-color: transparent;
+    position: fixed, static;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.header a {
+    color: darkred;
+    text-decoration: none;
+}
+
+.container-logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 30px;
+    margin-left: 0.5em;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+}
+
+.logo:hover {
+    font-size: 40px;
+}
+
+.navi ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navi ul li {
+    font-size: 18px;
+    display: inline-block;
+}
+
+.navi ul li a {
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
+    border-radius: 5px;
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.navi ul li a:hover {
+    background: darkred;
+    font-size: 20px;
+    color: black;
+    margin: 0.5em;
+    padding: 0.1em;
+    transform: rotate(360deg);
+}
+
+.icon-maquina {
+    width: 50px;
+}
+
+.icon-articulos {
+    width: 40px;
+}
+
+.icon-novedades {
+    width: 40px;
+}
+
+.icon-tool {
+    width: 40px;
+}
+
+.icon-comu {
+    width: 40px;
+}
+
+.icon {
+    width: 40px;
+}
+
+.icon-live {
+    width: 80px;
+}
+
+/* Portada Header */
+
+.portada {
+    position: static;
+    background-image: url(https://media0.giphy.com/media/l2JIireYxichTAGpq/giphy.gif?cid=ecf05e47tu84ttx7jxl1ldl25o7tk5dvavykxzs9k9w3jqui&rid=giphy.gif);
+    background-size: cover;
+    background-color: black;
+    width: 100%;
+    margin: auto;
+    height: 650px;
+    text-align: center;
+}
+
+.titulo-portada {
+    font-size: 80px;
+    font-style: oblique;
+    color: white;
+}
+
+.titulo-portada:hover {
+    font-size: 90px;
+}
+
+/* Segunda portada */
+
+.header0 {
+    background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
+    background-color: black;
+    position: fixed, static;
+    align-content: center;
+    height: 150px;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.container-logo-nav0 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Segundo header */
+
+.header2 {
+    background-image: url();
+    background-color: black;
+    position: fixed, static;
+    height: 100px;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.header2 a {
+    text-decoration: none;
+}
+
+.container-logo-nav2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo2 {
+    width: 30px;
+    margin-left: 0.5em;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+}
+
+.navi2 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navi2 ul li {
+    font-size: 18px;
+    display: inline-block;
+}
+
+.navi2 ul li a {
+    color: darkred;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
+    border-radius: 5px;
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.navi2 ul li a:hover {
+    background: darkred;
+    font-size: 18px;
+    color: black;
+    margin: 0.5em;
+    padding: 0.1em;
+    transform: rotate(360deg);
+}
+
+.icon2{
+    width: 50px;
+}
+
+
+
+
+
+
+
+.contenedor {
+    text-align: center;
+    text-justify: auto;
+    width: 100%;
+    background-color: black;
+    color: red;
+
+}
+
+.h3-blanco {
+    color: white;
+    width: 100%;
+}
+
+.portada2 {
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 3em;
+    height: 100px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-segunda {
+    width: 20%;
+}
+
+.div4 {
+    background-image: url();
+    padding: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: red 2px solid;
+}
+
+.h4-blanco {
+    color: white;
+    width: 100%;
+    text-align: justify;
+}
+
+.div-caja {
+    display: flex;
+    border: red 1px solid;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.h4-blanco-caja {
+    border: red 1px solid;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.div-caja-video {
+    display: flex;
+    border: red 1px solid;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.footer {
+    height:1px;
+    line-height:50px;
+    background:black;
+    color:red;
+    text-align:center;
+    text-decoration: red;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.footer {
+    height:0px;
+    line-height:25px;
+    background-color: black;
+    color: white;
+    text-align:center;
+    position: static;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.cursor {
+    cursor: hand;
+}
+
+
+
+/* Smartphones (portrait & landscape) Home */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+    /* Header Principal */
+
+    .header {
+        position: fixed, static;
+        font-size: 18px;
+    }
+
+    .logo {
+        font-size: 35px;
+        margin-top: 0.3em;
+    }
+
+    .icon {
+        width: 25px;
+    }
+
+    .icon-novedades {
+        width: 40px;
+    }
+    
+    .icon-tool {
+        width: 25px;
+    }
+
+    .icon-articulos {
+        width: 25px;
+    }
+
+    .icon-comu {
+        width: 25px;
+    }
+
+    .icon-live {
+        width: 45px;
+    }
+    
+    .icon-maquina {
+        width: 35px;
+    }
+    
+    .navi {
+        width: 100%;
+        margin-top: 5em;
+    }
+    
+    .navi ul li {
+        background-color: black;
+        border-radius: 25px;
+        display: inline-block;
+        offset-distance: 10em;
+        font-size: 14px;
+        margin-top: 15em;
+    }
+
+    /* Segunda portada */
+
+    .header0 {
+        background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
+        background-color: transparent;
+        position: fixed, static;
+        height: 100px;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .container-logo-nav0 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Segundo header */
+
+    .header2 {
+        background-image: url();
+        background-color: black;
+        position: fixed, static;
+        height: 20px;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .header2 a {
+        text-decoration: none;
+    }
+
+    .container-logo-nav2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navi2 ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+
+    .navi2 ul li {
+        font-size: 8px;
+        display: inline-block;
+    }
+
+    .icon2{
+        width: 30px;
+    }
+
+    /* Cuerpo de página */
+
+    body {
+        position: static;
+        width: 100%;
+        height: 100%;
+        background: black;
+        font-size: 18px;
+        line-height: 1.3em;
+        margin: 0;
+    }
+    
+    /* Portada Principal */
+
+    .portada {
+        position: static;
+        background-image: url(https://media0.giphy.com/media/l2JIireYxichTAGpq/giphy.gif?cid=ecf05e47tu84ttx7jxl1ldl25o7tk5dvavykxzs9k9w3jqui&rid=giphy.gif);
+        background-size: cover;
+        width: 100%;
+        margin: auto;
+        height: 350px;
+        color: black;
+        font-size: 20px;
+        line-height: 1em;
+        text-align: center;
+    }
+
+    .titulo-portada {
+        font-size: 45px;
+        text-align: center;
+        font-style: oblique;
+        color: white;
+        line-height: 0.9em;
+    }
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+.header {
+    font-size: 10px;
+}
+
+.icon {
+    width: 25px;
+}
+
+.icon-live {
+    width: 45px;
+}
+
+.icon-maquina {
+    width: 35px;
+}
+
+.navi {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.navi ul li {
+    display: inline-block;
+    font-size: 10px;
+}
+
+.navi ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
+    border-radius: 5px;
+}
+
+.navi ul li a:hover {
+    background: darkred;
+    color: white;
+}
+
+.portada-maquina {
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 8em;
+    height: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-portada {
+    margin-top: 8em;
+    width: 60%;
+}
+
+.contenedor {
+    margin-top: 8em;
+    text-align: center;
+}
+
+.img-segunda {
+    width: 40%;
+}
+
+.portada2 {
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 0em;
+    height: 100px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div4 {
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: red 2px solid;
+}
+
+.h4-blanco {
+    color: white;
+    width: 100%;
+    text-align: left;
+}
+
+.img-portada-blog {
+    width: 350px;
+}
+
+.div-caja {
+    display: table;
+    border: red 2px solid;
+    width: 98%;
+    margin-left: 0px;
+    
+}
+
+.h4-blanco-caja {
+    border: red 2px solid;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.div-caja-video {
+    display: initial;
+    border: red 1px solid;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.video {
+    width: 280px;
+}
+}
