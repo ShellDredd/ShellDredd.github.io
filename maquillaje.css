@@ -610,6 +610,10 @@ and (max-device-width : 480px) {
         line-height: 0.9em;
     }
     
+    .titulo-portada:hover {
+        font-size: 25px;
+    }
+    
     h1 {
         text-align: center;
         color: blanchedalmond;
