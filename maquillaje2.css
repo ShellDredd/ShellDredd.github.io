@@ -497,6 +497,10 @@ and (max-device-width : 480px) {
         color: white;
         line-height: 0.9em;
     }
+    
+    .titulo-portada:hover {
+        font-size: 45px;
+    }
 
 
 
