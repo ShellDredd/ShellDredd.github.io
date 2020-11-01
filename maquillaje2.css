@@ -413,7 +413,7 @@ and (max-device-width : 480px) {
         background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
         background-color: transparent;
         position: fixed, static;
-        height: 100px;
+        height: 120px;
         left: 0;
         top: 0;
         right: 0;
