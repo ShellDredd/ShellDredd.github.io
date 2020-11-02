@@ -364,6 +364,26 @@ body {
     margin-right: 19em;
 }
 
+.boton-unete {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    border-radius: 25px;
+}
+
+.boton-unete:hover {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    border-radius: 25px;
+}
+
+.icon-unete {
+    width: 70px;
+}
+
 h1 {
     text-align: center;
     border-radius: 25px;
