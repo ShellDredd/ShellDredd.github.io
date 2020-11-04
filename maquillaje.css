@@ -470,6 +470,32 @@ h2 {
     cursor: hand;
 }
 
+.licencia {
+    font-size: 18px;
+}
+
+.iconos-retri {
+    font-size: 14px;
+}
+
+
+
+
+/* Página comunidades */
+
+.redes {
+    display: inline;
+}
+
+.img-redes {
+    width: 30px;
+    min-block-size: 40px;
+}
+
+.img-redes:hover {
+    width: 40px;
+}
+
 
 
 /* Smartphones (portrait & landscape) Home */
