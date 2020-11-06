@@ -455,6 +455,32 @@ h2 {
 }
 
 
+/* Ver más directorios */
+
+.boton-mas {
+    width: 30%;
+    text-align: center;
+    float: right;
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 25px;
+}
+
+.boton-mas:hover {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 25px;
+}
+
+.icon-mas {
+    width: 35px;
+}
+
+
 
 
 
