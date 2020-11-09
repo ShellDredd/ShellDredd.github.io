@@ -623,11 +623,16 @@ and (max-device-width : 480px) {
         list-style: none;
 
     }
-
+     
     .navi2 ul li {
-        font-size: 8px;
-        display: inline-block;
-        transition: none;
+    font-size: 18px;
+    display: inline-block;
+    }
+
+     .navi2 ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     }
 
     .icon2{
