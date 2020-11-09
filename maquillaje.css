@@ -281,11 +281,6 @@ body {
     margin-right: 0em;
 }
 
-.descrip1:hover {
-    background-color: black;
-    color: white;
-}
-
 .img1 {
     float: left;
     margin-left: 3em;
@@ -313,11 +308,6 @@ body {
     margin-right: 0em;
 }
 
-.descrip2:hover {
-    background-color: black;
-    color: white;
-}
-
 .h1-texto2 {
     text-align: center;
     border-radius: 25px;
@@ -338,11 +328,6 @@ body {
     margin-bottom: 0em;
     margin-left: 0em;
     margin-right: 0em;
-}
-
-.descrip3:hover {
-    background-color: black;
-    color: white;
 }
 
 .img3 {
