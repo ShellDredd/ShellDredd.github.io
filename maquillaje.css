@@ -610,7 +610,7 @@ and (max-device-width : 480px) {
     }
      
     .navi2 ul li {
-    font-size: 18px;
+    font-size: 10px;
     display: inline-block;
     }
 
@@ -622,7 +622,7 @@ and (max-device-width : 480px) {
      
     .navi2 ul li a:hover {
     background: black;
-    font-size: 18px;
+    font-size: 10px;
     color: darkred;
     padding: 0.5rem 1rem;
     }
