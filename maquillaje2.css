@@ -229,9 +229,7 @@ body {
     color: darkred;
     display: block;
     padding: 0.5rem 1rem;
-    transition: all 0.5s linear;
     border-radius: 5px;
-    transition: width 1s, height 1s, transform 1s;
 }
 
 .navi2 ul li a:hover {
@@ -240,7 +238,6 @@ body {
     color: black;
     margin: 0.5em;
     padding: 0.1em;
-    transform: rotate(360deg);
 }
 
 .icon2{
@@ -547,6 +544,29 @@ and (max-device-width : 480px) {
     background: darkred;
     color: white;
 }
+     
+ 
+     
+.navi2 ul li {
+    font-size: 10px;
+    display: inline-block;
+}
+
+.navi2 ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+     
+.navi2 ul li a:hover {
+    background: black;
+    font-size: 10px;
+    color: darkred;
+    padding: 0.5rem 1rem;
+}
+     
+     
+     
 
 .portada-maquina {
     background-size: 30%;
