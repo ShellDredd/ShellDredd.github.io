@@ -634,6 +634,14 @@ and (max-device-width : 480px) {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     }
+     
+    .navi2 ul li a:hover {
+    background: black;
+    font-size: 18px;
+    color: darkred;
+    margin: 0.5em;
+    padding: 0.1em;
+    }
 
     .icon2{
         width: 30px;
