@@ -630,6 +630,7 @@ and (max-device-width : 480px) {
     .navi2 ul li {
         font-size: 8px;
         display: inline-block;
+        transition: none;
     }
 
     .icon2{
