@@ -639,8 +639,7 @@ and (max-device-width : 480px) {
     background: black;
     font-size: 18px;
     color: darkred;
-    margin: 0.5em;
-    padding: 0.1em;
+    padding: 0.5rem 1rem;
     }
 
     .icon2{
