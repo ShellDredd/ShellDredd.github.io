@@ -106,23 +106,23 @@
 }
 
 .icon-maquina {
-    width: 50px;
+    width: 30px;
 }
 
 .icon-articulos {
-    width: 40px;
+    width: 20px;
 }
 
 .icon-novedades {
-    width: 40px;
+    width: 20px;
 }
 
 .icon-tool {
-    width: 40px;
+    width: 20px;
 }
 
 .icon-comu {
-    width: 40px;
+    width: 20px;
 }
 
 .icon {
@@ -198,7 +198,7 @@ body {
 }
 
 .navi2 ul li {
-    font-size: 18px;
+    font-size: 14px;
     display: inline-block;
 }
 
@@ -211,7 +211,7 @@ body {
 
 .navi2 ul li a:hover {
     background: darkred;
-    font-size: 18px;
+    font-size: 14px;
     color: black;
     margin: 0.5em;
     padding: 0.1em;
