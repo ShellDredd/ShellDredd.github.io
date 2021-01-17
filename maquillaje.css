@@ -148,9 +148,10 @@
     .header0 {
         background-image: url(images/line.gif);
         background-color: black;
+        background-size: cover;
         position: fixed, static;
         align-content: center;
-        height: 150px;
+        height: 10px;
         left: 0;
         top: 0;
         right: 0;
