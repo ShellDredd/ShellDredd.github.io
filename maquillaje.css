@@ -416,12 +416,12 @@
     
     .separador-final {
         position: static;
-        background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
+        background-image: url(images/line.gif);
         background-size: cover;
         background-color: black;
         width: 100%;
         margin: auto;
-        height: 200px;
+        height: 10px;
         text-align: center;
     }
     
@@ -600,8 +600,9 @@
         /* Segunda portada */
     
         .header0 {
-            background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
+            background-image: url(images/line.gif);
             background-color: transparent;
+            background-size: cover;
             position: fixed, static;
             height: 100px;
             left: 0;
