@@ -169,8 +169,9 @@ body {
 /* Segunda portada */
 
 .header0 {
-    background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
+    background-image: url(images/line.gif);
     background-color: black;
+    background-size: cover;
     position: fixed, static;
     align-content: center;
     height: 150px;
@@ -410,8 +411,9 @@ and (max-device-width : 480px) {
     /* Segunda portada */
 
     .header0 {
-        background-image: url(https://media3.giphy.com/media/Q99A6dXgEr3shEYNi3/giphy.gif?cid=ecf05e47nennew84req4pik3ixqw2rwkmzzjelmvteonihzv&rid=giphy.gif);
+        background-image: url(images/line.gif);
         background-color: transparent;
+        background-size: cover;
         position: fixed, static;
         height: 120px;
         left: 0;
@@ -455,7 +457,7 @@ and (max-device-width : 480px) {
     }
 
     .navi2 ul li {
-        font-size: 8px;
+        font-size: 18px;
         display: inline-block;
     }
 
@@ -548,7 +550,7 @@ and (max-device-width : 480px) {
  
      
 .navi2 ul li {
-    font-size: 6px;
+    font-size: 10px;
     display: inline-block;
 }
 
@@ -560,7 +562,7 @@ and (max-device-width : 480px) {
      
 .navi2 ul li a:hover {
     background: black;
-    font-size: 6px;
+    font-size: 10px;
     color: darkred;
     padding: 0.5rem 1rem;
 }
