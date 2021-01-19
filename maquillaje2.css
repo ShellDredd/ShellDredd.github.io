@@ -20,23 +20,6 @@
                 z-index: 10000;
             }
 
-#carga{
-    border: 15px solid red;
-    border-top-style: groove;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    -webkit-animation: girar 1.5s linear infinite;
-     -o-animation: girar 1.5s linear infinite;
-     animation: girar 1.5s linear infinite;
-}
 
 @keyframes girar {
     from { transform: rotate(0deg);}
