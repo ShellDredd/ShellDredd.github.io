@@ -7,15 +7,18 @@
 }
 
 #contenedor_carga{
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-    z-index: 10000;
-}
+                background-image: url(https://media0.giphy.com/media/3o7TKCDD0G9hKB6cfe/giphy.gif?cid=ecf05e4750837f6c16c39a206cd43c98ce7a14d1eaddf678&rid=giphy.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                -webkit-transition: all 5s ease;
+                -o-transition: all 5s ease;
+                transition: all 5s ease;
+                z-index: 10000;
+            }
 
 #carga{
     border: 15px solid red;
