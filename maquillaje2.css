@@ -156,7 +156,7 @@ body {
     text-align: center;
 }
 
-portada-celebrity {
+.portada-celebrity {
     position: static;
     background-image: url(https://media1.giphy.com/media/IXnygGeB6LPPi/giphy.gif?cid=ecf05e47rdy8383f2krz3vstwioz7d61b09thhkcs33iyxjo&rid=giphy.gif);
     background-size: cover;
