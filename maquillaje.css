@@ -450,25 +450,25 @@
     }
     
     #artistas-bloque {
-        background-image: url(https://media0.giphy.com/media/jtVxhUfZvQ6KflynP0/giphy.gif?cid=ecf05e4772c043cb17e095e55b76e411020b998d911f7e3a&rid=giphy.gif);
-        width: 200px;
+        background-image: url(https://media3.giphy.com/media/3osxYzUOBRWEg5S5q0/giphy.gif?cid=ecf05e473b6ekylwwxubq9vf9m3bt181rvnjs0sssit1i5kx&rid=giphy.gif);
+        width: 500px;
         text-align: center;
         border-radius: 25px;
     }
     
     #artistas-bloque:hover {
-        background-image: url(https://media2.giphy.com/media/kF5tGe21yZ2UocgYvJ/giphy.gif?cid=ecf05e47b7hk77xu38sqmf8e7u89jt0d2vnuhidk3d21myjr&rid=giphy.gif);
+        background-image: url(https://media3.giphy.com/media/cJuKlj01ceiMtEwu43/giphy.gif?cid=ecf05e47c9a4e383b229b9315bcdc1a6fad526ca1c3343a8&rid=giphy.gif);
     }
     
     .titulo-artista {
         background-color: transparent;
-        font-size: 26px;
+        font-size: 22px;
         color: white;
     }
     
     .img-artista {
-        width: 150px;
-        min-block-size: 150px;
+        width: 90px;
+        min-block-size: 90px;
     }
     
     
