@@ -156,6 +156,17 @@ body {
     text-align: center;
 }
 
+portada-celebrity {
+    position: static;
+    background-image: url(https://media0.giphy.com/media/l2JIireYxichTAGpq/giphy.gif?cid=ecf05e47tu84ttx7jxl1ldl25o7tk5dvavykxzs9k9w3jqui&rid=giphy.gif);
+    background-size: cover;
+    background-color: black;
+    width: 100%;
+    margin: auto;
+    height: 650px;
+    text-align: center;
+}
+
 .titulo-portada {
     font-size: 60px;
     font-style: oblique;
