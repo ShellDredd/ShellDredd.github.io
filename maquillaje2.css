@@ -376,29 +376,13 @@ and (max-device-width : 480px) {
     .icon {
         width: 25px;
     }
-
+     
     .icon-novedades {
-        width: 40px;
-    }
-    
-    .icon-tool {
         width: 25px;
     }
-
-    .icon-articulos {
-        width: 25px;
-    }
-
-    .icon-comu {
-        width: 25px;
-    }
-
+     
     .icon-live {
-        width: 45px;
-    }
-    
-    .icon-maquina {
-        width: 35px;
+        width: 50px;
     }
     
     .navi {
@@ -410,7 +394,7 @@ and (max-device-width : 480px) {
         background-color: black;
         border-radius: 25px;
         display: inline-block;
-        offset-distance: 10em;
+        offset-distance: 1em;
         font-size: 14px;
         margin-top: 15em;
     }
