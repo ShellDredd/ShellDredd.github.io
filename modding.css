@@ -130,3 +130,29 @@
         .img-logo1 {
             filter: drop-shadow(0 10px 10px rgb(255, 53, 53));
         }
+
+
+
+/* Smartphones (portrait & landscape) Home */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {
+       
+      body {
+          font: Open Sans, Impact;
+          background-image: url(https://media0.giphy.com/media/3o7TKCDD0G9hKB6cfe/giphy.gif?cid=ecf05e4750837f6c16c39a206cd43c98ce7a14d1eaddf678&rid=giphy.gif);
+          background-size: cover;
+        }
+       
+      .text {
+          font-size: 200px;
+        }
+       
+       .contenedor-texto{
+            text-align: center;
+            font-size: 15px;
+            font-family: fantasy;
+            color: rgb(189, 0, 0);
+        }
+       
+    }
