@@ -436,6 +436,7 @@
     
     #artistas-bloque {
         background-image: url(https://media3.giphy.com/media/3osxYzUOBRWEg5S5q0/giphy.gif?cid=ecf05e473b6ekylwwxubq9vf9m3bt181rvnjs0sssit1i5kx&rid=giphy.gif);
+        background-size: cover;
         width: 500px;
         text-align: center;
         border-radius: 25px;
@@ -803,7 +804,16 @@
             height: 150px;
         }
 
+     /* Bloque contenedores */
 
+    #artistas-bloque {
+        background-image: url(https://media2.giphy.com/media/ncaMFZG3dU0eHnqQzA/giphy.gif?cid=ecf05e473tvza84ajs5qjhbbt2q5cjxi9a9nmvuapa1zbf18&rid=giphy.gif);
+        background-size: cover;
+        width: 200px;
+        text-align: center;
+        border-radius: 25px;
+    }
+         
         /* Contenido h4cknet */
 
     .portada-h4cknet {
