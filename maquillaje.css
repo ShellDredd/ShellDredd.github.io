@@ -539,35 +539,35 @@
     
         .header {
             position: fixed, static;
-            font-size: 18px;
+            font-size: 14px;
         }
     
         .icon {
-            width: 25px;
+            width: 15px;
         }
     
         .icon-novedades {
-            width: 40px;
+            width: 25px;
         }
         
         .icon-tool {
-            width: 25px;
+            width: 15px;
         }
     
         .icon-articulos {
-            width: 25px;
+            width: 15px;
         }
     
         .icon-comu {
-            width: 25px;
+            width: 15px;
         }
     
         .icon-live {
-            width: 45px;
+            width: 15px;
         }
         
         .icon-maquina {
-            width: 35px;
+            width: 20px;
         }
         
         .navi {
@@ -579,8 +579,8 @@
             background-color: black;
             border-radius: 25px;
             display: inline-block;
-            offset-distance: 10em;
-            font-size: 14px;
+            offset-distance: 2em;
+            font-size: 10px;
         }
     
         /* Segunda portada */
