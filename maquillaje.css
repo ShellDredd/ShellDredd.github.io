@@ -801,7 +801,7 @@
         .separador-final {
             position: static;
             width: 100%;
-            height: 150px;
+            height: 5px;
         }
 
      /* Bloque contenedores */
