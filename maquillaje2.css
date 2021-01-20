@@ -551,7 +551,7 @@ and (max-device-width : 480px) {
 
 .navi ul li a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 1em;
     border-radius: 5px;
 }
 
