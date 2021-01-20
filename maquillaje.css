@@ -543,31 +543,15 @@
         }
     
         .icon {
-            width: 15px;
+            width: 25px;
         }
     
         .icon-novedades {
             width: 25px;
         }
-        
-        .icon-tool {
-            width: 15px;
-        }
-    
-        .icon-articulos {
-            width: 15px;
-        }
-    
-        .icon-comu {
-            width: 15px;
-        }
     
         .icon-live {
-            width: 15px;
-        }
-        
-        .icon-maquina {
-            width: 20px;
+            width: 25px;
         }
         
         .navi {
