@@ -435,7 +435,7 @@
     }
     
     #artistas-bloque {
-        background-image: url(https://media3.giphy.com/media/3osxYzUOBRWEg5S5q0/giphy.gif?cid=ecf05e473b6ekylwwxubq9vf9m3bt181rvnjs0sssit1i5kx&rid=giphy.gif);
+        background-image: url(images/bloque1.gif);
         background-size: cover;
         width: 500px;
         text-align: center;
@@ -443,7 +443,7 @@
     }
     
     #artistas-bloque:hover {
-        background-image: url(https://media3.giphy.com/media/cJuKlj01ceiMtEwu43/giphy.gif?cid=ecf05e47c9a4e383b229b9315bcdc1a6fad526ca1c3343a8&rid=giphy.gif);
+        background-image: url(images/bloque2.gif);
     }
     
     .titulo-artista {
