@@ -1,13 +1,13 @@
 const typed = new Typed('.typed', {
 	strings: [
-		'<i class="texto1">Usuari@s Freedom</i>',
-		'<i class="texto2">Comunidad FOSS</i>',
-		'<i class="texto3">Sociedad Tecnológica</i>',
-		'<i class="texto1">Aprendizaje</i>',
-		'<i class="texto2">Proyectos</i>',
-		'<i class="texto3">Gnu/Linux</i>',
-		'<i class="texto1">Programación</i>',
-		'<i class="texto2">Divulgación</i>',
+		'<i class="texto1">Usuari@ Freedom</i>',
+		'<i class="texto2">Partidari@ del ecosistema FOSS</i>',
+		'<i class="texto3">Programador Front-End</i>',
+		'<i class="texto1">Entusiasta de InfoSec</i>',
+		'<i class="texto2">Jugador de CTF</i>',
+		'<i class="texto3">Creador de máquinas y retos</i>',
+		'<i class="texto1">Divulgador Gnu/Linux</i>',
+		'<i class="texto2">Tecnópata</i>',
 	],	
 	//stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 50, // Velocidad en mlisegundos para poner una letra,
