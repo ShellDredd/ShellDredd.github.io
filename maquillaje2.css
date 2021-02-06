@@ -262,6 +262,20 @@ body {
     width: 100%;
 }
 
+
+.tom-gif {
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 3em;
+    height: 100px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .portada2 {
     background-size: 30%;
     background-repeat: no-repeat;
