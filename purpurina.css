@@ -137,3 +137,8 @@
           color: rgb(185, 0, 0);
           text-align: center;
           filter: drop-shadow(0 1px 1px rgb(255, 53, 53));
+           
+        .imagen {
+          size:cover;
+          width: 600px;
+           }
