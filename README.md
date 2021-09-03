@@ -1,3 +1,3 @@
 
 Web personal ShellDredd:
-https://shelldredd.github.io/ShellDredd/
+https://shelldredd.github.io/
