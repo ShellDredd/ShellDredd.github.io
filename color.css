@@ -1,0 +1,670 @@
+/* 
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' */
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            #contenedor_carga_apt23{
+                background-image: url(images/arcade.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                -webkit-transition: all 3s ease;
+                -o-transition: all 3s ease;
+                transition: all 3s ease;
+                z-index: 10000;
+            }
+            
+            #menu{
+                
+            }
+
+            #contenedor_carga{
+                background-image: url(images/intro.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                -webkit-transition: all 3s ease;
+                -o-transition: all 3s ease;
+                transition: all 3s ease;
+                z-index: 10000;
+            }
+            
+            #menu{
+                
+            }
+        
+            /* Main styles */
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+        
+        .text {
+          fill: none;
+          stroke-width: 6;
+          stroke-linejoin: round;
+          stroke-dasharray: 70 330;
+          stroke-dashoffset: 0;
+          -webkit-animation: stroke 6s infinite linear;
+          animation: stroke 6s infinite linear;
+          font-size: 100px;
+        }
+        
+        .text:nth-child(5n + 1) {
+          stroke: #6b0000;
+          -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+        }
+        .text:nth-child(5n + 2) {
+          stroke: #701b1b;
+          -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+        }
+        
+        .text:nth-child(5n + 3) {
+          stroke: transparent;
+          -webkit-animation-delay: -3.6s;
+          animation-delay: -3.6s;
+        }
+        
+        .text:nth-child(5n + 4) {
+          stroke: #750000;
+          -webkit-animation-delay: -4.8s;
+          animation-delay: -4.8s;
+        }
+        
+        .text:nth-child(5n + 5) {
+          stroke: #5f0000;
+          -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+        }
+        
+        @-webkit-keyframes stroke {
+          100% {
+            stroke-dashoffset: -400;
+          }
+        }
+        
+        @keyframes stroke {
+          100% {
+            stroke-dashoffset: -400;
+          }
+        }
+        
+        /* Other styles */
+        
+        body {
+          font: Open Sans, Impact;
+          background-image: url();
+          background-size: cover;
+          height: 900px;
+        }
+        
+        .portada {
+          font: Open Sans, Impact;
+          background-image: url(images/lluvia.gif);
+          background-size: cover;
+          background-position: center;
+          height: 1200px;
+        }
+
+        .contenedor-texto{
+            text-align: center;
+            font-size: 30px;
+            font-family: fantasy;
+            color: rgb(189, 0, 0);
+        }
+        
+        .texto1 {
+            color: rgb(139, 0, 0);
+            filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+        }
+        
+        .texto2 {
+            color: rgb(139, 0, 0);
+            filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+        }
+        
+        .texto3 {
+            color: rgb(139, 0, 0);
+            filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+        }
+        
+        .img-logo1 {
+            filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+        }
+
+
+        .portada-apt-23{
+          position: static;
+          background-image: url(images/arcade.gif);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-size: ;
+          background-position-x: center;
+          background-color: black;
+          width: 100%;
+          margin: auto;
+          height: 800px;
+          text-align: center;
+        }
+
+        .icon-intro {
+            size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+          background-image: url();
+          background-color: transparent;
+          position: fixed, static;
+          left: 0;
+          top: 0;
+          right: 0;
+      }
+      
+      .header a {
+          color: darkred;
+          text-decoration: none;
+      }
+      
+      .container-logo-nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+      
+      .logo {
+          width: 30px;
+          margin-left: 0.5em;
+          letter-spacing: 5px;
+          font-size: 1.3em;
+      }
+      
+      .logo:hover {
+          font-size: 40px;
+      }
+      
+      .navi ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+      
+      .navi ul li {
+          font-size: 12px;
+          display: inline-block;
+      }
+      
+      .navi ul li a {
+          color: white;
+          display: block;
+          padding: 0.5rem 1rem;
+          transition: all 0.5s linear;
+          border-radius: 5px;
+          transition: width 1s, height 1s, transform 1s;
+      }
+      
+      .navi ul li a:hover {
+          background: darkred;
+          font-size: 20px;
+          color: black;
+          margin: 0.5em;
+          padding: 0.1em;
+          transform: rotate(360deg);
+      }
+      
+      .icon-maquina {
+          width: 30px;
+      }
+      
+      .icon-articulos {
+          width: 40px;
+      }
+      
+      .icon-novedades {
+          width: 60px;
+      }
+      
+      .icon-tool {
+          width: 40px;
+      }
+      
+      .icon-comu {
+          width: 40px;
+      }
+      
+      .icon {
+          width: 70px;
+      }
+      
+      .icon-live {
+          width: 80px;
+      }
+      
+      /* Segunda portada */
+      
+      .header0 {
+          background-image: url(images/line.gif);
+          background-color: black;
+          background-size: cover;
+          position: fixed, static;
+          align-content: center;
+          height: 10px;
+          left: 0;
+          top: 0;
+          right: 0;
+      }
+      
+      .container-logo-nav0 {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+      }
+
+      /* Segundo header */
+    
+    .header2 {
+      background-image: url();
+      background-size: auto;
+      background-color: black;
+      position: fixed, static;
+      height: 100px;
+      left: 0;
+      top: 0;
+      right: 0;
+  }
+  
+  .header2 a {
+      text-decoration: none;
+  }
+  
+  .container-logo-nav2 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  .logo2 {
+      width: 30px;
+      margin-left: 0.5em;
+      letter-spacing: 5px;
+      font-size: 1.3em;
+  }
+  
+  .navi2 ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  
+  .navi2 ul li {
+      font-size: 18px;
+      display: inline-block;
+  }
+  
+  .navi2 ul li a {
+      color: darkred;
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+  }
+  
+  .navi2 ul li a:hover {
+      background: darkred;
+      font-size: 18px;
+      color: black;
+      margin: 0.5em;
+      padding: 0.1em;
+  }
+  
+  .icon2{
+      width: 50px;
+  }
+  
+  
+  body {
+      background-color: black;
+      position: static;
+      width: 100%;
+      height: 100%;
+      font-size: 22px;
+      line-height: 1.3em;
+      margin: 0;
+      cursor: hand;
+  }
+  
+
+
+
+/* Caja de módulos */
+
+.h1-cajas {
+    text-align: center;
+    align-content: center;
+    color: darkred;
+}
+
+
+.contenedor {
+    text-align: center;
+    text-justify: auto;
+    width: 100%;
+    background-color: black;
+    color: red;
+
+}
+
+.h3-blanco {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+
+.tom-gif {
+    background-repeat: no-repeat;
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 100px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-shell-portada {
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    height: auto;
+    color: black;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.logo-shell {
+    background-repeat: no-repeat;
+    width: 70%;
+    margin: auto;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    height: auto;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portada2 {
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 3em;
+    height: 100px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mira-esto {
+    background-repeat: no-repeat;
+    width: auto;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    height: 100px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-mira-esto {
+    width: 20%;
+}
+
+.img-segunda {
+    width: 20%;
+}
+
+.div4 {
+    background-image: url();
+    padding: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: red 2px solid;
+}
+
+.h4-blanco {
+    color: white;
+    width: 100%;
+    text-align: justify;
+}
+
+.div-caja {
+    display: flex;
+    border: red 1px solid;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.h4-blanco-caja {
+    background-image: url();
+    filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: red 1px solid;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.div-caja-video {
+    background-image: url();
+    display: flex;
+    border: red 1px solid;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.img-reto-joker {
+    width: 60%;
+}
+
+.reto2-img {
+    width: 100%;
+}
+
+.arcadereto-img {
+    width: 14%;
+    filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.laser-espacio {
+    width: 20%;
+
+}
+
+.laser1rojo-img {
+    width: 20%;
+    filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.laser1rojo-img2 {
+    width: 30%;
+    filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.laser1rojo-img3 {
+    width: 40%;
+    filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.reto-cassete-img {
+    width: 630px;
+    height: 380px;
+}
+
+
+
+
+
+/* Página de artículos */
+
+.caja-articulo {
+    width: 100%;
+    background-color: wheat;
+    height: 300px;
+}
+
+.titulo-articulo {
+    background-color: violet;
+    color: darkred;
+    text-align: center;
+    width: 30%;
+}
+
+span {
+    background-color: whitesmoke;
+    color: black;
+    width: 100%;
+    float: right;
+}
+
+
+
+
+/* RETOS */
+
+.reto-oculto-portada1 {
+    background-image: url(https://media2.giphy.com/media/g64uBi2SjHZ60/giphy.gif?cid=ecf05e479y70mujqaa30d3swnfs8p88zw9x8rooayaa1ss31&rid=giphy.gif&ct=g);
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.maritrini {
+    background-image: url(https://media0.giphy.com/media/y0s36prnnGb5u/giphy.gif?cid=ecf05e47bfal6n15l9zikhel9s6knooai5uzr8tpwhpfm3gc&rid=giphy.gif&ct=g);
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.morfeo {
+    background-image: url(images/morse.gif);
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.zkuaker {
+    background-image: url(images/zerial.png);
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.kiss_me {
+    background-image: url(https://media3.giphy.com/media/xT9KVg3JVNumj5ZrW0/giphy.gif?cid=ecf05e47q4kyxxf2rwknrt2ytwpkbcl8qhkxt7p7sdx4643v&rid=giphy.gif&ct=g);
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.neo {
+    background-image: url(images/key-matrix.gif);
+    height: 350px;
+    width: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.apt-69 {
+    background-image: url(https://media1.giphy.com/media/7goZCK3457R7y/giphy.gif?cid=ecf05e47ub8oqmurkrosb3bctipkbqwgv2kbrlxo56x1ol71&rid=giphy.gif&ct=g);
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Smartphones (portrait & landscape) Home */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {
+       
+      body {
+          font: Open Sans, Impact;
+          background-image: url(images/fondo-web.gif);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+       
+      .text {
+          font-size: 200px;
+        }
+       
+       .contenedor-texto{
+            text-align: center;
+            font-size: 15px;
+            font-family: fantasy;
+            color: rgb(189, 0, 0);
+        }
+       
+    }
