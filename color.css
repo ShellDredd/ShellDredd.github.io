@@ -556,7 +556,7 @@
 }
 
 span {
-    background-color: black;
+    background-color: transparent;
     color: black;
     width: 100%;
     float: right;
