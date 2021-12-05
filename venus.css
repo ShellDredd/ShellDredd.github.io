@@ -86,6 +86,10 @@
             background-repeat: no-repeat;
         }
 
+        .img-hmvm-logo{
+            size: 250px;
+        }
+
         .header {
           background-image: url();
           background-color: transparent;
