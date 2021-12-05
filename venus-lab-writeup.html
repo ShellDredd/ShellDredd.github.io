@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<!--      .-----.
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' -->
+	
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <link  rel="icon"   href="images/flaticon1.jpeg" type="image/jpeg" sizes="16x16" />
+  <link href="venus.css" rel="stylesheet">
+  <title>Guía/WriteUps Venus HackMyVM Lab</title>
+</head>
+
+<body>
+  <div id="contenedor_carga">
+        <div id="carga"></div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var contenedor = document.getElementById('contenedor_carga');
+            
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+        }
+    </script>
+
+
+  <main class="main">
+
+
+        <div class="portada-apt-23">
+        
+            <header class="header">
+                <div class="container-logo-nav">
+                    <a href="index.html"class="logo">ShellDredd</a>
+                    <nav class="navi">
+                        <ul class="show">
+                            <li><a style="font-weight: bold;" href="index.html" target="blank"><img class="icon-novedades" src="images/home.gif" width="25px">Inicio</a></li>
+                            <li><a style="font-weight: bold;" href="https://github.com/ShellDredd" target="blank"><img class="icon-novedades" src="images/joker.gif" width="35px">GitHub</a></li>
+                            <li><a style="font-weight: bold;" href="https://www.youtube.com/channel/UCoCzIejJkl4-5Ds9yZIS9kw" target="blank"><img class="icon" src="images/youtube.gif" width="25px">Youtube</a></li>
+                            <li><a style="font-weight: bold;" href="https://www.twitch.tv/shelldredd" target="blank"><img class="icon-live" src="https://media3.giphy.com/media/QZPvzi88jo9l1uPO7i/giphy.gif?cid=ecf05e4739ec8e99eb76bd8d919174db0a228d92f653f11b&rid=giphy.gif" width="25px">Directos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            
+            </header>
+
+            <div class="logo-shell-portada">
+                <img class="img-hmvm-logo" src="images/hmvm-logo.png" width="500">
+            </div><br>
+            
+    
+        </div>
+    
+        <header class="header0">
+            <div class="container-logo-nav0">   
+            </div>
+        </header>
+    
+    
+        <header class="header2">
+            <div class="container-logo-nav2">
+                
+                <nav class="navi2">
+                    <ul class="show">
+                        <li><a style="font-weight: bold;" href="#reto1" target="">Nivel [01]</a></li>
+                        <li><a style="font-weight: bold;" href="#reto2" target="">Nivel [02]</a></li>
+                        <li><a style="font-weight: bold;" href="#reto3" target="">Nivel [03]</a></li>
+                        <li><a style="font-weight: bold;" href="#" target="">Nivel [04]</a></li>
+                        <li><a style="font-weight: bold;" href="" target="">Nivel [05]</a></li>
+                        <li><a style="font-weight: bold;" href="#" target="">Nivel [06]</a></li>
+                    </ul>
+                </nav>
+
+    </header>
+
+<div><img class="venus-monitor" src="images/monitor1.gif" width="250px"></div><br>
+
+<div id="reto1"></div>
+<h1 class="title-h1">Nivel [01] -- HACKER</h1>
+<h2 class="mision">mission.txt</h2>
+<P class="text-mision">
+  ## ES ##<br>
+  La usuaria sophia ha guardado su contraseña en un fichero oculto en esta carpeta.Encuentralo y logueate como sophia.
+</P><br>
+<h2 class="solution">Solución</h2>
+<p class="text-solution">
+  Para resolver este reto necesitamos conocer las órdenes de sistema correspondientes al listado y lectura de archivos y directorios ocultos. Disponemos de variantes para estos dos usos, veámos unas cuantas.<br><br>
+  # Listar archivos o directorios ocultos:<br><br>
+  ~$ ls -la<br>
+  ~$ ls -al <br>
+  ~$ ls -a <br>
+  <br><br>
+  #Lectura de archivos:<br>
+  ---Estos son ejemplos de comandos de lectura y tienen diversos parámetros para diferentes usos, no dudes en revisarlos usando el manual de comandos de sistema: "man cat | man head | man more"---<br><br>
+  ~$ cat .myhiddenpazz <br>
+  ~$ less mission.txt <br>
+  ~$ more .myhiddenpazz <br>
+  ~$ head -n 70 archivo #(en este caso con head podemos indicarle que lea las 70 primeras líneas de un archivo).|<br>
+</p><br>
+
+<h2 class="title-notas">Notas Adicionales:</h2>
+<p class="text-note">Ahora que conocemos la usuaria y su contraseña, procedemos a loguearnos en el sistema usando los comandos permitidos por el mismo para esta función.</p><br>
+  ~$ su sophia<br><br>
+  El directorio actual en el que nos encontramos es /pwned/hacker/ y necesitamos movernos al directorio de la usuaria SOPHIA -- /pwned/sophia/ <br><br>
+  # Ver el directorio actual en el que nos encontramos:<br><br>
+  ~$ pwd<br><br>
+  # Cambiar o moverse de directorio en el sistema:<br><br>
+  ~$ cd /pwned/sophia/<br>
+  ~$ cd /cualquier/directorio/<br><br>
+  # En este directorio encontramos la primera flag para introducir en la platadorma y ganar puntos en el ranking.<br><br>
+  ~$ head -n 1 flagz.txt<br><br>
+  # También podemos ver otros archivos que podemos leer y que serán comunes en todo el laboratorio de Venus. Como hemos visto en el directorio del usuario hacker y en este de sophia, tenemos dos archivos comunes entre usuarios, el "mission.txt" que nos revela las pistas para pivotar al siguiente usuario/a y nivel, y el de "flagz.txt" donde se encuentra la flag para introducir en la plataforma.<br><br>
+  ~$ ls -la<br>
+  ~$ cat mission.txt<br><br>
+  # Un hábito bueno para el listado de archivos y directorios, es el uso del parámetro "R" en la orden de sistema "ls -la" que permite el listado de archivos de forma recursiva en los directorios dentro del directorio actual.<br><br>
+  ~$ ls -laR<br><br>
+  # O en las rutas de directorios que le indiquemos:<br><br>
+  ~$ ls -laR /usr/share/wordlist/<br>
+
+<br><br><br>
+
+<div><img class="venus-coin" src="images/venus-coin.gif" width="150px"></div><br>
+
+
+<div id="reto2"></div>
+<h1 class="title-h1">Nivel [02] -- SOPHIA</h1>
+<h2 class="mision">mission.txt</h2>
+<P class="text-mision">
+  ## ES ##<br>
+  La usuaria angela ha guardado su password en un fichero pero no recuerda donde... solo recuerda que el fichero se llamaba whereismypazz.txt
+</P><br>
+<h2 class="solution">Solución</h2>
+<p class="text-solution">
+  Para resolver este reto necesitamos conocer las órdenes de sistema correspondientes a la búsqueda de directorios y archivos en todo el sistema.<br>
+  Existe un comando muy útil y con una parametrización amplia destinada a la búsqueda en sistema, lo usaremos para este caso.<br><br>
+  # El parámetro "/" indica el directorio raiz de donde partirá la búsqueda, el "-name" para la entrada del nombre de archivo  y "2>/dev/null" redirige el stderr (2) hacia el directorio /dev/null que podríamos decir que es como el agugero negro del sistema, la papelera del sistama.:<br><br>
+  ~$ find / -name whereismypazz.txt<br><br>
+  # El stdout o salida del comando nos indica que el archivo se encuentra en /usr/share/whereismypazz.txt así que procedemos a leer el contenido del mismo:<br>
+  ---Reordemos que existen rutas relativa y absolutas, además no necesitamos movernos movernos al directorio de un archivo para manipularlo, podemos hacerlo usando la ruta completa.---<br><br>
+  ~$ cat /usr/share/whereismypazz.txt<br>
+</p><br>
+
+<h2 class="title-notas">Notas Adicionales:</h2>
+<p class="text-note">Ahora que conocemos la usuaria y su contraseña, procedemos a loguearnos en el sistema usando los comandos permitidos por el mismo para esta función.</p><br>
+  ~$ su angela<br><br>
+  El directorio actual en el que nos encontramos es /pwned/sophia/ y necesitamos movernos al directorio de la usuaria ANGELA -- /pwned/angela/ <br><br>
+  # Ver el directorio actual en el que nos encontramos:<br><br>
+  ~$ pwd <br><br>
+  # Cambiar o moverse de directorio en sistema:<br><br>
+  ~$ cd /pwned/angela/<br><br>
+
+<br>
+
+
+
+<div><img class="venus-coin" src="images/venus3.gif" width="250px"></div><br>
+
+
+<div id="reto3"></div>
+<h1 class="title-h1">Nivel [03] -- ANGELA</h1>
+<h2 class="mision">mission.txt</h2>
+<P class="text-mision">
+  ## ES ##<br>
+  La password de la usuaria emma esta en la linea 4069 del fichero findme.txt
+</P><br>
+<h2 class="solution">Solución</h2>
+<p class="text-solution">
+  Para resolver este reto necesitamos conocer las órdenes de sistema correspondientes a la  lectura de archivos y cómo formatear el stdout o salida del comando con filtros de sintaxis regular para conseguir el resultado óptimo.<br>
+  Para este caso utilizaremos un filtro sobre el output del comando.<br><br>
+  # Primero con una tubería o pipe el cual se define añadiendo: " | " y que nos permite enlazar el filtro "awk" destinado para formatear output, sobre el que también añadiremos la sintáxis "'NR==4096'" consiguiendo mostrar por el output de pantalla exclusivamente la línea 4096 del archivo de texto "findme.txt" que encontramos en el directorio de la usuaria ANGELA.<br><br>
+  ~$ cat findme.txt | awk 'NR==4096'<br><br>
+</p><br>
+
+<h2 class="title-notas">Notas Adicionales:</h2>
+<p class="text-note">Ahora que conocemos la usuaria y su contraseña, procedemos a loguearnos en el sistema usando los comandos permitidos por el mismo para esta función.</p><br>
+  ~$ su enma<br><br>
+  El directorio actual en el que nos encontramos es /pwned/angela/ y necesitamos movernos al directorio de la usuaria ENMA -- /pwned/enma/ <br><br>
+  # Ver el directorio actual en el que nos encontramos:<br><br>
+  ~$ pwd <br><br>
+  # Cambiar o moverse de directorio en sistema:<br><br>
+  ~$ cd /pwned/angela/<br><br>
+
+<br>
+
+
+</body>
