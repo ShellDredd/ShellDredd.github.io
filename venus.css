@@ -1,0 +1,278 @@
+/* 
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' */
+
+* {
+   margin: 0;
+  padding: 0;
+}
+            
+            #contenedor_carga_apt23{
+                background-image: url(images/arcade.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                -webkit-transition: all 3s ease;
+                -o-transition: all 3s ease;
+                transition: all 3s ease;
+                z-index: 10000;
+            }
+            
+            #menu{
+                
+            }
+
+            #contenedor_carga{
+                background-image: url(images/intro.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                -webkit-transition: all 3s ease;
+                -o-transition: all 3s ease;
+                transition: all 3s ease;
+                z-index: 10000;
+            }
+            
+            #menu{
+                
+            }
+        
+            /* Main styles */
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+
+
+        body {
+            background-color: black;
+            color: pink;
+        }
+
+        .portada-apt-23{
+          position: static;
+          background-image: url(images/venus-portada.gif);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-size: ;
+          background-position-x: center;
+          background-color: black;
+          width: 100%;
+          margin: auto;
+          height: 900px;
+          text-align: center;
+        }
+
+        .icon-intro {
+            size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .logo-portada{
+            width: 100%;
+        }
+
+        .img-hmvm-logo{
+            width: : 450px;
+            margin-top: 70px;
+        }
+
+        .header {
+          background-image: url();
+          background-color: transparent;
+          position: fixed, static;
+          left: 0;
+          top: 0;
+          right: 0;
+      }
+      
+      .header a {
+          color: darkred;
+          text-decoration: none;
+      }
+      
+      .container-logo-nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+      
+      .logo {
+          width: 30px;
+          margin-left: 0.5em;
+          letter-spacing: 5px;
+          font-size: 1.3em;
+      }
+      
+      .logo:hover {
+          font-size: 40px;
+      }
+      
+      .navi ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+      
+      .navi ul li {
+          font-size: 12px;
+          display: inline-block;
+      }
+      
+      .navi ul li a {
+          color: white;
+          display: block;
+          padding: 0.5rem 1rem;
+          transition: all 0.5s linear;
+          border-radius: 5px;
+          transition: width 1s, height 1s, transform 1s;
+      }
+      
+      .navi ul li a:hover {
+          background: darkred;
+          font-size: 20px;
+          color: black;
+          margin: 0.5em;
+          padding: 0.1em;
+          transform: rotate(360deg);
+      }
+      
+      .icon-maquina {
+          width: 30px;
+      }
+      
+      .icon-articulos {
+          width: 40px;
+      }
+      
+      .icon-novedades {
+          width: 60px;
+      }
+      
+      .icon-tool {
+          width: 40px;
+      }
+      
+      .icon-comu {
+          width: 40px;
+      }
+      
+      .icon {
+          width: 70px;
+      }
+      
+      .icon-live {
+          width: 80px;
+      }
+      
+      /* Segunda portada */
+      
+      .header0 {
+          background-image: url(images/line.gif);
+          background-color: black;
+          background-size: cover;
+          position: fixed, static;
+          align-content: center;
+          height: 10px;
+          left: 0;
+          top: 0;
+          right: 0;
+      }
+      
+      .container-logo-nav0 {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+      }
+
+      /* Segundo header */
+    
+    .header2 {
+      background-image: url();
+      background-size: auto;
+      background-color: black;
+      position: fixed, static;
+      height: 100px;
+      left: 0;
+      top: 0;
+      right: 0;
+  }
+  
+  .header2 a {
+      text-decoration: none;
+  }
+  
+  .container-logo-nav2 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  .logo2 {
+      width: 30px;
+      margin-left: 0.5em;
+      letter-spacing: 5px;
+      font-size: 1.3em;
+  }
+  
+  .navi2 ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  
+  .navi2 ul li {
+      font-size: 18px;
+      display: inline-block;
+  }
+  
+  .navi2 ul li a {
+      color: darkred;
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+  }
+  
+  .navi2 ul li a:hover {
+      filter: drop-shadow(5px 10px 10px pink);
+      font-size: 18px;
+      color: pink;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+  }
+  
+  .icon2{
+      width: 50px;
+  }
+
+
+  .code1{font-size: 18px; filter: drop-shadow(5px 5px 20px darkred);}
+  .title-h1{color: pink; filter: drop-shadow(5px 5px 20px pink); }
+  .text-note{color: pink; filter: drop-shadow(5px 5px 20px pink);}
+  .mision{color: darkred; filter: drop-shadow(5px 5px 20px red);margin-top: 1em;}
+  .text-mision{color: darkorange;}
+  .solution{color: darkgreen; filter: drop-shadow(5px 5px 20px darkgreen);}
+  .text-solution{color: white; text-align: justify;}
+  .title-notas{color: purple; filter: drop-shadow(5px 5px 20px purple);}
+
+  .venus-monitor{margin-left: 8em; filter: drop-shadow(5px 5px 20px red)}
+  .venus-coin{margin-left: 8em; filter: drop-shadow(5px 5px 20px red)}
