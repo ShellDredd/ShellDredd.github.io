@@ -90,6 +90,7 @@
                         <li><a style="font-weight: bold;" href="#reto4" target="">Nivel [04]</a></li>
                         <li><a style="font-weight: bold;" href="#reto5" target="">Nivel [05]</a></li>
                         <li><a style="font-weight: bold;" href="#reto6" target="">Nivel [06]</a></li>
+                        <li><a style="font-weight: bold;" href="#reto7" target="">Nivel [07]</a></li>
                     </ul>
                 </nav>
 
@@ -358,13 +359,50 @@
   ~$ su - luna<br><br>
   </code><br>
 
+
+
+<div id="reto7"><img class="venus-coin" src="images/venus7-rick-skate.gif" width="220px"></div>
+
+<h1 class="title-h1">Nivel [07] -- LUNA</h1>
+<h2 class="mision">mission.txt</h2>
+<P class="text-mision">
+  La usuaria eleanor ha dejado su password en un fichero que ocupa 6969 bytes.
+</P><br>
+<h2 class="solution">Solución</h2>
+<p class="text-solution">
+  Para encontrar un archivo por tamaño de bytes en concreto nos sirve la orden find utilizada en el nivel anterior, solo necesitamos añadir "-size" y el número de bytes con la letra "c" al final para indicar bytes.<br>
+  <br><br>
+  # Indicamos que la buscqueda de find parta de la ruta raíz del sistema comn "/", filtramos por tipo de archivo file "type -f" y redirigimos el stderr a la papelera universal del sistema "2>/dev/null".<br>
+  <code class="code1">
+  ~$ find / -size 6969c -type f 2>/dev/null<br>
+  </code><br>
+  # Obtenemos el archivo de texto moon en la ruta "/usr/share/moon.txt" y procedemos a su lectura para obtener la contraseña para "eleanor".<br><br>
+  <code class="code1">
+  ~$ cat /usr/share/moon.txt <br>
+  </code><br>
+</p><br>
+
+<h2 class="title-notas">Notas Adicionales:</h2>
+<p class="text-note">Aprovechemos este nivel para ver un método distinto de lectura usando una redirección del stdout (outut por pantalla) del comando de lectura "cat" y guardando o creando un archivo de texto nuevo en el directorio "/tmp" (*a continuación se explica /tmp) para luego realizar la lectura sobre este archivo que hemos creado.<br><br>
+El símbolo ">" nos permite redireccionar el output o stdout y crear un archivo de texto en el caso de que no exista, escribir en el mismo y si ya existe el archivo, lo sobreescribe borrando todo el contenido del mismo. En cambio, si usamos dos símbolos ">>" lo que hacemos redireccionar y escribir en la última línea disponible al final del archivo, usando un salto de línea "/n"</p><br>
+  <code class="code1">
+  ~$ cat /usr/share/moon.txt > /tmp/surprise.txt && more /tmp/surprise.txt <br>
+  </code><br>
+  <h2 class="title-notas">[*] ¿Qué es el directorio /tmp?</h2>
+  <p class="code1">
+    Como ya da a entender su nombre, sirve para almacenar archivos temporales de todo tipo, ya sea de elementos del sistema, o también de diferentes aplicaciones a nivel de usuario como puedan ser Firefox o Chrome/Chromium.<br>
+  Es un directorio dispuesto para almacenar contenido de corta durada, de hecho en la gran mayoría de los casos se suele vaciar de forma automática en cada reinicio del sistema. Aun así, no debes borrar su contenido de forma manual, puesto que puede contener archivos necesarios para ciertos programas o procesos que estén ejecutándose.</p><br>
+
+  <p class="code1">Las partes omitidas de explicación como por ejemplo el uso de "2/dev/null" , se contemplan en las notas adicionales de los primeros retos, échale un ojo.</p><br>
+  <code class="code1">
+  ~$ su - luna<br><br>
+  </code><br>
+
 <div><img class="venus-coin" src="images/work-progress.gif" width="190px"></div><br>
 <h2 class="mision">CONTINUARÁ</h2><br>
 <p class="text-mision">
   Esta guía aumentará cada día con 5 niveles nuevos hasta terminar el laboratorio Venus por completo.
-</p><br>
-
-<br>
+</p><br><br>
 
 
 
