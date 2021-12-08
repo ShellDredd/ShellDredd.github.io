@@ -395,6 +395,36 @@ El símbolo ">" nos permite redireccionar el output o stdout y crear un archivo 
   <code class="code1">
   ~$ su - eleanor<br><br>
   </code><br>
+           
+  
+ <div id="reto7"><img class="venus-coin" src="images/venus-eleanor.gif" width="260px"></div>
+
+<h1 class="title-h1">Nivel [08] -- ELEANOR</h1>
+<h2 class="mision">mission.txt</h2>
+<P class="text-mision">
+  La usuaria victoria ha dejado su password en un fichero en el cual el propietario es el usuario violin.
+</P><br>
+<h2 class="solution">Solución</h2>
+<p class="text-solution">
+  Para resolver este nivel, seguiremos con el comando "find" y cambiaremos el patrón de búsqueda de nombre a usuari@ con el parámetro "-user".<br><br>
+  <code class="code1">
+  ~$ find / -user violin -type f 2>/dev/null<br>
+  </code><br>
+  # Obtenemos la ruta y el archivo /usr/local/games/yo sobre el cual ejerceremos una orden de sistema para su lectura.<br><br>
+  <code class="code1">
+  ~$ more /usr/local/games/yo<br>
+  </code><br>
+</p><br>
+
+<h2 class="title-notas">Notas Adicionales:</h2>
+  <p class="code1">Las partes omitidas de explicación como por ejemplo el uso de "2/dev/null", "type f" se contemplan en los niveles anteriores, échale un ojo.</p><br>
+  <p class="text-note">
+  Ahora que conocemos la usuaria y su contraseña, procedemos a loguearnos en el sistema usando los comandos permitidos por el mismo para esta función.</p><br>
+  <code class="code1">
+  ~$ su - violin<br><br>
+  </code><br> 
+
+           
 
 <div><img class="venus-coin" src="images/work-progress.gif" width="190px"></div><br>
 <h2 class="mision">CONTINUARÁ</h2><br>
