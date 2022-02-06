@@ -186,7 +186,6 @@ filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
 .header-nav__list {
     margin: 0;
     padding: 0;
-    width: 35%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -247,7 +246,6 @@ filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
 .apt-nav__list {
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
 }
 
 .apt-nav__item:hover {
@@ -264,16 +262,16 @@ filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
     font-weight: bold;
 }
 
-.videoclub {
+.videoclub, .celebrity, .shelldredd, .retos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
-.videoclub-icon {
+.videoclub-icon, .celebrity-icon {
     background-repeat: no-repeat;
     color: black;
     display: flex;
@@ -313,6 +311,7 @@ font-size: 25px;
     border: 3px solid darkred;
     color: white;
     padding-left: 10px;
+    padding-right: 2px;
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
@@ -347,9 +346,44 @@ font-size: 25px;
     padding-left: 10px;
 }
 
-.machine-description {
-
+.darkered-red {
+    color: darkred;
 }
+
+.retos-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.reto {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid darkred;
+    font-size: 15px;
+}
+
+.reto__title, .reto__subtitle{
+    margin: 0;
+    
+}
+
+.reto__description{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .retos-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 /*
 
@@ -702,3 +736,4 @@ span {
     color: rgb(189, 0, 0);
   }
 }
+
