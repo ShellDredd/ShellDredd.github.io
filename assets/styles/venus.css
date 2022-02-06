@@ -14,12 +14,9 @@
       '.        `\
         `'---.   |
            ,__) /
-            `..' */
+            `..' 
 
-* {
-   margin: 0;
-  padding: 0;
-}
+
             
             #contenedor_carga_apt23{
                 background-image: url(images/arcade.gif);
@@ -57,7 +54,7 @@
                 
             }
         
-            /* Main styles */
+            /* Main styles 
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
 
 
@@ -184,7 +181,7 @@
           width: 80px;
       }
       
-      /* Segunda portada */
+      /* Segunda portada 
       
       .header0 {
           background-image: url(images/line.gif);
@@ -204,7 +201,7 @@
           flex-wrap: wrap;
       }
 
-      /* Segundo header */
+      /* Segundo header 
     
     .header2 {
       background-image: url();
@@ -282,3 +279,4 @@
 
   .venus-monitor{margin-left: 8em; filter: drop-shadow(5px 5px 20px red)}
   .venus-coin{margin-left: 5em; filter: drop-shadow(5px 5px 20px red)}
+*/

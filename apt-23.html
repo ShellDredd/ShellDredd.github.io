@@ -1,9 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
+  <!-- Web Site diseñada y programada por Alexandre Varela Sixto - ShellDredd -->
 
-<!-- Web Site diseñada y programada por Alexandre Varela Sixto - ShellDredd -->
-
-<!--      .-----.
+  <!--      .-----.
    .' -   - '.
   /  .-. .-.  \
   |  | | | |  |     ShellDredd Society
@@ -20,150 +19,212 @@
         `'---.   |
            ,__) /
             `..' -->
-	
-<head>
+
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="cache-control" content="no-cache" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <meta name="robots" content="index,follow" />
-    <meta name="description" contant="ShellDredd plataforma web de infosec donde encontrarás máquinas, retos, artículos, herramientas y novedades, además del contenido exclusivo de ShellDredd." />
-    <meta name="keywords" content="shelldredd, hacker, hacking, blog seguridad informática, comunidad linux, comunidad gnu, youtuber linux, directo sobre linux, comunidad programadores"/>
+    <meta
+      name="description"
+      contant="ShellDredd plataforma web de infosec donde encontrarás máquinas, retos, artículos, herramientas y novedades, además del contenido exclusivo de ShellDredd."
+    />
+    <meta
+      name="keywords"
+      content="shelldredd, hacker, hacking, blog seguridad informática, comunidad linux, comunidad gnu, youtuber linux, directo sobre linux, comunidad programadores"
+    />
     <meta rel="canonical" href="https://shelldredd.github.io/ShellDredd/" />
     <meta name="author" content="Alexandre Varela ShellDredd" />
     <meta name="copyright" content="Alexandre Varela ShellDredd" />
 
-    <meta property=”og:image” content=”https://avatars3.githubusercontent.com/u/70167960?s=460&u=a6a16627c52a6bcc024883d0c40e0beb9647f315&v=4” />
-    <link  rel="icon"   href="images/flaticon1.jpeg" type="image/jpeg" sizes="16x16" />
-    <link href="color.css" rel="stylesheet">
+    <meta property=”og:image”
+    content=”https://avatars3.githubusercontent.com/u/70167960?s=460&u=a6a16627c52a6bcc024883d0c40e0beb9647f315&v=4”
+    />
+    <link
+      rel="icon"
+      href="images/flaticon1.jpeg"
+      type="image/jpeg"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link href="assets/styles/color.css" rel="stylesheet" />
 
     <title>ShelDredd Society</title>
+  </head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163406834-2"></script>
-	<script>
- 	 window.dataLayer = window.dataLayer || [];
-  	 function gtag(){dataLayer.push(arguments);}
-  	 gtag('js', new Date());
+  <body>
+    <!-- <div id="contenedor_carga_apt23" class="contenedor_carga_apt23">
+      <div class="contenedor-carga-apt23__image"></div>
+    </div> -->
 
-  	 gtag('config', 'UA-163406834-2');
-	 </script>
-
-</head>
-
-<body>
-
-    <div id="contenedor_carga_apt23">
-        <div id="carga"></div>
-    </div>
-
-    <script>
-        window.onload = function(){
-            var contenedor = document.getElementById('contenedor_carga_apt23');
-            
-            contenedor.style.visibility = 'hidden';
-            contenedor.style.opacity = '0';
-        }
-    </script>
-
-    <main class="main">
-
-
-        <div class="portada-apt-23">
-        
-            <header class="header">
-                <div class="container-logo-nav">
-                    <a href="index.html"class="logo">ShellDredd</a>
-                    <nav class="navi">
-                        <ul class="show">
-                            <li><a style="font-weight: bold;" href="index.html" target="blank"><img class="icon-novedades" src="images/home.gif" width="25px">Inicio</a></li>
-                            <li><a style="font-weight: bold;" href="https://github.com/ShellDredd" target="blank"><img class="icon-novedades" src="images/joker.gif" width="35px">GitHub</a></li>
-                            <li><a style="font-weight: bold;" href="https://www.youtube.com/channel/UCoCzIejJkl4-5Ds9yZIS9kw" target="blank"><img class="icon" src="images/youtube.gif" width="25px">Youtube</a></li>
-                            <li><a style="font-weight: bold;" href="https://www.twitch.tv/shelldredd" target="blank"><img class="icon-live" src="https://media3.giphy.com/media/QZPvzi88jo9l1uPO7i/giphy.gif?cid=ecf05e4739ec8e99eb76bd8d919174db0a228d92f653f11b&rid=giphy.gif" width="25px">Directos</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            
-            </header>
-
-            <div class="logo-shell-portada">
-                <img class="img-segunda" src="images/logo.png">
-            </div><br>
-            
-    
+    <header class="header">
+      <nav class="header-nav">
+        <div class="header-logo">
+          <a href="index.html">
+            <img
+              src="images/logo.png"
+              alt="ShellDredd"
+              class="header-logo__img"
+            />
+          </a>
         </div>
-    
+
+        <ul class="header-nav__list">
+          <a class="header-nav__link" href="index.html" target="_blank">
+            <li class="header-nav__item">
+              <img class="header-nav__icon" src="images/home.gif" />
+              Inicio
+            </li>
+          </a>
+          <a
+            class="header-nav__link"
+            href="https://github.com/ShellDredd"
+            target="_blank"
+          >
+            <li class="header-nav__item">
+              <img class="header-nav__icon" src="images/joker.gif" />
+              GitHub
+            </li>
+          </a>
+          <a
+            class="header-nav__link"
+            href="https://www.youtube.com/channel/UCoCzIejJkl4-5Ds9yZIS9kw"
+            target="_blank"
+          >
+            <li class="header-nav__item">
+              <img
+                class="header-nav__icon"
+                src="images/youtube.gif"
+                width="25px"
+              />Youtube
+            </li>
+          </a>
+          <a
+            class="header-nav__link"
+            href="https://www.twitch.tv/shelldredd"
+            target="_blank"
+          >
+            <li class="header-nav__item">
+              <img
+                class="header-nav__icon"
+                src="https://media3.giphy.com/media/QZPvzi88jo9l1uPO7i/giphy.gif?cid=ecf05e4739ec8e99eb76bd8d919174db0a228d92f653f11b&rid=giphy.gif"
+                width="25px"
+              />Directos
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <main class="apt-main">
+      <nav class="apt-nav">
+        <!--arreglar movimiento de la navbar -->
+        <ul class="apt-nav__list">
+          <li class="apt-nav__item">
+            <a class="apt-nav__link" href="#contenedor">MÁQUINAS</a>
+          </li>
+          <li class="apt-nav__item">
+            <a class="apt-nav__link" href="#retos">RETOS</a>
+          </li>
+          <li class="apt-nav__item">
+            <a
+              class="apt-nav__link"
+              href="venus-lab-writeup.html"
+              target="blank"
+              >WriteUps Venus-LAB HMVM</a
+            >
+          </li>
+          <li class="apt-nav__item">
+            <a
+              href="http://www.gulag.org.mx/proximamente-congreso-2021.html"
+              target="_blank"
+              class="apt-nav__link"
+              >CONFERENCIAS</a
+            >
+          </li>
+        </ul>
+      </nav>
+      
+      <section class="videoclub">
+        <div class="videoclub-icon">
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+          <img class="img-segunda" src="images/cinema.gif" />
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+        </div>
+        <h2 class="section-title">Video Club</h2>
+        <h3 class="section-subtitle">
+          By
+          <a
+            class="section-subtitle__link"
+            href="https://www.twitch.tv/shelldredd"
+            target="_blank"
+            >ShellDredd</a
+          ><br />
+          Like a CTF
+        </h3>
+
+        <article class="machine-title">
+          <h4>✪ Filename: video-club.ova<br /></h4>
+          <h4>✪ File size: 983.413.760 bytes<br /></h4>
+        </article>
+
+        <article class="info">
+          <section class="info-section">
+            <article class="info-section__difficult">
+              <h4>✪Dificulty:<br />☛Easy</h4>
+            </article>
+            <article class="info-section__flag">
+              <h4>✪Flag: 2<br />☛User<br />☛Root</h4>
+            </article>
+
+            <article class="info-section__work">
+              <h4>✪Work:<br />☛Enumeration Web<br />☛Privilege Escalation</h4>
+            </article>
+          </section>
+          <section class="info-downloads">
+            <h4>
+              ✪Descarga Directa: Enlace de
+              <a
+                href="https://drive.google.com/file/d/1IESFuv64TsAQ4Id-jWNjDqM1MygiIySd/view?usp=sharing"
+                target="_blank"
+                style="color: darkred"
+              >
+                Drive
+              </a>
+            </h4>
+            <h4 class="h4-blanco">
+              ✪Descarga desde Plataforma HackMyVM: Enlace de
+              <a
+                class="cursor"
+                href="https://hackmyvm.eu/"
+                target="_blank"
+                style="color: darkred"
+                >HackMyVM</a
+              >
+            </h4>
+          </section>
+        </article>
+
+        <article class="machine-description">
+          <p>
+            Máquina al estilo CTF Old School donde descubrirás el sublime mundo
+            del cine de video club retro, Happy Hacking.
+          </p>
+        </article>
+
         <header class="header0">
-            <div class="container-logo-nav0">   
-            </div>
+          <div class="container-logo-nav0"></div>
         </header>
-    
-    
-        <header class="header2">
-            <div class="container-logo-nav2">
-                
-                <nav class="navi2">
-                    <ul class="show">
-                        <li><a style="font-weight: bold;" href="#contenedor" target="">MÁQUINAS</a></li>
-                        <li><a style="font-weight: bold;" href="#retos" target="">RETOS</a></li>
-                        <li><a style="font-weight: bold;" href="venus-lab-writeup.html" target="blank">WriteUps Venus-LAB HMVM</a></li>
-                        <li><a style="font-weight: bold;" href="http://www.gulag.org.mx/proximamente-congreso-2021.html" target="_blank">CONFERENCIAS</a></li>
-                    </ul>
-                </nav>
+      </section>
+    </main>
 
-    </header>
-		
-    <div class="tom-gif">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-        <img class="img-segunda" src="images/cinema.gif">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-    </div><br>
+    <!-- 
+
 
     
-    <div id="contenedor">
-        <h1 class="h1-cajas">Video Club</h1>
-        <h2></h2>
-        <h3 class="h3-blanco">By <a class="cursor" href="https://www.twitch.tv/shelldredd" target="_blank" style="color:darkred;" >ShellDredd</a><br>
-            Like a CTF</h3><br>
-    </div>
-
-    <div class="div4">
-        <h4 class="h4-blanco">✪Filename: video-club.ova<br>
-            ✪File size: 983.413.760 bytes<br>
-            <br>
-            
-        </h4>
-    </div>
-    <br>
-
-    <div class="div-caja">
-        <h4 class="h4-blanco-caja">✪Dificulty:<br>☛Easy
-        </h4>
-
-        <h4 class="h4-blanco-caja">✪Flag: 2<br>☛User<br>☛Root
-        </h4>
-
-        <h4 class="h4-blanco-caja">✪Work:<br>☛Enumeration Web<br>☛Privilege Escalation
-        </h4>
-    </div>
-
-    <div class="div4">
-        <h4 class="h4-blanco">✪Descarga Directa: Enlace de <a class="cursor" href="https://drive.google.com/file/d/1IESFuv64TsAQ4Id-jWNjDqM1MygiIySd/view?usp=sharing" target="_blank" style="color:darkred;" >Drive</a>
-        </h4>
-        <h4 class="h4-blanco">✪Descarga desde Plataforma HackMyVM: Enlace de <a class="cursor" href="https://hackmyvm.eu/" target="_blank" style="color:darkred;" >HackMyVM</a>
-        </h4>
-    </div>
-    <br>
-
-    <div class="div4">
-        <h4 class="h4-blanco">
-            Máquina al estilo CTF Old School donde descubrirás el sublime mundo del cine de video club retro, Happy Hacking.
-        </h4>
-    </div>
-
-    <header class="header0">
-            <div class="container-logo-nav0"></div>
-    </header>
 		
 		
 		
@@ -269,7 +330,7 @@
         </h4>
     </div>
 
-    
+    ## ZONA RETOS ##
     
 
     <div id="retos" class="contenedor">
@@ -357,10 +418,7 @@
         </h4>
 
     </div>
-
-
-
-
-    </main>
-    
-</body>
+-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
