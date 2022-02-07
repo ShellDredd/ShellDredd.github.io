@@ -1,10 +1,12 @@
 //contenedor de carga
 window.addEventListener('load', () => {
   const contenedor = document.getElementById('contenedor_carga')
-  const contenedor_apt23 = document.getElementById('contenedor_carga_apt23')
-
+  const contenedor_carga_image = document.getElementById(
+    'contenedor-carga-image'
+  )
   contenedor.classList.add('hide-image')
-  contenedor_apt23.classList.add('hide-image')
+  contenedor_carga_image.classList.add('hide-image')
+  
 })
 
 //google function
