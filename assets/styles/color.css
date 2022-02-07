@@ -354,6 +354,7 @@ font-size: 25px;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
+    width: 70%;
 }
 
 .reto {
@@ -361,22 +362,34 @@ font-size: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: 2px solid darkred;
     font-size: 15px;
+    padding: 10px;	
 }
-
+.title-container{
+  text-align: center;
+}
 .reto__title, .reto__subtitle{
     margin: 0;
+    padding: 0;
     
 }
 
-.reto__description{
+.reto-description{
     width: 100%;
     text-align: center;
 }
 
+.reto-description__paragraph {
+  font-size: 20px;
+  text-align: center;
 
+}
+
+.reto__img {
+  max-width: 100%;
+}
 
 @media screen and (min-width: 1024px) {
     .retos-list {
