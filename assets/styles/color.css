@@ -392,7 +392,9 @@ font-size: 25px;
 }
 
 @media screen and (min-width: 1024px) {
+
     .retos-list {
+      width: 100%;
         grid-template-columns: 1fr 1fr;
     }
 }
