@@ -1,9 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
+  <!-- Web Site diseñada y programada por Alexandre Varela Sixto - ShellDredd -->
 
-<!-- Web Site diseñada y programada por Alexandre Varela Sixto - ShellDredd -->
-
-<!--      .-----.
+  <!--      .-----.
    .' -   - '.
   /  .-. .-.  \
   |  | | | |  |     ShellDredd Society
@@ -20,347 +19,549 @@
         `'---.   |
            ,__) /
             `..' -->
-	
-<head>
+
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="cache-control" content="no-cache" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <meta name="robots" content="index,follow" />
-    <meta name="description" contant="ShellDredd plataforma web de infosec donde encontrarás máquinas, retos, artículos, herramientas y novedades, además del contenido exclusivo de ShellDredd." />
-    <meta name="keywords" content="shelldredd, hacker, hacking, blog seguridad informática, comunidad linux, comunidad gnu, youtuber linux, directo sobre linux, comunidad programadores"/>
+    <meta
+      name="description"
+      contant="ShellDredd plataforma web de infosec donde encontrarás máquinas, retos, artículos, herramientas y novedades, además del contenido exclusivo de ShellDredd."
+    />
+    <meta
+      name="keywords"
+      content="shelldredd, hacker, hacking, blog seguridad informática, comunidad linux, comunidad gnu, youtuber linux, directo sobre linux, comunidad programadores"
+    />
     <meta rel="canonical" href="https://shelldredd.github.io/ShellDredd/" />
     <meta name="author" content="Alexandre Varela ShellDredd" />
     <meta name="copyright" content="Alexandre Varela ShellDredd" />
 
-    <meta property=”og:image” content=”https://avatars3.githubusercontent.com/u/70167960?s=460&u=a6a16627c52a6bcc024883d0c40e0beb9647f315&v=4” />
-    <link  rel="icon"   href="images/flaticon1.jpeg" type="image/jpeg" sizes="16x16" />
-    <link href="color.css" rel="stylesheet">
+    <meta property=”og:image”
+    content=”https://avatars3.githubusercontent.com/u/70167960?s=460&u=a6a16627c52a6bcc024883d0c40e0beb9647f315&v=4”
+    />
+    <link
+      rel="icon"
+      href="images/flaticon1.jpeg"
+      type="image/jpeg"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link href="assets/styles/color.css" rel="stylesheet" />
 
     <title>ShelDredd Society</title>
+  </head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163406834-2"></script>
-	<script>
- 	 window.dataLayer = window.dataLayer || [];
-  	 function gtag(){dataLayer.push(arguments);}
-  	 gtag('js', new Date());
-
-  	 gtag('config', 'UA-163406834-2');
-	 </script>
-
-</head>
-
-<body>
-
-    <div id="contenedor_carga_apt23">
-        <div id="carga"></div>
+  <body>
+    <div id="contenedor_carga_apt23" class="contenedor_carga_apt23">
+      <div class="contenedor-carga-apt23__image" id="contenedor-carga-apt23-image"></div>
     </div>
 
-    <script>
-        window.onload = function(){
-            var contenedor = document.getElementById('contenedor_carga_apt23');
-            
-            contenedor.style.visibility = 'hidden';
-            contenedor.style.opacity = '0';
-        }
-    </script>
-
-    <main class="main">
-
-
-        <div class="portada-apt-23">
-        
-            <header class="header">
-                <div class="container-logo-nav">
-                    <a href="index.html"class="logo">ShellDredd</a>
-                    <nav class="navi">
-                        <ul class="show">
-                            <li><a style="font-weight: bold;" href="index.html" target="blank"><img class="icon-novedades" src="images/home.gif" width="25px">Inicio</a></li>
-                            <li><a style="font-weight: bold;" href="https://github.com/ShellDredd" target="blank"><img class="icon-novedades" src="images/joker.gif" width="35px">GitHub</a></li>
-                            <li><a style="font-weight: bold;" href="https://www.youtube.com/channel/UCoCzIejJkl4-5Ds9yZIS9kw" target="blank"><img class="icon" src="images/youtube.gif" width="25px">Youtube</a></li>
-                            <li><a style="font-weight: bold;" href="https://www.twitch.tv/shelldredd" target="blank"><img class="icon-live" src="https://media3.giphy.com/media/QZPvzi88jo9l1uPO7i/giphy.gif?cid=ecf05e4739ec8e99eb76bd8d919174db0a228d92f653f11b&rid=giphy.gif" width="25px">Directos</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            
-            </header>
-
-            <div class="logo-shell-portada">
-                <img class="img-segunda" src="images/logo.png">
-            </div><br>
-            
-    
+    <header class="header">
+      <nav class="header-nav">
+        <div class="header-logo">
+          <a href="index.html">
+            <img
+              src="images/logo.png"
+              alt="ShellDredd"
+              class="header-logo__img"
+            />
+          </a>
         </div>
-    
+
+        <ul class="header-nav__list">
+          <a class="header-nav__link" href="index.html" target="_blank">
+            <li class="header-nav__item">
+              <img class="header-nav__icon" src="images/home.gif" />
+              Inicio
+            </li>
+          </a>
+          <a
+            class="header-nav__link"
+            href="https://github.com/ShellDredd"
+            target="_blank"
+          >
+            <li class="header-nav__item">
+              <img class="header-nav__icon" src="images/joker.gif" />
+              GitHub
+            </li>
+          </a>
+          <a
+            class="header-nav__link"
+            href="https://www.youtube.com/channel/UCoCzIejJkl4-5Ds9yZIS9kw"
+            target="_blank"
+          >
+            <li class="header-nav__item">
+              <img
+                class="header-nav__icon"
+                src="images/youtube.gif"
+                width="25px"
+              />Youtube
+            </li>
+          </a>
+          <a
+            class="header-nav__link"
+            href="https://www.twitch.tv/shelldredd"
+            target="_blank"
+          >
+            <li class="header-nav__item">
+              <img
+                class="header-nav__icon"
+                src="https://media3.giphy.com/media/QZPvzi88jo9l1uPO7i/giphy.gif?cid=ecf05e4739ec8e99eb76bd8d919174db0a228d92f653f11b&rid=giphy.gif"
+                width="25px"
+              />Directos
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <main class="apt-main">
+      <nav class="apt-nav">
+        <!--arreglar movimiento de la navbar -->
+        <ul class="apt-nav__list">
+          <li class="apt-nav__item">
+            <a class="apt-nav__link" href="#maquinas">MÁQUINAS</a>
+          </li>
+          <li class="apt-nav__item">
+            <a class="apt-nav__link" href="#retos">RETOS</a>
+          </li>
+          <li class="apt-nav__item">
+            <a
+              class="apt-nav__link"
+              href="venus-lab-writeup.html"
+              target="blank"
+              >WriteUps Venus-LAB HMVM</a
+            >
+          </li>
+          <li class="apt-nav__item">
+            <a
+              href="http://www.gulag.org.mx/proximamente-congreso-2021.html"
+              target="_blank"
+              class="apt-nav__link"
+              >CONFERENCIAS</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <section class="videoclub" id="maquinas">
+        <div class="videoclub-icon">
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+          <img class="img-segunda" src="images/cinema.gif" />
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+        </div>
+        <h2 class="section-title">Video Club</h2>
+        <h3 class="section-subtitle">
+          By
+          <a
+            class="section-subtitle__link"
+            href="https://www.twitch.tv/shelldredd"
+            target="_blank"
+            >ShellDredd</a
+          ><br />
+          Like a CTF
+        </h3>
+
+        <article class="machine-title">
+          <h4>✪ Filename: video-club.ova<br /></h4>
+          <h4>✪ File size: 983.413.760 bytes<br /></h4>
+        </article>
+
+        <article class="info">
+          <section class="info-section">
+            <article class="info-section__difficult">
+              <h4>✪Dificulty:<br />☛Easy</h4>
+            </article>
+            <article class="info-section__flag">
+              <h4>✪Flag: 2<br />☛User<br />☛Root</h4>
+            </article>
+
+            <article class="info-section__work">
+              <h4>✪Work:<br />☛Enumeration Web<br />☛Privilege Escalation</h4>
+            </article>
+          </section>
+          <section class="info-downloads">
+            <h4>
+              ✪Descarga Directa: Enlace de
+              <a
+                href="https://drive.google.com/file/d/1IESFuv64TsAQ4Id-jWNjDqM1MygiIySd/view?usp=sharing"
+                target="_blank"
+                class="darkered-red"
+              >
+                Drive
+              </a>
+            </h4>
+            <h4>
+              ✪Descarga desde Plataforma HackMyVM: Enlace de
+              <a
+                class="darkered-red"
+                href="https://hackmyvm.eu/"
+                target="_blank"
+                >HackMyVM</a
+              >
+            </h4>
+          </section>
+        </article>
+
+        <article class="machine-description">
+          <p>
+            Máquina al estilo CTF Old School donde descubrirás el sublime mundo
+            del cine de video club retro, Happy Hacking.
+          </p>
+        </article>
+
         <header class="header0">
-            <div class="container-logo-nav0">   
-            </div>
+          <div class="container-logo-nav0"></div>
         </header>
-    
-    
-        <header class="header2">
-            <div class="container-logo-nav2">
-                
-                <nav class="navi2">
-                    <ul class="show">
-                        <li><a style="font-weight: bold;" href="#contenedor" target="">MÁQUINAS</a></li>
-                        <li><a style="font-weight: bold;" href="#retos" target="">RETOS</a></li>
-                        <li><a style="font-weight: bold;" href="venus-lab-writeup.html" target="blank">WriteUps Venus-LAB HMVM</a></li>
-                        <li><a style="font-weight: bold;" href="http://www.gulag.org.mx/proximamente-congreso-2021.html" target="_blank">CONFERENCIAS</a></li>
-                    </ul>
-                </nav>
+      </section>
 
-    </header>
-		
-    <div class="tom-gif">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-        <img class="img-segunda" src="images/cinema.gif">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-    </div><br>
+      <section class="celebrity">
+        <div class="celebrity-icon">
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+          <img class="img-segunda" src="images/joker.gif" />
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+        </div>
+        <h2 class="section-title">Celebrity Soup</h2>
+        <h3 class="section-subtitle">
+          By
+          <a
+            class="section-subtitle__link"
+            href="https://www.twitch.tv/shelldredd"
+            target="_blank"
+            >ShellDredd</a
+          ><br />
+          Like a CTF
+        </h3>
+        <article class="machine-title">
+          <h4>✪Filename: Celebrity-soup.ova<br /></h4>
+          <h4>✪File size: 794,8 MiB<br /></h4>
+        </article>
 
-    
-    <div id="contenedor">
-        <h1 class="h1-cajas">Video Club</h1>
-        <h2></h2>
-        <h3 class="h3-blanco">By <a class="cursor" href="https://www.twitch.tv/shelldredd" target="_blank" style="color:darkred;" >ShellDredd</a><br>
-            Like a CTF</h3><br>
-    </div>
+        <article class="info">
+          <section class="info-section">
+            <article class="info-section__difficult">
+              <h4>✪Dificulty:<br />☛Medium</h4>
+            </article>
+            <article class="info-section__flag">
+              <h4>✪Flag: 2<br />☛User<br />☛Root</h4>
+            </article>
 
-    <div class="div4">
-        <h4 class="h4-blanco">✪Filename: video-club.ova<br>
-            ✪File size: 983.413.760 bytes<br>
-            <br>
-            
-        </h4>
-    </div>
-    <br>
+            <article class="info-section__work">
+              <h4>✪Work:<br />☛Enumeration<br />☛Privilege Escalation</h4>
+            </article>
+          </section>
+          <section class="info-downloads">
+            <h4>
+              ✪Descarga: Enlace de
+              <a
+                href="https://drive.google.com/file/d/1LbuY8IdD-yPX0DkpLkJG4q_fBO9RB4kg/view?usp=sharing"
+                target="_blank"
+                class="darkered-red"
+                >Drive</a
+              >
+            </h4>
+            <h4>
+              ✪Descarga desde Plataforma HackMyVM: Enlace de
+              <a
+                href="https://drive.google.com/file/d/1LbuY8IdD-yPX0DkpLkJG4q_fBO9RB4kg/view?usp=sharing"
+                target="_blank"
+                class="darkered-red"
+                >HackMyVM</a
+              >
+            </h4>
+          </section>
+        </article>
 
-    <div class="div-caja">
-        <h4 class="h4-blanco-caja">✪Dificulty:<br>☛Easy
-        </h4>
+        <article class="machine-description">
+          <p>
+            Máquina al estilo CTF enfocada a un entorno futurista donde tendrás
+            que descubrir los secretos y experimentos de un Departamento de
+            cibercrimen muy peculiar.
+          </p>
+        </article>
+      </section>
 
-        <h4 class="h4-blanco-caja">✪Flag: 2<br>☛User<br>☛Root
-        </h4>
+      <section class="shelldredd">
+        <div class="celebrity-icon">
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+          <img class="img-segunda" src="images/joker.gif" />
+          <img class="laser-espacio" src="images/laser-fast-rojo.gif" />
+        </div>
+        <h2 class="section-title">Celebrity Soup</h2>
+        <h3 class="section-subtitle">
+          By
+          <a
+            class="section-subtitle__link"
+            href="https://www.twitch.tv/shelldredd"
+            target="_blank"
+            >ShellDredd</a
+          ><br />
+          Like a CTF
+        </h3>
+        <article class="machine-title">
+          <h4>✪Filename: ShellDredd-Lab.ova<br /></h4>
+          <h4>✪File size: 803 MB<br /></h4>
+          <h4>✪MD5: 1628C919B784DF23F2AC84B547888663<br /></h4>
+          <h4>✪SHA1: 0E8181822F6B2BD24488952641F396D2D01F894C<br /></h4>
+        </article>
 
-        <h4 class="h4-blanco-caja">✪Work:<br>☛Enumeration Web<br>☛Privilege Escalation
-        </h4>
-    </div>
+        <article class="info">
+          <section class="info-section">
+            <article class="info-section__difficult">
+              <h4>✪Dificulty:<br />☛Easy</h4>
+            </article>
+            <article class="info-section__flag">
+              <h4>✪Flag: 2<br />☛User<br />☛Root</h4>
+            </article>
 
-    <div class="div4">
-        <h4 class="h4-blanco">✪Descarga Directa: Enlace de <a class="cursor" href="https://drive.google.com/file/d/1IESFuv64TsAQ4Id-jWNjDqM1MygiIySd/view?usp=sharing" target="_blank" style="color:darkred;" >Drive</a>
-        </h4>
-        <h4 class="h4-blanco">✪Descarga desde Plataforma HackMyVM: Enlace de <a class="cursor" href="https://hackmyvm.eu/" target="_blank" style="color:darkred;" >HackMyVM</a>
-        </h4>
-    </div>
-    <br>
+            <article class="info-section__work">
+              <h4>✪Work:<br />☛Enumeration<br />☛Privilege Escalation</h4>
+            </article>
+          </section>
+          <section class="info-downloads">
+            <h4>
+              ✪Descarga:<br />Disponible a través de Discord
+              <a
+                class="darkered-red"
+                href="https://discord.gg/uYbWvCxjS3"
+                target="_blank"
+                >Enlace a la comunidad de Discord</a
+              >
+            </h4>
+          </section>
+        </article>
 
-    <div class="div4">
-        <h4 class="h4-blanco">
-            Máquina al estilo CTF Old School donde descubrirás el sublime mundo del cine de video club retro, Happy Hacking.
-        </h4>
-    </div>
-
-    <header class="header0">
-            <div class="container-logo-nav0"></div>
-    </header>
-		
-		
-		
-
-    <div class="tom-gif">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-        <img class="img-segunda" src="images/joker.gif">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-    </div><br>
-
-    
-    <div id="contenedor">
-        <h1 class="h1-cajas">Celebrity Soup</h1>
-        <h2></h2>
-        <h3 class="h3-blanco">By <a class="cursor" href="https://www.twitch.tv/shelldredd" target="_blank" style="color:darkred;" >ShellDredd</a><br>
-            Like a CTF</h3><br>
-    </div>
-
-    <div class="div4">
-        <h4 class="h4-blanco">✪Filename: Celebrity-soup.ova<br>
-            ✪File size: 794,8 MiB<br>
-            <br>
-            
-        </h4>
-    </div>
-    <br>
-
-    <div class="div-caja">
-        <h4 class="h4-blanco-caja">✪Dificulty:<br>☛Medium
-        </h4>
-
-        <h4 class="h4-blanco-caja">✪Flag: 2<br>☛User<br>☛Root
-        </h4>
-
-        <h4 class="h4-blanco-caja">✪Work:<br>☛Enumeration<br>☛Privilege Escalation
-        </h4>
-    </div>
-
-    <div class="div4">
-        <h4 class="h4-blanco">✪Descarga: Enlace de <a class="cursor" href="https://drive.google.com/file/d/1LbuY8IdD-yPX0DkpLkJG4q_fBO9RB4kg/view?usp=sharing" target="_blank" style="color:darkred;" >Drive</a>
-        </h4>
-        <h4 class="h4-blanco">✪Descarga desde Plataforma HackMyVM: Enlace de <a class="cursor" href="https://drive.google.com/file/d/1LbuY8IdD-yPX0DkpLkJG4q_fBO9RB4kg/view?usp=sharing" target="_blank" style="color:darkred;" >HackMyVM</a>
-        </h4>
-    </div>
-    <br>
-
-    <div class="div4">
-        <h4 class="h4-blanco">
-            Máquina al estilo CTF enfocada a un entorno futurista donde tendrás que descubrir los secretos y experimentos de un Departamento
-            de cibercrimen muy peculiar.
-        </h4>
-    </div>
-
-    <header class="header0">
-            <div class="container-logo-nav0"></div>
-    </header>
-
-    <div class="logo-shell">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-        <img class="img-segunda" src="images/logo.png">
-        <img class="laser-espacio" src="images/laser-fast-rojo.gif" >
-    </div><br>
-
-    <div class="contenedor">
-        <h1><br>Máquina Shelldredd Lab</h1>
-        <h2></h2>
-        <h3 class="h3-blanco">By <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >d4t4s3c</a><br>
-            Máquina exclusiva de ShellDredd Society</h3><br>
-    </div>
-
-    <div class="div4">
-        <h4 class="h4-blanco">✪Filename: ShellDredd-Lab.ova<br>
-            ✪File size: 803 MB<br>
-            ✪MD5: 1628C919B784DF23F2AC84B547888663<br>
-            ✪SHA1: 0E8181822F6B2BD24488952641F396D2D01F894C
-        </h4>
-    </div>
-    <br>
-
-    <div class="div-caja">
-        <h4 class="h4-blanco-caja">✪Dificultad:<br>☛Easy
-        </h4>
-
-        <h4 class="h4-blanco-caja">✪Flag: 2<br>☛User<br>☛Root
-        </h4>
-
-        <h4 class="h4-blanco-caja">✪Practica:<br>☛Enumeration<br>☛Privilege Escalation
-        </h4>
-    </div>
-
-    <div class="div4">
-        <h4 class="h4-blanco">✪Descarga:<br>Disponible a través de Discord <a class="cursor" href="https://discord.gg/uYbWvCxjS3" target="_blank" style="color:darkred;" >Enlace a la comunidad de Discord</a>
-        </h4>
-        
-    </div>
-    <br>
-
-    <div class="div4">
-        <h4 class="h4-blanco">Ha sido creada por <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:red;" >d4t4s3c</a>
-            , un compañero de la comunidad que nos ha regalado esta máquina destinada a los principiantes.<br>
-            Puedes encontrar repositorios y herramientas de d4t4s3c <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:red;" >aquí</a><br>
+        <article class="machine-description">
+          <p>
+            Ha sido creada por
+            <a
+              class="cursor"
+              href="https://github.com/d4t4s3c/"
+              target="_blank"
+              style="color: red"
+              >d4t4s3c</a
+            >
+            , un compañero de la comunidad que nos ha regalado esta máquina
+            destinada a los principiantes.<br />
+            Puedes encontrar repositorios y herramientas de d4t4s3c
+            <a
+              class="cursor"
+              href="https://github.com/d4t4s3c/"
+              target="_blank"
+              style="color: red"
+              >aquí</a
+            ><br />
             ¿Estás listo para jugar tu moneda?
-        </h4>
-    </div>
+          </p>
+        </article>
+      </section>
 
-    
-    
+      <section class="retos" id="retos">
+        <h2 class="section-title">Zona Retos</h2>
+        <h3 class="section-subtitle">
+          Retos de diferentes temáticas y
+          <a
+            class="darkered-red"
+            href="https://github.com/d4t4s3c/"
+            target="_blank"
+            >Creadores</a
+          ><br />
+          Retos web, stego, criptografía, reversing, osint, misc, decode ...
+        </h3>
+        <img class="arcadereto-img" src="images/retro-arcade.gif" /><br />
+        <img class="laser1rojo-img" src="images/laser1rojo.gif" />
 
-    <div id="retos" class="contenedor">
-        <h1><br>Zona Retos</h1><br>
-        <h2></h2>
-        <h3 class="h3-blanco">Retos de diferentes temáticas y <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >Creadores</a><br>
-            Retos web, stego, criptografía, reversing, osint, misc, decode ...</h3><br>
-            <img class="arcadereto-img" src="images/retro-arcade.gif" ><br>
-            <img class="laser1rojo-img" src="images/laser1rojo.gif" >
-            
-    </div>
+        <section class="retos-list">
+          <article class="reto">
+            <h2 class="reto__title">JOKER BRAIN GAME</h2>
+            <h3 class="reto__subtitle">
+              By
+              <a
+                class="darkered-red"
+                href="https://github.com/d4t4s3c/"
+                target="_blank"
+                >ShellDredd</a
+              >
+            </h3>
+            <div class="reto-description">
+              <h3>
+                Reto de dificultad media Disfruta del stego, el decode y
+                enumeración web
+              </h3>
+              <h3>Descubre el chiste del JOKER</h3>
+            </div>
+            <img class="img-reto-joker" src="images/joker-reto.gif" />
+            <a href="https://shelldredd.github.io/23/">
+              <img
+                src="images/start-win.gif"
+                width="130px"
+                href="https://shelldredd.github.io/23/"
+              />
+            </a>
+          </article>
+          <article class="reto">
+            <h2 class="reto__title">RETO_1 STEGO - ALIENS</h2>
+            <h3 class="reto__subtitle">
+              By
+              <a
+                class="darkered-red"
+                href="https://github.com/d4t4s3c/"
+                target="_blank"
+                >Noname</a
+              >
+            </h3>
+            <div class="reto-description">
+              <h3>
+                <br />Reto de dificultad fácil<br />--------------<br />
+                Encuentra la flag<br />
+              </h3>
+            </div>
 
-    <div class="div-caja-video">
-        <h4 class="h4-blanco-caja">JOKER BRAIN GAME<br>
-            By <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >ShellDredd</a><br>
-            <br>Reto de dificultad media<br>
-            Disfruta del stego, el decode y enumeración web<br><br>
-            Descubre el chiste del JOKER<br>
-            <img class="img-reto-joker" src="images/joker-reto.gif"><br>
-            <a href="https://shelldredd.github.io/23/"><img src="images/start-win.gif" width="130px" href="https://shelldredd.github.io/23/"></a>
-            
-            
-        </h4>
-        
-        <h4 class="h4-blanco-caja">RETO_1 STEGO - ALIENS<br>
-            By <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >Noname</a><br>
-            <br>Reto de dificultad fácil<br>--------------<br>
-            Encuentra la flag<br>
-            
-            <img class="reto2-img" src="images/Aliens_El_Regreso.jpg" ><br>
-            Se puede resolver en Windows, GNU-Linux o Mac
-            Formato de la flag: flag{Ejemplo_de_una_flag}<br>
-            <a href="images/Aliens_El_Regreso.jpg"><img src="https://media1.giphy.com/media/9gkkXa6EE2qaprN5xg/giphy.gif?cid=ecf05e47vieny2gymr38eogah1fza5zv7s3ard8iqpmw4992&rid=giphy.gif&ct=s" width="180px"></a>
-            
-        </h4>
-    </div><br><br>
+            <img class="reto2-img" src="images/Aliens_El_Regreso.jpg" /><br />
+            <h4>
+              Se puede resolver en Windows, GNU-Linux o Mac Formato de la flag:
+              flag{Ejemplo_de_una_flag}<br />
+            </h4>
+            <a href="images/Aliens_El_Regreso.jpg">
+              <img
+                src="https://media1.giphy.com/media/9gkkXa6EE2qaprN5xg/giphy.gif?cid=ecf05e47vieny2gymr38eogah1fza5zv7s3ard8iqpmw4992&rid=giphy.gif&ct=s"
+                width="180px"
+              />
+            </a>
+          </article>
+
+          <article class="reto">
+            <div class="title-container">
+              <h2 class="reto__title">RETO_2 STEGO</h2>
+              <h3 class="reto__subtitle">
+                By
+                <a
+                  class="darkered-red"
+                  href="https://github.com/d4t4s3c/"
+                  target="_blank"
+                  >Noname</a
+                >
+              </h3>
+
+            </div>
+            <img class="reto__img" src="images//cG9va2FJVFRE.jpg" />
+            <div class="reto__description">
+              <h3>
+                <br />Reto de dificultad fácil<br />--------------<br />
+                Encuentra la flag<br />
+              </h3>
+            </div>
+
+            <h4>
+              Se puede resolver en Windows, GNU-Linux o Mac Formato de la flag:
+              flag{Ejemplo_de_una_flag}<br />
+            </h4>
+            <a href="images/cG9va2FJVFRE.jpg"
+              ><img
+                src="https://media3.giphy.com/media/md76w7onmbfHiXlj4R/giphy.gif?cid=ecf05e47z5o2ed5wnw8vhdwxuy275xcd1dqnlietw69w7kne&rid=giphy.gif&ct=s"
+                width="70px" /></a
+            ><br />
+          </article>
+
+          <article class="reto">
+            <h2 class="reto__title">RETO_3 STEGO - AUDIO</h2>
+            <h3 class="reto__subtitle">
+              By
+              <a
+                class="darkered-red"
+                href="https://github.com/d4t4s3c/"
+                target="_blank"
+                >Noname</a
+              ><br />
+            </h3>
+            <img class="reto__img" src="images/cassete.gif" />
+
+            <div class="reto-description">
+              <h3>
+                <br />Reto de dificultad fácil<br />--------------<br />
+                Encuentra la flag<br />
+              </h3>
+            </div>
+
+            <h4>
+              Formato de la flag: flag{Ejemplo_de_una_flag} 09/07/2021<br />
+            </h4>
+            <a href="images/CTF-voz.wav"
+              ><img
+                src="https://media1.giphy.com/media/9gkkXa6EE2qaprN5xg/giphy.gif?cid=ecf05e47vieny2gymr38eogah1fza5zv7s3ard8iqpmw4992&rid=giphy.gif&ct=s"
+                width="180px"
+            /></a>
+          </article>
+
+          <article class="reto">
+            <h2 class="reto__title">RETOrmenta14</h2>
+            <h3 class="reto__subtitle">
+              By
+              <a
+                class="darkered-red"
+                href="https://twitter.com/a1t0rmenta"
+                target="_blank"
+                >A1t0rmenta</a
+              ><br />
+            </h3>
+            <img class="reto2-img" src="images/rabbit.gif" />
+
+            <div class="reto-description">
+              <p class="reto-description__paragraph">
+                RETOrmenta14: @S4vitar necesita nuestra ayuda para poder emitir
+                hoy.<br />
+                Tenemos que decodificar un mensaje para acceder a
+                vodafonePraim:<br /><br /><br />
+                102 108 097 103 123 115 052 118 105 116 097 114 038 118 111 100
+                097 102 111 110 101 078 101 099 101 115 105 116 097 110 072 105
+                101 108 111 125
+              </p>
+            </div>
+
+            <a href="images/CTF-voz.wav"
+              ><img
+                src="https://media1.giphy.com/media/9gkkXa6EE2qaprN5xg/giphy.gif?cid=ecf05e47vieny2gymr38eogah1fza5zv7s3ard8iqpmw4992&rid=giphy.gif&ct=s"
+                width="180px"
+            /></a>
+          </article>
+
+          <article class="reto">
+            <h2 class="reto__title">RETO_3 STEGO - AUDIO</h2>
+            <h3 class="reto__subtitle">
+              By
+              <a
+                class="darkered-red"
+                href="https://github.com/d4t4s3c/"
+                target="_blank"
+                >Noname</a
+              ><br />
+            </h3>
+            <img class="reto__img" src="images/stego-audio.gif" >
 
 
-    <div class="div-caja-video">
-        
+            <div class="reto__description">
+              <p class="reto-description__paragraph">
+                Team Kitty ha interceptado un archivo comprimido en 7z que contiene un txt codificado
+              Serás capaz de descifrarlo y encontrar la flag? <br>
+              Formato de la flag: flag{Esto_es_una_flag}
+              02/07/2021<br />
+              Formato de la flag: flag{Ejemplo_de_una_flag} 09/07/2021<br />
 
-        <h4 class="h4-blanco-caja">RETO_2 STEGO<br>By <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >Noname</a><br>
-            <img class="reto2-img" src="images//cG9va2FJVFRE.jpg">
-            <br>Reto de dificultad fácil<br>--------------<br>Encuentra la flag<br>
-            Se puede resolver en Windows, GNU-Linux o Mac
-            Formato de la flag: flag{Ejemplo_de_una_flag}<br><br>
-            <a href="images/cG9va2FJVFRE.jpg"><img src="https://media3.giphy.com/media/md76w7onmbfHiXlj4R/giphy.gif?cid=ecf05e47z5o2ed5wnw8vhdwxuy275xcd1dqnlietw69w7kne&rid=giphy.gif&ct=s" width="70px"></a><br>
-            
-        </h4>
-        
-        <h4 class="h4-blanco-caja">RETO_3 STEGO - AUDIO<br>
-            By <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >Noname</a><br>
-            <img class="reto-cassete-img" src="images/cassete.gif" >
-            <br>Reto de dificultad fácil<br>--------------<br>
-            Encuentra la flag<br>
-            Formato de la flag: flag{Ejemplo_de_una_flag}
-            09/07/2021<br><br>
-            <a href="images/CTF-voz.wav"><img src="https://media1.giphy.com/media/9gkkXa6EE2qaprN5xg/giphy.gif?cid=ecf05e47vieny2gymr38eogah1fza5zv7s3ard8iqpmw4992&rid=giphy.gif&ct=s" width="180px"></a>
-        </h4>
+              </p>
+            </div>
 
-    </div>
-
-    
-
-    <div class="div-caja-video">
-        
-
-        <h4 class="h4-blanco-caja">RETOrmenta14<br>By <a class="cursor" href="https://twitter.com/a1t0rmenta" target="_blank" style="color:darkred;" >A1t0rmenta</a><br>
-            <img class="reto2-img" src="images/rabbit.gif">
-            <br>RETOrmenta14: @S4vitar necesita nuestra ayuda para poder emitir hoy.<br> Tenemos que decodificar un mensaje para acceder a vodafonePraim:<br><br><br>
-           102 108 097 103 123 115 052 118 105 116 097 114 038 118 111 100 097 102 111 110 101 078 101 099 101 115 105 116 097 110 072 105 101 108 111 125<br>
-            <a href="retormenta_14.txt" ><img src="images/start-win.gif" width="130px">
-            <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" ></a>
-        </h4>
-        
-        <h4 class="h4-blanco-caja">Reto_01 Criptografía<br>
-            By <a class="cursor" href="https://github.com/d4t4s3c/" target="_blank" style="color:darkred;" >Noname</a><br>
-            <img class="reto-cassete-img" src="images/stego-audio.gif" >
-            <br>Reto de dificultad fácil<br>--------------<br>
-            Team Kitty ha interceptado un archivo comprimido en 7z que contiene un txt codificado
-            Serás capaz de descifrarlo y encontrar la flag? <br>
-            Formato de la flag: flag{Esto_es_una_flag}
-            02/07/2021<br>
+            <h4>
+            </h4>
             <a href="images/secret_file.7z"><img href="" src="https://media1.giphy.com/media/9gkkXa6EE2qaprN5xg/giphy.gif?cid=ecf05e47vieny2gymr38eogah1fza5zv7s3ard8iqpmw4992&rid=giphy.gif&ct=s" width="180px">
-        </h4>
 
-    </div>
-
-
-
-
+          </article>
+        </section>
+      </section>
     </main>
-    
-</body>
+    <script src="js/apt23.js"></script>
+  </body>
+</html>

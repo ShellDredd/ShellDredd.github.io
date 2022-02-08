@@ -1,0 +1,755 @@
+/* /* 
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' 
+*/
+
+body {
+    height: 100vh;
+}
+/* ESTILOS PAGINA PRESENTACION*/
+.hide-image {
+    animation: load-image 3s ease-out forwards;
+}
+
+@keyframes load-image {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    
+    }
+}
+
+.contenedor-carga__image {
+    position: absolute;
+    margin: 0;  
+    height: 100%;
+    width: 100%;
+    background-image: url(../../images/fondo-purple.gif);
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+
+}
+
+.main-presentacion {
+    height: 100%;
+    background-image: url(../../images/shell1.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    font-family: 'Open Sans', Impact;
+
+}
+
+
+.menu-icon__link {
+    font-weight: bold;
+}
+
+.contenedor-texto {
+    text-align: center;
+    font-size: 30px;
+    font-family: fantasy;
+    color: rgb(189, 0, 0);
+}
+
+.text {
+    fill: none;
+    stroke-width: 6;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 6s infinite linear;
+    font-size: 100px;
+}
+.text:nth-child(5n + 1) {
+stroke: #6b0000;
+-webkit-animation-delay: -1.2s;
+animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+stroke: #701b1b;
+-webkit-animation-delay: -2.4s;
+animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+stroke: transparent;
+-webkit-animation-delay: -3.6s;
+animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+stroke: #750000;
+-webkit-animation-delay: -4.8s;
+animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+stroke: #5f0000;
+-webkit-animation-delay: -6s;
+animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+100% {
+    stroke-dashoffset: -400;
+}
+}
+
+@keyframes stroke {
+100% {
+    stroke-dashoffset: -400;
+}
+}
+
+.texto1 {
+color: rgb(139, 0, 0);
+filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.texto2 {
+color: rgb(139, 0, 0);
+filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.texto3 {
+color: rgb(139, 0, 0);
+filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+
+/* ESTILOS PAGINA PRINCIPAL */
+
+.contenedor-carga-apt23__image {
+  background-image: url(../../images/arcade.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+  margin: 0;  
+  background-color: black;
+}
+.header {
+    background-image: url(../../images/arcade.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+}
+.header-logo__img{
+    width: 100px;
+
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header-nav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Open Sans', Impact;
+}
+
+.header-nav__item{
+    list-style: none;
+    height:100%;
+    padding: 2px;
+    font-size: 20px;
+    height: 100%;
+}
+
+
+.header-nav__icon{
+    width: 70px;
+}
+.header-nav__link {
+    text-decoration: none;
+    color: white;
+}
+
+.header-nav__link:hover {
+    background-color: darkred;
+    border-radius: 12px;
+    color: black;
+    animation: icon-rotation .8s ease-in-out forwards;
+}
+
+@keyframes icon-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.apt-main {
+    background-color: black;
+}
+
+.apt-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+}
+
+.apt-nav__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+}
+
+.apt-nav__list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.apt-nav__item:hover {
+    color: black;
+    background-color: #5f0000;
+    padding: 2px;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.apt-nav__link {
+    text-decoration: none;
+    color: darkred;
+    font-weight: bold;
+}
+
+.videoclub, .celebrity, .shelldredd, .retos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.videoclub-icon, .celebrity-icon {
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-segunda, .laser-espacio  {
+width: 20%;
+}
+
+.section-title, .section-subtitle {
+    margin: 0;
+}
+
+.section-title{
+text-align: center;
+align-content: center;
+color: darkred;
+font-size: 40px;
+
+}
+
+.section-subtitle {
+color: white;
+width: 100%;
+text-align: center;
+font-size: 25px;
+}
+
+.section-subtitle__link {
+    color:rgb(139, 0, 0)
+}
+
+.machine-title, .info, .machine-description {
+    width: 100%;
+    border: 3px solid darkred;
+    color: white;
+    padding-left: 10px;
+    padding-right: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.info {
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+
+}
+.info-section {
+    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+  
+.info-section__difficult, .info-section__flag,  .info-section__work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid darkred;
+    border-bottom: 6px solid darkred;
+    filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.info-downloads{
+    padding-left: 10px;
+}
+
+.darkered-red {
+    color: darkred;
+}
+
+.retos-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    width: 70%;
+}
+
+.reto {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid darkred;
+    font-size: 15px;
+    padding: 10px;	
+}
+.title-container{
+  text-align: center;
+}
+.reto__title, .reto__subtitle{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.reto-description{
+    width: 100%;
+    text-align: center;
+}
+
+.reto-description__paragraph {
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.reto__img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .retos-list {
+      width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*
+
+
+
+.header0 {
+  background-image: url(images/line.gif);
+  background-color: black;
+  background-size: cover;
+  position: fixed, static;
+  align-content: center;
+  height: 10px;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.container-logo-nav0 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Segundo header 
+
+.header2 {
+  background-image: url();
+  background-size: auto;
+  background-color: black;
+  position: fixed, static;
+  height: 100px;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.header2 a {
+  text-decoration: none;
+}
+
+.container-logo-nav2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo2 {
+  width: 30px;
+  margin-left: 0.5em;
+  letter-spacing: 5px;
+  font-size: 1.3em;
+}
+
+.navi2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navi2 ul li {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.navi2 ul li a {
+  color: darkred;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.navi2 ul li a:hover {
+  background: darkred;
+  font-size: 18px;
+  color: black;
+  margin: 0.5em;
+  padding: 0.1em;
+}
+
+.icon2 {
+  width: 50px;
+}
+
+body {
+  background-color: black;
+  position: static;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  line-height: 1.3em;
+  margin: 0;
+  cursor: hand;
+}
+
+/* Caja de módulos 
+
+
+
+.contenedor {
+  text-align: center;
+  text-justify: auto;
+  width: 100%;
+  background-color: black;
+  color: red;
+}
+
+
+
+.tom-gif {
+  background-repeat: no-repeat;
+  width: 70%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  height: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-shell-portada {
+  background-repeat: no-repeat;
+  width: auto;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  height: auto;
+  color: black;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.logo-shell {
+  background-repeat: no-repeat;
+  width: 70%;
+  margin: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  height: auto;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portada2 {
+  background-size: 30%;
+  background-repeat: no-repeat;
+  width: auto;
+  margin: auto;
+  margin-top: 3em;
+  height: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mira-esto {
+  background-repeat: no-repeat;
+  width: auto;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  height: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-mira-esto {
+  width: 20%;
+}
+
+
+
+.div4 {
+  background-image: url();
+  padding: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  border: red 2px solid;
+}
+
+.h4-blanco {
+  color: white;
+  width: 100%;
+  text-align: justify;
+}
+
+.div-caja {
+  display: flex;
+  border: red 1px solid;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+
+
+.div-caja-video {
+  background-image: url();
+  display: flex;
+  border: red 1px solid;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.img-reto-joker {
+  width: 60%;
+}
+
+.reto2-img {
+  width: 100%;
+}
+
+.arcadereto-img {
+  width: 14%;
+  filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+
+
+.laser1rojo-img {
+  width: 20%;
+  filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.laser1rojo-img2 {
+  width: 30%;
+  filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.laser1rojo-img3 {
+  width: 40%;
+  filter: drop-shadow(0 10px 10px rgb(168, 21, 21));
+}
+
+.reto-cassete-img {
+  width: 630px;
+  height: 380px;
+}
+
+/* Página de artículos 
+
+.caja-articulo {
+  width: 100%;
+  background-color: wheat;
+  height: 300px;
+}
+
+.titulo-articulo {
+  background-color: violet;
+  color: darkred;
+  text-align: center;
+  width: 30%;
+}
+
+span {
+  background-color: transparent;
+  color: black;
+  width: 100%;
+  float: right;
+}
+
+/* RETOS 
+
+.reto-oculto-portada1 {
+  background-image: url(https://media2.giphy.com/media/g64uBi2SjHZ60/giphy.gif?cid=ecf05e479y70mujqaa30d3swnfs8p88zw9x8rooayaa1ss31&rid=giphy.gif&ct=g);
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.maritrini {
+  background-image: url(https://media0.giphy.com/media/y0s36prnnGb5u/giphy.gif?cid=ecf05e47bfal6n15l9zikhel9s6knooai5uzr8tpwhpfm3gc&rid=giphy.gif&ct=g);
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.morfeo {
+  background-image: url(images/morse.gif);
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.zkuaker {
+  background-image: url(images/zerial.png);
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kiss_me {
+  background-image: url(https://media3.giphy.com/media/xT9KVg3JVNumj5ZrW0/giphy.gif?cid=ecf05e47q4kyxxf2rwknrt2ytwpkbcl8qhkxt7p7sdx4643v&rid=giphy.gif&ct=g);
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.neo {
+  background-image: url(images/key-matrix.gif);
+  height: 350px;
+  width: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.apt-69 {
+  background-image: url(https://media1.giphy.com/media/7goZCK3457R7y/giphy.gif?cid=ecf05e47ub8oqmurkrosb3bctipkbqwgv2kbrlxo56x1ol71&rid=giphy.gif&ct=g);
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Smartphones (portrait & landscape) Home 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    font: Open Sans, Impact;
+    background-image: url(images/fondo-web.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .text {
+    font-size: 200px;
+  }
+
+  .contenedor-texto {
+    text-align: center;
+    font-size: 15px;
+    font-family: fantasy;
+    color: rgb(189, 0, 0);
+  }
+}
+
