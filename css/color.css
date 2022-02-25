@@ -1,0 +1,145 @@
+/* 
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' */
+
+
+/* Código referente al index.html */
+
+* {
+   margin: 0;
+   padding: 0;
+   }
+
+
+#contenedor_carga{
+   background-image: url(images/fondo-purple.gif); background-repeat: no-repeat; background-size: cover; background-color: black;
+   height: 100%; width: 100%;
+   position: fixed;
+   -webkit-transition: all 3s ease;
+   -o-transition: all 3s ease;
+   transition: all 3s ease;
+   z-index: 10000;
+   }
+
+.text {
+          fill: none;
+          stroke-width: 6;
+          stroke-linejoin: round;
+          stroke-dasharray: 70 330;
+          stroke-dashoffset: 0;
+          -webkit-animation: stroke 6s infinite linear;
+          animation: stroke 6s infinite linear;
+          font-size: 70px;
+        }
+        
+        .text:nth-child(5n + 1) {
+          stroke: #450085;
+          -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+        }
+        .text:nth-child(5n + 2) {
+          stroke: #550894;
+          -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+        }
+        
+        .text:nth-child(5n + 3) {
+          stroke: transparent;
+          -webkit-animation-delay: -3.6s;
+          animation-delay: -3.6s;
+        }
+        
+        .text:nth-child(5n + 4) {
+          stroke: #8d16bd;
+          -webkit-animation-delay: -4.8s;
+          animation-delay: -4.8s;
+        }
+        
+        .text:nth-child(5n + 5) {
+          stroke: #8515cf;
+          -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+        }
+        
+        @-webkit-keyframes stroke {
+          100% {
+            stroke-dashoffset: -400;
+          }
+        }
+        
+        @keyframes stroke {
+          100% {
+            stroke-dashoffset: -400;
+          }
+        }
+
+html {box-sizing: border-box;}
+
+body {
+  background-image: linear-gradient(340deg, rgb(67, 6, 82) 25%, #0a060a 100%);
+  height: 1000px;
+}
+
+.portada-index{
+          position: static;
+          background-image: url(../images/index-intro2.gif);
+          background-size: calc(450px);
+          background-repeat: no-repeat;
+          background-position-x: center;
+          width: 100%;
+          height: 450px;
+          text-align: center;
+          filter: drop-shadow(10px 10px 10px purple);
+}
+
+.contenedor-texto{
+            text-align: center;
+            font-size: 20px;
+            font-family: fantasy;
+            color: rgb(143, 40, 190);
+        }
+        
+        .texto1 {
+            color: rgb(143, 40, 190);
+            filter: drop-shadow(0 10px 10px rgb(164, 23, 207));
+        }
+        
+        .texto2 {
+            color: rgb(143, 40, 190);
+            filter: drop-shadow(0 10px 10px rgb(164, 23, 207));
+        }
+        
+        .texto3 {
+            color: rgb(143, 40, 190);
+            filter: drop-shadow(0 10px 10px rgb(164, 23, 207));
+        }
+        
+        .img-logo1 {
+          filter: drop-shadow(0 10px 10px rgb(164, 23, 207));
+          }
+
+.icon-intro{filter: drop-shadow(5px 10px 10px rgb(31, 17, 160));}
+.icon-intro:hover{filter: drop-shadow(5px 10px 10px rgb(10, 129, 209));}
+
+
+
+@media only screen and (max-width : 900px) {
+  body{margin-top: 3em;height: 1200px;}
+  .portada-index{background-size: calc(220px);height: 230px;}
+  .text{font-size: 270px;}
+  .contenedor-texto{font-size: 14px;margin-top: 3em;}
+}
