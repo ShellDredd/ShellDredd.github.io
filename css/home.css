@@ -454,14 +454,13 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
 
 
 
- /* @media only screen and (max-width : 1200px) {
+ @media only screen and (max-width : 1200px) {
 
     .img-articulos{background-image: url(../images/debian.jpg);width: 250px;height: auto;}
     .img-articulos:hover{}
   
   .img-boton{width: 70px; height: auto}
   /* Articulos tecnología */
-/*  
 .bloque-art-list {
       width: auto;
       background:rgba(222, 178, 240, 0.753);
@@ -478,7 +477,7 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
   .img-art-list{width: 200px; margin-right: 25px;}
   .enlace-art{display: flex;line-height: 50px;font-size: 16px; color: #fffefb; font-style: oblique;filter: drop-shadow(5px 5px 5px rgb(0, 0, 0))}
 }
- */
+
 
 
 @media only screen and (max-width : 900px){
