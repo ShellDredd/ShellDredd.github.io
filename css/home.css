@@ -395,6 +395,8 @@ body{background-color: #000000;
   #img-articulos-click31:checked + label > img {width:900px;height: auto;margin: 0px;}
   #img-articulos-click32{display: none;}
   #img-articulos-click32:checked + label > img {width:900px;height: auto;margin: 0px;}
+  #img-articulos-click33{display: none;}
+  #img-articulos-click33:checked + label > img {width:900px;height: auto;margin: 0px;}
 
   /* .img-articulos:hover{width: 100%;height: auto;filter: drop-shadow(0 10px 15px rgb(255, 179, 255))} */
 
