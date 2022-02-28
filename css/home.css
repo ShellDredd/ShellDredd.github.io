@@ -330,7 +330,7 @@ body{background-color: #000000;
 
 
   /* Articulos Tecnicos*/
-  .img-articulos{display: inline-block;width: 400px;height: auto;filter: drop-shadow(0 10px 15px rgb(132, 19, 155));border-radius: 25px;cursor:zoom-in;margin: 5px;}
+  .img-articulos{display: inline-block;width: 400px;height: auto;filter: drop-shadow(0 10px 15px rgb(132, 19, 155));border-radius: 15px;cursor:zoom-in;margin: 5px;}
   #img-articulos-click{display: none;}
   #img-articulos-click:checked + label > img {width:900px;height: auto;margin: 0px;}
   #img-articulos-click2{display: none;}
