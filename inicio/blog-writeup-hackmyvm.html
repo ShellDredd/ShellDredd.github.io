@@ -107,10 +107,10 @@
                   </ul><br>
                 
                 Si deseamos guardar esta información en un archivo de texto, podemos utilizar una redirección del STDOUT de la orden del sistema hacia un archivo de texto, 
-                usando la sintaxis y caracter ">" el cual, crea o sobreescribre el contenido de un archivo de texto. Si utilizamos dos ">>" en vez de sobreescribir sobre 
-                el contenido del archivo, lo que sucederá es que escribirá la información en la última línea disponible añadiendo un salto de línea a la anterior.<br><br>
+                usando la sintaxis y caracter ">" el cual, crea o sobreescribre el contenido de un archivo de texto. Si utilizamos dos ">>", en vez de sobreescribir sobre 
+                el contenido del archivo, lo que sucederá es que escribirá la información en la última línea disponible, añadiendo un salto de línea a la anterior.<br><br>
                 <ul class="texto-articulos">
-                    <li>arp-scan -l | grep "PCS" | awk {'print $1'} > datos</li>
+                    <li>arp-scan -l | grep "PCS" | awk {'print $1'} > datitos</li>
                   </ul><br>
 
                   <input type="checkbox" id="img-articulos-click2"/>
@@ -137,9 +137,9 @@
                   <br><br>
                   Obtenemos un TTL de 64 por lo que estamos ante un sistema Gnu/Linux, con esta información podemos continuar con un escaneo de servicios y puertos hacia la IP 
                   de la máquina víctima. Personalmente me gusta utilizar una metodología de escaneo doble, primero un sondeo rápido de puertos abiertos para luego realizar un 
-                  análisis más amplio a los puertos abiertos descubiertos con la parametrización del primer nmap que ejecuto, esto es práctico ya que ahorramos tiempo de escaneo 
+                  análisis más amplio a los puertos abiertos descubiertos con la parametrización del primer nmap que ejecuto, esto es práctico ya que, ahorramos tiempo de escaneo 
                   con la herramienta nmap, debido a que el segundo nmap es más agresivo y con parametrización que extrae más información que el anterior y si lo lanzamos hacia 
-                  todos los puertos, deriba más tiempo.<br>
+                  todos los puertos, deriba en más tiempo.<br>
                   Para tener la información bien documentada en nuestro directorio predefinido de la máquina, guardaremos el STDOUT del segundo nmap en un archivo de texto, para 
                   ello utilizaremos el parámetro "-oN" que guarda la salida en formato nmap hacia un archivo de texto.<br><br>
                   <ul class="texto-articulos">
@@ -158,13 +158,13 @@
               <h2 class="h2-articulos">Enumeración servicio Web.</h2><br>
 
               <p class="texto-parrafo">
-                Dos servicios corriendo en puertos, aplicación de red SSH por el 22 y servicio web por el 80 sostententado por apache, además obtenemos que el sistema es 
+                Dos servicios corriendo en puertos, aplicación de red SSH por el 22 y servicio web por el 80 sostentado por apache, además obtenemos que el sistema es 
                 un debian. Un curl como método rápido de visualización del contenido web dependiente de la IP.<br><br>
                 <ul class="texto-articulos">
                     <li>curl -s $ip</li>
                   </ul><br>
 
-                Nos indica que existe un "pre" indicando un ping y un dominio "blog.hmv", se podría deducir que necesitamos añadir este a nuestro /etc/host pero en este caso 
+                Nos indica que existe un "pre" indicando un ping y un dominio "blog.hmv", se podría deducir que necesitamos añadir este a nuestro /etc/host , pero en este caso 
                 no es necesario así que continuamos con un fuzzing de estexiones y directorios web dependientes de IP, en este caso usamos la herramienta Wfuzz.</p><br>
                 <ul class="texto-articulos">
                 <li>wfuzz -c --hc=404 -t 300 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $ip/FUZZ</li>
@@ -176,10 +176,10 @@
                 <label class="img-articulos" for="img-articulos-click33"><img class="img-articulos" src="../blogvm/blog-fuzzing1.png"/></label><br><br>
                 
                 Después de investigar en el código y en los enlaces, descubrimos un "meta name="generator" content="Nibleblog"" que hace referencia a un gestor de contenidos 
-                web conocido, Nibleblog. Esta es ya una pista llamativa pero aún así continuamos enumerando con el fuzzing pero esta vez desde /my_weblog pero 
-                tampoco devuelve dirctorios, por lo que añadimos extensiones, las que necesitamos son txt y php, las asignamos como parametrización al wfuzz. Efectivamente 
+                web conocido, Nibleblog. Esta es una pista llamativa pero aún así continuamos enumerando con el fuzzing, pero esta vez desde /my_weblog. 
+                Tampoco devuelve dirctorios, por lo que añadimos extensiones, las que necesitamos son txt y php, las asignamos como parametrización al wfuzz. Efectivamente 
                 esta enumeración nos revela 5 extensión, dos archivos txt y 3 php,  COPYRIGHT.txt alberga información del CMS Nibleblog y su fecha de copyright (2009 - 2013), 
-                deducimos trás una búsqueda en google que tenemos dos versiones en este periodo de tiempo. Tenemos un posible vector de ataque.<br><br>
+                deducimos tras una búsqueda en google, que tenemos dos versiones en este periodo de tiempo. Tenemos un posible vector de ataque.<br><br>
                 <ul class="texto-articulos">
                   <li>wfuzz -c --hc=404 -t 300 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -z list,php-txt 'http://192.168.1.53/my_weblog/FUZZ.FUZ2Z'</li>
                   </ul><br>
@@ -193,9 +193,9 @@
 
                   <h2 class="h2-articulos">Explotación CMS Nibleblog.</h2><br>
                   Buscamos exploits para el CMS y su versión, existe uno que utiliza la subida de un archivo para gestionar una reverse shell con PHP pero se requiere 
-                  autentificación por lo que no nos sirve. El siguiente paso es realizar fuerza bruta al login con la esperanza de obtener credenciales, 
+                  autentificación, por lo que no nos sirve. El siguiente paso es realizar fuerza bruta al login con la esperanza de obtener credenciales, 
                   para este proceso utilizamos hydra pero nos falta un detalle importante, conocer el formato de las peticiones que hace el login desde el panel admin.php.
-                  Descubrimos un post con la sintáxis de error, de la cual hacemos acópio para nuestra fuerza bruta (se observa desde inspector de código, en la pestaña de
+                  Descubrimos un post con la sintáxis de error, de la cual hacemos acopio para nuestra fuerza bruta (se observa desde el inspector de código, en la pestaña de
                   Network, hacemos un login aleatorio, click en el "document" de la petición y seleccionamos la pestaña "request").<br>
                   <input type="checkbox" id="img-articulos-click10"/>
                   <label class="img-articulos" for="img-articulos-click10"><img class="img-articulos" src="../blogvm/blog-peticion-admin.png"/></label><br><br>
@@ -208,8 +208,8 @@
 
                     Hemos tenido suerte con las credenciales, accedemos como administrador al panel de gestión del CMS Nibbleblog y observando los exploits comentados 
                     anteriormente, el vector de ataque para acceder al sistema se basa en la subida de una "imagen" a través del apartado de plugins, pero nosotr@s usaremos un 
-                    archivo con extensión "php" que contendrá una sintáxis del lenguaje que nos permite provocar un RCE (ejecución de comandos remotamente) y de la cuál haremos 
-                    uso para extraer info delicada del sistema y además, gestionar una reverse shell que nos dará acceso al sistema como usuario www-data.
+                    archivo con extensión "php" que contendrá una sintáxis del lenguaje que nos permite provocar un RCE (ejecución de comandos remotamente) y de la cual haremos 
+                    uso para extraer información delicada del sistema y además, gestionar una reverse shell que nos dará acceso al sistema como usuario www-data.
                     (Este fallo es común en algunos CMS, la funcionalidad de subida de imagenes NO restringe formatos de archivo diferentes a los correspondientes para imágenes).<br>
                     <input type="checkbox" id="img-articulos-click12"/>
                     <label class="img-articulos" for="img-articulos-click12"><img class="img-articulos" src="../blogvm/blog-panel1.png"/></label><br>
@@ -246,7 +246,7 @@
 
                   Llegados a este punto, necesitamos una reverse shell para ejecutar desde el RCE obtenido, para ello utilizaremos la herramienta "Shelly" del usuario d4t4s3c y 
                   que podemos descargar desde su espacio en github. Una vez instalada en nuestro sistema, le otorgamos permisos de ejecución con "chmod +x" y seguimos los pasos 
-                  para generar una reverseshell con netcat. Este paso se puede hacer manual, cuando repites este paso varias veces, recuerdas perfectamente los comandos pero a veces 
+                  para generar una reverseshell con netcat. Este paso se puede hacer manual, cuando repites este método varias veces, recuerdas perfectamente la sintáxis pero a veces 
                   fallan y necesitas recurrir a sintáxis de otros lenguajes y aquí, es donde este tipo de herramientas te facilitan el trabajo.<br>
                   <p>Enlace a la herramienta <a class="enlace" href="https://github.com/d4t4s3c/Shelly" target="blank">Shelly</a></p><br>
                   <input type="checkbox" id="img-articulos-click19"/>
@@ -263,7 +263,7 @@
           
 
                   <h2 class="h2-articulos">Enumeración y explotación de sistema.</h2><br>
-                  Ya tenemos acceso al sistema como usuario www-data y comenzamos con las metodologías de enumeración en sistema pero antes hacemos un tratamiento de TTY 
+                  Ya tenemos acceso al sistema como usuario www-data y comenzamos con las metodologías de enumeración en sistema pero antes, hacemos un tratamiento de TTY 
                   para tener comodidad y funcionalidades en la shell. Este es un ejemplo de tratamiento de tty con bash:<br>
                   # En el sistema víctima:<br><br>
                   <ul class="texto-articulos">
