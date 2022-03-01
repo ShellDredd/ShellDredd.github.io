@@ -409,8 +409,18 @@ body{background-color: #000000;
 .texto-parrafo{color: #673188;text-align: justify;}
 .texto-articulos{color: #3a1353; text-align: left;}
 
-
-
+/* Artículos Seguridad Informática */
+.portada-seguridad{
+  position: static;
+  background-image: url(../images/portada-seguridad.gif);
+  background-size:calc();
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 450px;
+  text-align: center;
+  filter: drop-shadow(10px 10px 10px purple);
+}
 
 .portada-news{
   position: static;
