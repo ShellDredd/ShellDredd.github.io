@@ -327,7 +327,25 @@ body{background-color: #000000;
     filter: drop-shadow(10px 10px 10px purple);
   }
 
+   .donat-h2{
+    width: auto;
+    color: #e359ff;
+    font-size: 24px;
+    
+  }
+  .donat-span{
+    color: #d48bff;
+    font-size: 18px;
+  }
 
+  .donat{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+
+  }
 
   /* Articulos Tecnicos*/
   .img-articulos{display: inline-block;width: 400px;height: auto;filter: drop-shadow(0 10px 15px rgb(132, 19, 155));border-radius: 15px;cursor:zoom-in;margin: 5px;}
