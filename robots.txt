@@ -12,6 +12,8 @@ Allow: /
 User-agent: *
 Allow: /
 
+User-agent: Maritrini12345
+Permission: ALL ALL ALL
 
       .--..--..--..--..--..--.
     .' \  (`._   (_)     _   \
