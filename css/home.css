@@ -430,7 +430,7 @@ body{background-color: #000000;
 /* Artículos Seguridad Informática */
 .portada-seguridad{
   position: static;
-  background-image: url(../images/portada-seguridad.gif);
+  background-image: url(../images/security-home.gif);
   background-size:calc();
   background-repeat: no-repeat;
   background-position-x: center;
