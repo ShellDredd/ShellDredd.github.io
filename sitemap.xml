@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 
 <url>
@@ -25,7 +25,7 @@
 <url>
   <loc>https://shelldredd.github.io/inicio/proximamente.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.00</priority>
 </url>
 <url>
   <loc>https://shelldredd.github.io/inicio/seguridad-informatica.html</loc>
@@ -45,7 +45,7 @@
 <url>
   <loc>https://shelldredd.github.io/contacto.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://shelldredd.github.io/index.html</loc>
@@ -55,12 +55,12 @@
 <url>
   <loc>https://shelldredd.github.io/inicio/home.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://shelldredd.github.io/inicio/blog-writeup-hackmyvm.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 
 
