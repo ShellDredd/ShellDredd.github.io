@@ -442,7 +442,7 @@ body{background-color: #000000;
 
 .portada-kitty{
   position: static;
-  background-image: url(kitty.svg);
+  background-image: url(../images/kitty.svg);
   background-size:350px;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -629,7 +629,7 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
 
     .portada-kitty{
       position: static;
-      background-image: url(kitty.svg);
+      background-image: url(../images/kitty.svg);
       background-size:250px;
       background-repeat: no-repeat;
       background-position-x: center;
