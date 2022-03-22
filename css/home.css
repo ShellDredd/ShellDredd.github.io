@@ -55,7 +55,7 @@ body{background-color: #000000;
         .portada-home{
           position: static;
           background-image: url(../images/intro-bunny.gif);
-          background-size: calc();
+          background-size: 350px;
           background-repeat: no-repeat;
           background-position-x: center;
           width: 100%;
@@ -597,7 +597,18 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
 
 
 @media only screen and (max-width : 900px){
-  .portada-home{}
+    .portada-home{
+          position: static;
+          background-image: url(../images/intro-bunny.gif);
+          background-size: calc();
+          background-repeat: no-repeat;
+          background-position-x: center;
+          width: 100%;
+          height: 400px;
+          text-align: center;
+          filter: drop-shadow(10px 10px 10px purple);
+          
+        }
 
     .header{display: inline-block;}
     .container-logo-nav{display: inline-block;align-items: center;}
