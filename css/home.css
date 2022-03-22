@@ -55,13 +55,14 @@ body{background-color: #000000;
         .portada-home{
           position: static;
           background-image: url(../images/intro-bunny.gif);
-          background-size: 600px;
+          background-size: 850px;
           background-repeat: no-repeat;
           background-position-x: center;
           width: 100%;
           height: 400px;
           text-align: center;
           filter: drop-shadow(10px 10px 10px purple);
+          margin-bottom: 1em;
           
         }
 
