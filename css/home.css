@@ -442,12 +442,26 @@ body{background-color: #000000;
 
 .portada-kitty{
   position: static;
-  background-image: url(kitty.svg);
+  background-image: url(../images/kitty.svg);
   background-size:350px;
   background-repeat: no-repeat;
   background-position-x: center;
   width: 100%;
   height: 300px;
+  margin-top: 5em;
+  margin-bottom: 4em;
+  text-align: center;
+  filter: drop-shadow(10px 10px 10px purple);
+}
+
+.portada-hostname{
+  position: static;
+  background-image: url(../images/hostname-intro.png);
+  background-size:400px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 400px;
   margin-top: 5em;
   margin-bottom: 4em;
   text-align: center;
