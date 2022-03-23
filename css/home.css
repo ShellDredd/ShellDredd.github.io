@@ -54,8 +54,8 @@ body{background-color: #000000;
 
         .portada-home{
           position: static;
-          background-image: url(../images/border1.gif);
-          background-size: calc();
+          background-image: url(../images/intro-bunny.gif);
+          background-size: 600px;
           background-repeat: no-repeat;
           background-position-x: center;
           width: 100%;
