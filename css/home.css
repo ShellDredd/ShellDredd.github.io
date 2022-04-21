@@ -615,6 +615,8 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
 
 
 @media only screen and (max-width : 900px){
+   .video-yt{width: 290px;height: 200px;}
+   
   .portada-home{}
 
     .header{display: inline-block;}
