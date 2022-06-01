@@ -697,7 +697,7 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
   .portada-shell-intro{
     position: static;
     background-image: url(../images/shell-intro.png);
-    background-size: 470px;
+    background-size: 440px;
     background-repeat: no-repeat;
     background-position-x: center;
     width: 100%;
@@ -710,7 +710,7 @@ background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 20%, transpa
   .portada-reto-morada-titulo{
     position: static;
     background-image: url(../images/texto-red-morada-final.png);
-    background-size: 450px;
+    background-size: 410px;
     background-repeat: no-repeat;
     background-position-x: center;
     width: 100%;
