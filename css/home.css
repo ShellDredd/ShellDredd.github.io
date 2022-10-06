@@ -112,7 +112,7 @@
          height: 310px;
          text-align: center;
          filter: drop-shadow(10px 10px 10px rgb(187, 3, 187));
-         
+           f
          
        }
  
@@ -127,7 +127,20 @@
          text-align: center;
          filter: drop-shadow(10px 10px 10px purple);
        }
- 
+      
+      .portada-china{
+        position: static;
+         background-image: url(../images/gif-china.gif);
+         background-size:350px;
+         background-repeat: no-repeat;
+         background-position-x: center;
+         width: 100%;
+         height: 300px;
+         margin-top: 5em;
+         margin-bottom: 4em;
+         text-align: center;
+         filter: drop-shadow(10px 10px 10px purple);
+      }
  
  
  
