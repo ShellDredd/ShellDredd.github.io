@@ -55,6 +55,8 @@
            padding-top: 30px;
            background-image: linear-gradient(340deg, rgba(161, 36, 192, 0.658) 25%, #0a060a 100%);}
  
+         .p{font-size: 24px;}
+
          .portada-home{
            position: static;
            background-image: url(../images/logo-rosa.png);
