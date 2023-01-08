@@ -5,6 +5,16 @@
 
 
 
+.icon-llaves{
+  filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+  width: 70px;
+}
+
+.icon-llaves:hover{
+  filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+  width: 100px;
+}
+
 
 
 .portada-caja-nueva{
@@ -65,7 +75,7 @@
 .plan > * {flex:1 1 100%;}
 .plan .cta {align-items: center; width: 100%; color: #bb76e4; filter: drop-shadow(0 5px 5px rgb(0, 0, 0))}
 
-.icon-1{width: 500px;}
+.icon-1{width: 130px;}
 
 
 
@@ -300,8 +310,13 @@ html {box-sizing: border-box; height: auto; background-color: #000000;position: 
     height: auto;
   }
 
+.main-intro{
+  background-image: linear-gradient(100deg, rgb(37, 7, 42) 60%, #7c0e98 100%);
+  height: 1000px;
+}
+
   .banner{
-    background-image: url(https://media4.giphy.com/media/8OzI5NkvzPePDX8BnT/giphy.gif?cid=ecf05e47algn88umiy5lsa9cqvgc2ysettbwfhrroll9jwox&rid=giphy.gif&ct=s);
+    background-image: url(https://media0.giphy.com/media/h2B0ShI0z0qM4KD0BA/giphy.gif?cid=790b7611b5c9b6e8e07305e46412bab22d55fb00d3c80cfa&rid=giphy.gif&ct=s);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -314,8 +329,45 @@ html {box-sizing: border-box; height: auto; background-color: #000000;position: 
 
   .banner:hover{
     width: 25%;
-    background-image: url(https://media0.giphy.com/media/h2B0ShI0z0qM4KD0BA/giphy.gif?cid=790b7611b5c9b6e8e07305e46412bab22d55fb00d3c80cfa&rid=giphy.gif&ct=s);
+    background-image: url(https://media4.giphy.com/media/xTg8B31DCfCWKEThG8/giphy.gif?cid=ecf05e4703aqhoy73tpj52g1y92jyxbkit2ivxfpvqq8kljx&rid=giphy.gif&ct=g);
+    background-size: 480px;
+    border-radius: 1000px;
   }
+
+  .banner-intro-web{
+    background-image: url(https://media0.giphy.com/media/h2B0ShI0z0qM4KD0BA/giphy.gif?cid=790b7611b5c9b6e8e07305e46412bab22d55fb00d3c80cfa&rid=giphy.gif&ct=s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+    z-index: 0;
+    width: 26%;
+    margin-top: 80px;
+  }
+
+  .banner-intro-web:hover{
+    width: 35%;
+    background-image: url(https://media4.giphy.com/media/xTg8B31DCfCWKEThG8/giphy.gif?cid=ecf05e4703aqhoy73tpj52g1y92jyxbkit2ivxfpvqq8kljx&rid=giphy.gif&ct=g);
+    background-size: 690px;
+    border-radius: 1500px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   .banner-left{
@@ -415,7 +467,7 @@ table {
 
 .text-descrip-table-tips{
   font-size: 16px;
-  color: #c4f5c9;
+  color: #f1ccfc;
 }
 
 
@@ -757,8 +809,20 @@ tr:nth-child(even) {
 
 
 
+/* Logo shelldredd */
+.icon-shelldredd-intro{
+  width: 700px;
+  height: 35px;
+  margin-right: 10px;
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
 
-
+.icon-shelldredd{
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
 
 /* Contenido fotos articulos */
 
@@ -777,6 +841,16 @@ tr:nth-child(even) {
   padding: 0.3rem;
   background-color: #1759b6;
   color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-windows1:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -826,6 +900,37 @@ tr:nth-child(even) {
   padding: 0.3rem;
   background-color: #b1bd2e;
   color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-linux1:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*Boton seguridad categoría*/
+.boton-seguridad{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #c68332c5;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-seguridad:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -1246,6 +1351,44 @@ tr:nth-child(even) {
     background-position: center;
   }
 
+  .banner-intro-web{
+    background-image: url(https://media0.giphy.com/media/h2B0ShI0z0qM4KD0BA/giphy.gif?cid=790b7611b5c9b6e8e07305e46412bab22d55fb00d3c80cfa&rid=giphy.gif&ct=s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+    z-index: 0;
+    width: 60%;
+    margin-top: 80px;
+  }
+
+  .banner-intro-web:hover{
+    width: 90%;
+    background-image: url(https://media4.giphy.com/media/xTg8B31DCfCWKEThG8/giphy.gif?cid=ecf05e4703aqhoy73tpj52g1y92jyxbkit2ivxfpvqq8kljx&rid=giphy.gif&ct=g);
+    background-size: 890px;
+    border-radius: 500px;
+  }
+
+  .icon-shelldredd-intro{
+    width: 370px;
+    height: 35px;
+    margin-right: 10px;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+  }
+
+  .icon-llaves{
+    filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+    width: 70px;
+  }
+
+  .icon-llaves:hover{
+    filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+    width: 90px;
+  }
+
+
+
   h5{font-size: 14px;color: #e9b8ec;}
   
   .name-difficulty{
@@ -1295,7 +1438,7 @@ tr:nth-child(even) {
     color: rgb(0, 0, 0);
     font-style: normal;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   /* Contenido windows */
@@ -1307,7 +1450,7 @@ tr:nth-child(even) {
   color: rgb(0, 0, 0);
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .boton-windows2{
@@ -1322,6 +1465,16 @@ tr:nth-child(even) {
 
 .buttom-div-duo-windows{
   margin-left: 2.2rem;
+}
+
+.boton-seguridad{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #c68332c5;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 /* Tabla de artículos responsive */
