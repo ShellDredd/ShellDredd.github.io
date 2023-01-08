@@ -75,7 +75,7 @@
 .plan > * {flex:1 1 100%;}
 .plan .cta {align-items: center; width: 100%; color: #bb76e4; filter: drop-shadow(0 5px 5px rgb(0, 0, 0))}
 
-.icon-1{width: 130px;}
+.icon-1{width: 350px;}
 
 
 
@@ -89,8 +89,12 @@
 
 
 
-
-
+.donat-h2{
+  color: rgb(232, 161, 241);
+}
+.donat-span{
+  color: rgb(232, 161, 241);
+}
 
 
 /* Menu Desplegable 1 */
@@ -343,7 +347,7 @@ html {box-sizing: border-box; height: auto; background-color: #000000;position: 
     filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
     z-index: 0;
     width: 26%;
-    margin-top: 80px;
+    margin-top: 180px;
   }
 
   .banner-intro-web:hover{
@@ -1371,7 +1375,7 @@ tr:nth-child(even) {
   }
 
   .icon-shelldredd-intro{
-    width: 370px;
+    width: 320px;
     height: 35px;
     margin-right: 10px;
     filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
@@ -1570,5 +1574,20 @@ tr:nth-child(even) {
   }
 
   .footer{width: auto;}
+
+
+  #submenu{
+  padding: 3px 5px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #000000;
+  }
 
 }
