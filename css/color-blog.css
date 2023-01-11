@@ -1421,15 +1421,15 @@ tr:nth-child(even) {
 @media only screen and (max-width : 600px){
 
   .icon-shelldredd{
-    width: 70px;
-    height: 40px;
+    width: 60px;
+    height: 30px;
     margin-right: 10px;
     filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
   }
   
   .logo-header-icon{
-    width: 60px;
-    height: 40px;
+    width: 50px;
+    height: 30px;
     margin-right: 10px;
   }
 
