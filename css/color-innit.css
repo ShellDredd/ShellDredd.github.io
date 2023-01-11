@@ -217,5 +217,21 @@
     z-index: 0%;
     width: 300px;
   }
+    
+  a {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 15px;
+  }
+  
+  
+  a:hover {
+    color: var(--black);
+    background-color: #196c15;
+    width: 100%;
+    color: #000000;
+    width: 35%;
+    border-radius: 5px;
+  }
   
 }
