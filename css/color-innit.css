@@ -1,0 +1,229 @@
+:root {
+    --black: #1F2420;
+    --green: #53C758;
+  }
+  
+  body {
+    font-family: 'Roboto Mono';
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: var(--green);
+    width: 100%;
+  }
+
+  .main{
+    background-image: linear-gradient(100deg, rgb(37, 7, 42) 60%, #7c0e98 100%);
+    height: auto;
+    width: 100%;
+  }
+  
+  .terminal__container {
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    box-shadow: inset 0 -10px 100px rgb(0,0,0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  
+  .banner{
+    filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+    z-index: 0%;
+    width: 130px;
+    margin-top: 4px;
+  }
+
+  .banner:hover{
+    filter: drop-shadow(10px 10px 10px rgb(191, 11, 195));
+    z-index: 0%;
+    width: 130px;
+    margin-top: 4px;
+  }
+
+  .banner-shell{
+    filter: drop-shadow(10px 10px 10px rgb(2, 1, 2));
+    z-index: 0%;
+    width: 400px;
+    margin-top: 0px;
+  }
+
+  .banner-shell:hover{
+    filter: drop-shadow(10px 10px 10px rgb(131, 17, 133));
+    z-index: 0%;
+    width: 420px;
+    margin-top: 0px;
+  }
+
+  .banner-loading{
+    filter: drop-shadow(10px 10px 10px rgb(2, 1, 2));
+    z-index: 0%;
+    width: 500px;
+  }
+
+  .banner-loading:hover{
+    filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+    z-index: 0%;
+    width: 500px;
+  }
+
+
+  .bg__effect {
+    height: 2px;
+    width: 100%;
+    background-color: rgba(199, 97, 210, 0.1);
+    position: absolute;
+    opacity: 5%;
+    filter: drop-shadow(0 10px 0 #b257c7) drop-shadow(0 10px 0 #a334bc) drop-shadow(0 10px 0 #c757c7) drop-shadow(0 10px 0 #c757bf) drop-shadow(0 10px 0 #c757bf) drop-shadow(0 10px 0 #c357c7) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #57C75C) drop-shadow(0 10px 0 #c757c7) drop-shadow(0 10px 0 #c757bc) drop-shadow(0 10px 0 #ba57c7) drop-shadow(0 10px 0 #c357c7);
+      animation-name: bgeffect;
+      animation-iteration-count: infinite;
+      animation-duration:0.2s;
+  }
+  
+  @keyframes bgeffect {
+      0% {top:0px;}
+      50% {top:10px;}
+  }
+  
+  .terminal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2em 3em 2em 3em;
+    gap: 2em;
+  }
+  
+  .terminal__title {
+    font-size: 40px;
+    color: rgb(221, 120, 198);
+    font-weight: bold;
+    position: relative;
+    position: relative;
+    filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 24px;
+  }
+  
+  
+  a:hover {
+    color: var(--black);
+    background-color: #196c15;
+    width: 100%;
+    color: #000000;
+    width: 35%;
+    border-radius: 5px;
+  }
+  
+  .account__options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  
+  
+  input {
+    background-color: transparent;
+    border: none;
+    caret-shape: block;
+    caret-color: var(--green);
+    height: 100%;
+    width: 600px;
+    color: var(--green);
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  input::selection {
+    color: var(--black);
+    background-color: var(--green);
+  }
+  
+  .feeling__lucky {
+    font-size: 12px;
+    position: absolute;
+    left: 10px;
+      top: 50%;
+      max-width: 200px;
+      max-height: 30px;
+  }
+  
+  .results {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+  }
+  
+  textarea {
+      font-size: 14px;
+      font-weight: normal;
+      caret-color: transparent;
+      background-color: transparent;
+      border: transparent;
+      color: var(--green);
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    font-weight: normal;
+      resize: none;
+      width: 100%;
+      height: 300px;
+      overflow: auto;
+      
+  }
+  
+  textarea:focus {
+      outline: none;
+  }
+  
+  textarea::selection {
+    color: var(--black);
+    background-color: var(--green);
+  }
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 600px){
+
+  .banner-shell{
+    width: 300px;
+  }
+
+  .banner-shell:hover{
+    width: 300px;
+  }
+
+  .terminal__title{
+    font-size: 26px;
+  }
+
+  .banner-loading{
+    filter: drop-shadow(10px 10px 10px rgb(2, 1, 2));
+    z-index: 0%;
+    width: 300px;
+  }
+  
+}
