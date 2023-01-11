@@ -20,7 +20,7 @@
 .portada-caja-nueva{
   width: 90%;
   padding: 10px 10px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 
@@ -957,6 +957,86 @@ tr:nth-child(even) {
   font-size: 14px;
 }
 
+.boton-writeup{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #ffffffc5;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-writeup:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-herramientas{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8092fac5;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-herramientas:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-video1{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #cc3535;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-video1:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-directos{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #f696f0c5;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-directos:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 /* tabla categorias general */
 
 .text-article-table{
@@ -1605,6 +1685,7 @@ tr:nth-child(even) {
   border-style: solid;
   border-width: 3px;
   border-color: #000000;
+  text-align: left;
   }
 
   .banner-video-wellcome{
