@@ -1407,6 +1407,12 @@ tr:nth-child(even) {
 
 @media only screen and (max-width : 600px){
 
+  .icon-shelldredd{
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+  }
 
   .pricing-grid {
     max-width: 100%;
