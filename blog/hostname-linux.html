@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" contant="" />
+    <meta name="keywords" content=""/>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Hostname Linux" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://drenet.com/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/ShellDredd/ShellDredd.github.io/gh-pages/images/logo-ninja.JPG" />
+    <meta property="og:description" content="Explicación y uso de Hostname en sistemas Linux" />
+    <meta name="robots" content="index,follow">
+	
+    <link  rel="icon" href="https://raw.githubusercontent.com/ShellDredd/ShellDredd.github.io/gh-pages/images/logo-ninja.JPG" type="image/jpeg" sizes="16x16" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    <link href="css/color-blog.css" rel="stylesheet">
+
+    <title>ShellDredd Rabbitt</title>
+
+</head>
+
+<body>
+
+  <nav class="dropdownmenu">
+  
+    <ul>
+      
+      <li><a><img class="logo-header-icon" src="https://cdn-icons-png.flaticon.com/512/336/336200.png"></a>
+      <ul id="submenu">
+        <li><a>MENÚ</a></li>
+        <li><a href="#">·Blog</a></li>
+        <li><a href="#">·Podcast</a></li>
+        <li><a href="https://www.twitch.tv/shelldredd" target="_blank">·Directos</a></li>
+        <li><a href="https://www.youtube.com/channel/UCV_nyB99w6s3tNTSK6aRI9Q" target="_blank">·Vídeos</a></li>
+        <li><a href="https://discord.gg/qUemGhF6hF">·Discord</a></li>
+      </ul>
+    </li>
+      
+    <li><a><a><img class="logo-header-icon" src="https://cdn-icons-png.flaticon.com/512/7069/7069820.png"></a>
+      <ul id="submenu">
+        <li><a>SUBMENÚ</a></li>
+        <li><a href="#">·Seguridad</a></li>
+        <li><a href="#">·WriteUps</a></li>
+        <li><a href="#">·Sistemas</a></li>
+        <li><a href="#">·Redes</a></li>
+        <li><a href="#">·Programación</a></li>
+        <li><a href="#">·Herramientas</a></li>
+        <li><a href="#">PRÓXIMAMENTE MÁS</a></li>
+      </ul>
+    </li>
+  
+    <li><a><a><img class="logo-header-icon" src="https://cdn-icons-png.flaticon.com/512/808/808439.png"></a>
+      <ul id="submenu">
+        <li><a href="#">ACTIVIDADES</a></li>
+        <li><a href="#">·Máquinas CTF</a></li>
+        <li><a href="https://shelldredd.github.io/23/" target="blamk">·Retos Web</a></li>
+        <li><a href="#">·Torneos</a></li>
+      </ul>
+    </li>
+  
+    <li><a><a><img class="icon-shelldredd" src="https://shelldredd.github.io/images/logo-text-shelldredd.jpeg"></a></li>
+    </ul>
+    </ul>
+    </nav>
+
+    <main class="main">
+        <br><br><br><br>
+
+        <div class="portada-articulo-ejemplo"></div>
+
+
+        <div class="bloque-texto">
+        
+          <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">¿Qué es el hostname de un equipo o sistema?</h2><br>
+
+            <p class="texto-parrafo">Un nombre de equipo es un nombre único que se le otorga a un dispositivo conectado a una red de dispositivos informáticos.
+               Puede ser un ordenador, un servidor de ficheros, un dispositivo de almacenamiento conectado en red, un fax, impresora, teléfono móvil, etc..<br>
+               En Internet o la red, usualmente se trabaja con equipos funcionando como servidores (hosts), en estos casos el equivalente para «nombre de equipo» 
+               en inglés sería hostname. Estos servidores siempre tienen una dirección IP asignada, al igual que los dispositivos que se encuentran en nuestra "red local".<br>
+               El nombre de host o "hostname" ayuda al administrador de la red a identificar los dispositivos sin tener que memorizar una dirección IP para cada uno de ellos.
+               El nombre para el equipo o dispositivo suele ser una palabra sencilla, elegida por el administrador. Se puede entablar tanto nombres descriptivos, 
+               como creativos (iron-man, stallman), como números (machine07).<br>
+               Prácticamente todos los sistemas operativos se identifican con un nombre predeterminado para referirse al ordenador local: "localhost" y aunque 
+               se cambie o asigne otro nombre de equipo, el localhost siempre será identificativo y se podrá usar en el sistema o equipo.
+               </p><br>
+
+              <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">¿Cómo funciona el hostname en Internet?</h2><br>
+              <p class="texto-parrafo">
+                El nombre de equipo o hostname no es visible en Internet. Pero realmente, cualquier máquina,
+                 dispositivo u ordenador, tiene un nombre de dominio completamente cualificado (FQDN), el cual
+                  se compone del nombre de equipo y del nombre de dominio. Un ejemplo sería: en equipo007.shelldredd.com,
+                   "equipo007" es el nombre de equipo, y "shelldredd.com" es el nombre del dominio.<br><br>
+              </p>
+              <h2 class="h2-articulos">✪ ¿Qué es un FQDN?</h2><br>
+              <p class="texto-parrafo">
+                Sus siglas en inglés significan "fully qualified domain name" y es un nombre de dominio completo, que incluye el nombre del equipo y el nombre de dominio asociado a ese equipo. Ejemplo: "equipo007.shelldredd.com".
+                  La longitud máxima permitida para un FQDN es de 255 caracteres (bytes), con una limitación de 63 bytes por etiqueta dentro de un nombre de dominio.<br>
+                  Con esta información básica explicada, podemos continuar con la parte práctica del artículo, "cambiar el hostname".
+                  <br><br>
+                </p>
+
+              <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Cambiar hostname en sistemas Gnu/Linux.
+              </h2><br>
+              <p class="texto-parrafo">
+                En algunas distribuciones se puede cambiar desde el panel de información de sistema, propiedades y cambiar nombre de equipo pero en este caso usaremos
+                 la shell de la terminal, si ejecutamos "hostname" nos dirá cual es nombre de equipo actual. Con la orden de sistema "hostnamectl" con el parametro "set-hostname":
+                <br></p>
+
+                
+
+                <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                  <table>
+                    <tr class="cabecera-tabla-tips">
+                      <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Instrucciones para ejecutar en la shell</b></h5></span></th>
+                    </tr>
+                    <tr>
+                      <td><span class="text-descrip-table-tips">
+                        <b><br>sudo hostnamectl set-hostname [nombre-nuevo]</b><br><br>
+                        <img class="img-articulos-normal" src="https://shelldredd.github.io/images/host1.png">
+                      </span>
+                      </td>
+                     </tr>
+                    <tr>
+                  </table>
+                    <p class="texto-parrafo">
+                      Después de la ejecución del comando, no veremos cambios algunos en el encabezado o promt de la terminal, necesitamos reiniciar el entorno de la shell para que se actualice. Para ello cerramos o salimos de la terminal con el comando "exit".
+                      <br><br>
+                      Ejecutamos la terminal de nuevo y comprobamos que los cambios han surgido efecto.
+                    </p>
+
+                    <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                      <table>
+                        <tr class="cabecera-tabla-tips">
+                          <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Instrucciones para ejecutar en la shell</b></h5></span></th>
+                        </tr>
+                        <tr>
+                          <td><span class="text-descrip-table-tips">
+                            <b><br>hostname</b><br><br>
+                            <img class="img-articulos-normal" src="https://shelldredd.github.io/images/host2.png">
+                          </span>
+                          </td>
+                         </tr>
+                        <tr>
+                      </table>
+
+                      <h2 class="h2-articulos"><img src="https://media2.giphy.com/media/5warsMsqwpDiH2ugEG/giphy.gif?cid=ecf05e47y966ao6u608z43xjq0w7om0zfc98ckxcdkzrnk83&rid=giphy.gif&ct=s" width="30px">Cambiar el archivo de configuración de hosts.</h2><br>
+                      <p class="texto-parrafo">
+                        Después del paso anterior no hemos terminado de configurar el cambio de nombre de equipo, ya que si ejecutamos un comando, el stderr nos indicará que no se encuentra o no se puede resolver el nombre de host como nuestra la siguiente imagen.
+                        <br>
+                        Para que no suceda este error, debemos añadir manualmente el nombre de equipo al archivo de configuración de hosts que se encuentra en el directorio /etc/ . En este archivo veremos el localhost que se corresponde con el 127.0.0.1 y a continuación el hostname con el 127.0.1.1 , este último es el que debemos cambiar por el nombre que hemos elegido antes.
+                        <br>
+                      </p>
+
+                      <div class="cont-table-tips"> <!-- Tabla de contenidos -->
+                        <table>
+                          <tr class="cabecera-tabla-tips">
+                            <th class="name-creator"><span><h5><b><img src="https://media2.giphy.com/media/hM3hev4edKz6oCZzyD/giphy.gif?cid=ecf05e477gp4ikqz50l2ndmlmt40btdt9dd0e7hsxgvvt4ec&rid=giphy.gif&ct=s" width="40" height="25">Instrucciones para ejecutar en la shell</b></h5></span></th>
+                          </tr>
+                          <tr>
+                            <td><span class="text-descrip-table-tips">
+                              <img class="img-articulos-normal" src="https://shelldredd.github.io/images/host3.png">
+                              <br><br>
+                              <b><br>sudo nano /etc/hosts
+                              </b><br><br>
+                              <img class="img-articulos-normal" src="https://shelldredd.github.io/images/host4.png">
+                            </span>
+                            </td>
+                           </tr>
+                          <tr>
+                        </table>
+                        <p class="texto-parrafo">
+                          Y con este paso tendremos correctamente cambiado el nombre de equipo o hostname.<br><br>
+                          ✪ Artículo escrito por ShellDredd.<br>
+                          ✪ Fecha de publicación: 23 de Marzo de 2022.<br>
+                          ✪ Fuentes de información: manual del administrador de Debian.<br>
+                        </p>
+                      
+             </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cont-table"> <!-- Tabla de contenidos -->
+          <table>
+            <tr class="cabecera-tabla">
+              <th class="name-machine"><span></span><h5><b>Actividad</b></h5></span></th>
+              <th class="name-creator"><span><h5><b>Descripción</b></h5></span></th>
+              <th class="name-difficulty"><span><h5><b>Temática</b></h5></span></th>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/4793/4793069.png" width="40" height="30"></a>
+                  <br><a class="a-article" href="https://shelldredd.github.io/seguridad/hackmyvm.html">Resolución Máquina Blog CTF</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>07/01/2023 | Guía completa y explicada paso a paso sobre la resolución de la máquina BLOG, creada por d4t4s3c y de nivel fácil, la cual he elegido como favorita para este writeup destinado a jugadores/as novicios/as.</b></span>
+              </td>
+              <td><a href="" title="PROXIMAMENTE"><span class="boton-writeup">WriteUp</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://youtu.be/Nq8atKx1lNw" title="Ver Vídeo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/720/720320.png" width="30" height="25"></a>
+                  <br><a class="a-article" href="https://youtu.be/Nq8atKx1lNw" target="_blank">Analizando ESTAFA de SMISHING y WEB SPOOFING</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/Nq8atKx1lNw"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>07/01/2023 | Analizo la estafa actual de reembolso de la agencia tributaria, la cual funciona a través de smishing para luego redirigir a una suplantación de la web de hacienda. #Youtube Video.</b></span>
+              </td>
+              <td><a href="" title="PROXIMAMENTE"><span class="boton-video1">Vídeo</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href=""><img src="https://cdn-icons-png.flaticon.com/512/1770/1770356.png" width="40" height="25"></a>
+                  <br><a class="a-article" href="">HostName Linux. Uso y configuración básica.</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href=""><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>07/01/2023 | Un nombre de equipo es un nombre único que se le otorga a un dispositivo conectado a una red de dispositivos informáticos. Puede ser un ordenador, un servidor de ficheros, un dispositivo de almacenamiento conectado en red, un fax, impresora, teléfono móvil, etc..</b></span>
+              </td>
+              <td><a href="" title="PROXIMAMENTE"><span class="boton-linux1">Linux</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/1770/1770356.png" width="40" height="25"></a>
+                  <br><a class="a-article" href="https://shelldredd.github.io/seguridad/hackmyvm.html">¿Qué es HackMyVm?</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://shelldredd.github.io/seguridad/hackmyvm.html"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>07/01/2023 | Plataforma de seguridad informática que permite descargar máquinas vulnerables CTF para practicar tus habilidades y aprender conceptos nuevos.</b></span>
+              </td>
+              <td><a href="" title="PROXIMAMENTE"><span class="boton-seguridad">Seguridad</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://youtu.be/Tp9NbSrWTMw" title="Ver Vídeo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4793/4793069.png" width="40" height="30"></a>
+                  <br><a class="a-article" href="https://youtu.be/Tp9NbSrWTMw" target="_blank">WriteUp/Walkthrough JABITA VM [HackMyVM]</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/Tp9NbSrWTMw"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>07/01/2023 | Writeup de la máquina vulnerable JABITA creada por Rijaba1 y disponible en la plataforma de CTF HackMyVM.</b></span>
+              </td>
+              <td><a href="" title="PROXIMAMENTE"><span class="boton-video1">Vídeo</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://github.com/ShellDredd/VulnHub-Tool-Explorer" title="Ver Github" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/8076/8076505.png" width="40" height="30"></a>
+                  <br><a class="a-article" href="https://github.com/ShellDredd/VulnHub-Tool-Explorer" target="_blank">VulnHub-Tool-Explorer</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://github.com/ShellDredd/VulnHub-Tool-Explorer"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>Cliente de terminal para explorar y descargar máquinas de la plataforma VulnHub. Programado en Python 3.</b></span>
+              </td>
+              <td><a href="" title="PROXIMAMENTE"><span class="boton-herramientas">Herramienta</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://youtu.be/R3DE1ZHo2s4" title="Ver Directo" target="_blank"><img src="https://media1.giphy.com/media/USaytK56wz2dasZPeC/giphy.gif?cid=ecf05e47850pvkwo9ckksibw1g6lgvfa8k51mymlvwpdvhyx&rid=giphy.gif&ct=s" width="60" height="40"></a>
+                    <br><a class="a-article" href="https://youtu.be/R3DE1ZHo2s4" target="_blank">Directo resolviendo 2 máquinas CTF - GIFT | FLOWERS - HackMyVM</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/R3DE1ZHo2s4"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>Resolución y explicación en directo a través de Twitch de dos máquinas CTF, Gift y Flowers, pertenecientes a la plataforma HackMyVM.</b></span>
+              </td>
+              <td><a title="PROXIMAMENTE"><span class="boton-directos">Directo</span></a></td>
+            </tr>
+            <tr>
+              <td><span class="text-article-table">
+                  <b><a class="button" href="https://cdn-icons-png.flaticon.com/512/220/220215.png" title="Ver Artículo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/220/220215.png" width="30" height="25"></a>
+                    <br><a class="a-article" href="https://youtu.be/R3DE1ZHo2s4" target="_blank">Descarga cualquier producto oficial de MICROSOFT en 2 clicks.</a></b></span></td>
+              <td><span class="text-descrip-table"><a class="button" href="https://youtu.be/R3DE1ZHo2s4"><img src="https://cdn-icons-png.flaticon.com/512/2821/2821739.png" width="25" height="20"></a>
+                  <b>Descubre esta herramienta online para descargar cualquier producto de Microsoft de forma sencilla y rápida desde un menú intuitivo.</b></span>
+              </td>
+              <td><a title="PROXIMAMENTE"><span class="boton-windows1">Windows</span></a></td>
+            </tr>
+          
+        </table>
+      
+        <div class="donat">
+          <h2 class="donat-h2">¿Te gusta el contenido de ShellDredd?</h2>
+        <span class="donat-span">Si quieres puedes invitarme a un café para apoyar el contenido.</span>
+          <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script class="donat" type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#b53ff5', 'S6S5BGJG8');kofiwidget2.draw();</script> 
+        </div><br><br>  
+      
+
+         <!-- Footer -->
+         <footer class="footer">
+            <p class="text-footer">Shelldredd© 2022-2023<img class="logo-footer" src="images/shell-logo1.png"></p>
+          </footer>
+          </main>
+          </body>
+
+    </html>
+        
