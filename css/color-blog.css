@@ -1325,6 +1325,19 @@ tr:nth-child(even) {
 
 @media only screen and (max-width : 900px){
 
+  .icon-shelldredd{
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+  }
+  
+  .logo-header-icon{
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
   .dropdownmenu ul{width: 100%;}
 
   .pricing-grid {
@@ -1412,6 +1425,12 @@ tr:nth-child(even) {
     height: 30px;
     margin-right: 10px;
     filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+  }
+  
+  .logo-header-icon{
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
   }
 
   .pricing-grid {
