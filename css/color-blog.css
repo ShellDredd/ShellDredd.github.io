@@ -319,6 +319,12 @@ html {box-sizing: border-box; height: auto; background-color: #000000;position: 
   height: 1200px;
 }
 
+.main-maquinas{
+  background-image: url(https://media1.giphy.com/media/D7D0bE6Y4V8oOtdG4v/giphy.gif?cid=ecf05e47uwt7znb2zye1d8cl6f0uujkx05tdb289vaz07qg3&rid=giphy.gif&ct=g);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
   .banner{
     background-image: url(https://media0.giphy.com/media/h2B0ShI0z0qM4KD0BA/giphy.gif?cid=790b7611b5c9b6e8e07305e46412bab22d55fb00d3c80cfa&rid=giphy.gif&ct=s);
     background-repeat: no-repeat;
@@ -376,7 +382,26 @@ html {box-sizing: border-box; height: auto; background-color: #000000;position: 
     filter: drop-shadow(10px 10px 10px rgb(195, 49, 203));
   }
 
+  .banner-maquinas-ctf{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    filter: drop-shadow(10px 10px 10px rgb(95, 5, 97));
+    z-index: 0;
+    width: 100%;
+    height: 550px;
+    margin-top: 40px;
+  }
 
+  .banner-maquinas-ctf:hover{
+    width: 100%;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
 
 
