@@ -962,6 +962,27 @@ tr:nth-child(even) {
 }
 
 /*Boton seguridad categoría*/
+
+.boton-laboratorios{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #000000c5;
+  color: rgb(221, 121, 255);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton-laboratorios:hover{
+  border-radius: 10%;
+  padding: 0.3rem;
+  background-color: #8d249d;
+  color: rgb(229, 163, 41);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .boton-seguridad{
   border-radius: 10%;
   padding: 0.3rem;
