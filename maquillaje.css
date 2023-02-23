@@ -1,0 +1,260 @@
+
+* {margin: 0; padding: 0;}
+
+html {box-sizing: border-box; height: auto; background-color: #000000;position: relative;}
+
+body {
+	margin: 0;
+	background-image: linear-gradient(130deg, #000000 50%, #8907c1 60%);
+	color: #fff;
+	font-family: sans-serif;
+	
+	align-items: center;
+	min-height: 100vh;
+}
+
+.body-horizontal {
+	margin: 0;
+	background-image: linear-gradient(180deg, #000000 60%, #8907c1 80%);
+	color: #fff;
+	font-family: sans-serif;
+	
+	align-items: center;
+	min-height: 100vh;
+}
+
+.main{
+    background-image: linear-gradient(100deg, rgb(37, 7, 42) 70%, #7c0e98 60%);
+    height: auto;
+  }
+
+.banner{
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDA2ZTY5MzlkN2MwZDM3MjAzNDI0NDQyMTNjZDY1ZDc1ZGU4MzdkYiZjdD1z/jUoNHLhsJF6yo2VDGE/giphy.gif);
+    background-repeat: no-repeat;
+    filter: drop-shadow(10px 10px 10px rgb(172, 18, 210));
+    background-position-x: center;
+	background-size: 500px;
+    height: 420px;
+    margin: auto;
+}
+
+  .banner:hover{
+    background-image: url();
+    background-size: 480px;
+    margin: auto;
+  }
+
+  .shell-banner{
+	width: 320px;
+	margin-top: 100px;
+  }
+
+  .shell-banner-titulo{
+	width: 350px;
+	margin-top: 30px;
+  }
+
+  .text-intro{
+    width: auto;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pricing-grid {
+    max-width: 1%;
+    min-width: 1%;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .pricing-grid:hover {filter: drop-shadow(0 10px 15px rgb(0, 0, 0))}
+  
+  .plan {
+    width: auto;
+    background:rgba(123, 29, 160, 0.411);
+    margin: 10px;
+    margin-bottom: 10px;
+    padding:1px;
+    border-radius: 10px;
+    text-align: center;
+    flex:1;
+    display: block;
+    flex-wrap:wrap;
+  }
+  
+  .plan:hover {filter: drop-shadow(0 10px 15px #9c10bb)}
+
+
+.choose-title{
+	font-size: 28px;
+	color: #c23bf8;
+	filter: drop-shadow(0 10px 15px #000000);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.player-title{
+	font-size: 32px;
+	color: #fa8d00;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: solid;
+	background-color: #000000;
+}
+
+.player-enlace{
+	background-image: url();
+	color: #df9227;
+	text-decoration: none;
+	border-radius: 10px;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 6px;padding-bottom: 6px;
+
+	
+}
+
+a{
+	background-color: #000000;
+}
+
+a :hover{
+	background-color: #c23bf8;
+}
+
+.player-enlace a :hover{
+	color: #fa8d00;
+	text-decoration: none;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	background-color: white;
+	
+}
+
+.boton-seleccion{
+	height: 2px;
+}
+
+.slider {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.slider input {
+	display: none;
+}
+.testimonials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 450px;
+	perspective: 300px;
+	overflow: hidden;
+}
+.testimonials .item {
+	width: 350px;
+	padding: 30px;
+	border-radius: 0px;
+	background-color: rgba(0, 0, 0, 0.225);
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	text-align: center;
+	transition: transform 0.4s;
+	filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+	user-select: none;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+.testimonials .item :hover {
+	background-image: url();
+}
+.testimonials .item img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 0%;
+	border: 0px solid #3B344D;
+}
+.testimonials .item p {
+	color: #fa8d00;
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dots label {
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #e827e8;
+	margin: 7px;
+	transition-duration: 0.2s;
+}
+
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"] {
+	transform: scale(3);
+	background-color: #fff;
+}
+#t-1:checked ~ .dots label[for="t-2"],
+#t-2:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-3"],
+#t-3:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-4"],
+#t-4:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-5"],
+#t-5:checked ~ .dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+#t-1:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-4"],
+#t-3:checked ~ .testimonials label[for="t-5"],
+#t-4:checked ~ .testimonials label[for="t-1"],
+#t-5:checked ~ .testimonials label[for="t-2"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-4"],
+#t-4:checked ~ .testimonials label[for="t-5"],
+#t-5:checked ~ .testimonials label[for="t-1"] {
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-3"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-1:checked ~ .testimonials label[for="t-5"] {
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+#t-3:checked ~ .testimonials label[for="t-1"],
+#t-4:checked ~ .testimonials label[for="t-2"],
+#t-5:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-5"],
+#t-1:checked ~ .testimonials label[for="t-4"] {
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+}
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"],
+#t-4:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-5"] {
+	z-index: 4;
+}
