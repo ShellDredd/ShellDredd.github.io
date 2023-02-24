@@ -5,8 +5,7 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap:
-https://shelldredd.github.io/sitemap.xml
+Sitemap: https://shelldredd.github.io/sitemap.xml
 
 #      .--..--..--..--..--..--.
 #    .' \  (`._   (_)     _   \
