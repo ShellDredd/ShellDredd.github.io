@@ -90,7 +90,7 @@ body {
 
 
 .choose-title{
-	font-size: 28px;
+	font-size: 26px;
 	color: #c23bf8;
 	filter: drop-shadow(0 10px 15px #000000);
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -258,3 +258,140 @@ a :hover{
 #t-5:checked ~ .testimonials label[for="t-5"] {
 	z-index: 4;
 }
+
+@media only screen and (max-width : 700px){
+
+	.banner{
+		background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDA2ZTY5MzlkN2MwZDM3MjAzNDI0NDQyMTNjZDY1ZDc1ZGU4MzdkYiZjdD1z/jUoNHLhsJF6yo2VDGE/giphy.gif);
+		background-repeat: no-repeat;
+		filter: drop-shadow(10px 10px 10px rgb(172, 18, 210));
+		background-position-x: center;
+		background-size: 360px;
+		height: 350px;
+		margin: auto;
+	}
+	
+	.shell-banner{
+		width: 240px;
+		margin-top: 50px;
+	
+	}
+	
+	.shell-banner-titulo{
+		width: 320px;
+	}
+	
+	.choose-title{
+		font-size: 20px;
+	}
+
+
+
+	
+	.slider {
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	.slider input {
+		display: none;
+	}
+	.testimonials {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		min-height: 400px;
+		perspective: 300px;
+		width: 100%;
+		overflow: hidden;
+	}
+	.testimonials .item {
+		
+		width: 250px;
+		padding: 10px;
+		border-radius: 0px;
+		background-color: rgba(1, 0, 2, 0.311);
+		position: absolute;
+		top: 0;
+		box-sizing: border-box;
+		text-align: center;
+		transition: transform 0.4s;
+		filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+		user-select: none;
+		cursor: pointer;
+		border-radius: 30px;
+	}
+	
+	.testimonials .item :hover {
+		background-image: url();
+	}
+	.testimonials .item img {
+		width: 200px;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 0%;
+		border: 0px solid #3B344D;
+		filter: drop-shadow(5px 5px 5px rgb(125, 4, 191));
+	}
+	.testimonials .item p {
+		color: #fa8d00;
+	}
+	
+	
+	.player-title{
+		font-size: 26px;
+		color: #fa8d00;
+		border-radius: 10px;
+		border-width: 1px;
+		border-color: #000000;
+		border-style: solid;
+		background-color: #000000;
+	}
+	
+	.a-player-title{
+		font-size: 32px;
+		color: #fa8d00;
+		border-radius: 10px;
+		border-width: 1px;
+		border-color: #000000;
+		border-style: solid;
+		background-color: #000000;
+		text-decoration: none;
+	}
+	
+	.a-player-enlace{
+		font-size: 12px;
+		background-color: #8121a7b2;
+		color: #df9227;
+		width: 100px;
+		text-decoration: none;
+		border-radius: 3px;
+		padding-left: 12px; padding-right: 15px;
+		padding-top: 6px;padding-bottom: 6px;}
+	
+	
+	
+	.secret{
+		color: #00000000;
+	}
+	
+	
+	.dots {
+		background-color: #000000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.dots label {
+		font-size: 12px;
+		height: 10px;
+		width: 12px;
+		border-radius: 50%;
+		cursor: pointer;
+		background-color: #630d7e;
+		margin: 20px;
+		transition-duration: 0.2s;
+	}
+	
+	}
