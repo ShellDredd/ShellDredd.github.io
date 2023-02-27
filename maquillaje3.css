@@ -209,6 +209,7 @@ body {
   .a-article{
 	color: rgb(241, 216, 147);
 	text-decoration: none;
+	font-size: 15px;
   }
   
   .a-article:hover {
