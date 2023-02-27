@@ -216,7 +216,7 @@ body {
   }
   
   .text-descrip-table{
-	font-size: 12px;
+	font-size: 16px;
 	color: #faa5fe;
   }
 
@@ -841,6 +841,11 @@ tr:nth-child(even) {
 		border-radius: 10px;
 	  }
 
+	.text-descrip-table{
+		font-size: 14px;
+		color: #faa5fe;
+ 	 }
+	
 	  @media only screen and (max-width : 700px){
 
 		.banner{
