@@ -18,17 +18,17 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/blog.html</loc>
+  <loc>https://shelldredd.github.io/celebrity-soup.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/inicio/proximamente.html</loc>
+  <loc>https://shelldredd.github.io/seguridad.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
   <priority>0.00</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/inicio/seguridad-informatica.html</loc>
+  <loc>https://shelldredd.github.io/karate.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -38,12 +38,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/23/</loc>
+  <loc>https://shelldredd.github.io/writesup.html</loc>
   <lastmod>2021-01-09T16:05:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/contacto.html</loc>
+  <loc>https://shelldredd.github.io/blog.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
   <priority>0.50</priority>
 </url>
@@ -53,15 +53,13 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/inicio/home.html</loc>
+  <loc>https://shelldredd.github.io/redes.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://shelldredd.github.io/inicio/blog-writeup-hackmyvm.html</loc>
+  <loc>https://shelldredd.github.io/linux.html</loc>
   <lastmod>2022-03-11T22:07:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
 </urlset>
