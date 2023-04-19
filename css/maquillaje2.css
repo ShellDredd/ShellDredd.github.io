@@ -1862,5 +1862,25 @@ table {
 	border-radius: 10px;
   }
 
+/* BLOG ARTICULOS ENTRADAS*/
 
+.bloque-texto {
+  font-size: 18px;
+  width: auto;
+  color: #5f2572;
+  background:rgba(222, 178, 240, 0.753);
+  filter: drop-shadow(0 10px 15px rgb(205, 56, 175));
+  padding:1px;
+  border-radius: 4px;
+  text-align: justify;
+  margin-left: 1px;margin-right: 1px;
+  flex:1;
+  display: block;
+  flex-wrap:wrap;
+}
+
+.title-blog{
+  margin-top: 80px;
+}
+	
 }
