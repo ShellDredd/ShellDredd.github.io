@@ -1526,6 +1526,25 @@ tr:nth-child(even) {
   flex-wrap:wrap;
 }
 
+.boton-dificultad-writeup-h1{
+  border-radius: 10%;
+	padding: 0.3rem;
+	background-color: #6d0795;
+	color: rgb(255, 255, 255);
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.boton-dificultad-writeup{
+  border-radius: 10%;
+	padding: 0.3rem;
+	background-color: #6d0795;
+	color: rgb(255, 255, 255);
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+}
 
 
 /* Imagenes Galería Articulos*/
